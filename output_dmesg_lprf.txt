@@ -1,0 +1,159 @@
+// load driver (sudo insmod lprf.ko)
+lprf: lprf_probe - start: /home/pi/lprf/lprf_mod_1.c:1472
+	[17890.644347] lprf: lprf_get_pdata - start /home/pi/lprf/lprf_mod_1.c:1276
+	[17890.644393] lprf: lprf_get_pdata - 2 rstn: 24, slp_tr: 25, xtal_trim: 15: /home/pi/lprf/lprf_mod_1.c:1294
+	[17890.644408] lprf: lprf_get_pdata - end /home/pi/lprf/lprf_mod_1.c:1298
+	
+	[17890.644967] lprf: lprf_detect_device - start /home/pi/lprf/lprf_mod_1.c:1346
+		[17890.644996] lprf: __lprf_read: addr=5	data=-670786364
+		[17890.645114] lprf: lprf_detect_device - CHIP_ID_H=1A /home/pi/lprf/lprf_mod_1.c:1354
+		[17890.645133] lprf: __lprf_read: addr=4	data=-670786364
+		[17890.645198] lprf: lprf_detect_device - CHIP_ID_L=51 /home/pi/lprf/lprf_mod_1.c:1365
+	[17890.645215] lprf: lprf_detect_device - end /home/pi/lprf/lprf_mod_1.c:1410
+	
+	[17890.645232] lprf: lprf_hw_init - start. /home/pi/lprf/lprf_mod_1.c:1049
+		[17890.645243] lprf: __lprf_write - start: addr=61, data=01
+		[17890.645301] lprf: __lprf_write - end.
+		[17890.645320] lprf: lprf_write_subreg: addr=208	data=1	mask=64	shift=6
+		[17890.645384] lprf: lprf_write_subreg: addr=192	data=1	mask=32	shift=5
+		[17890.645475] lprf: __lprf_write - start: addr=60, data=29
+		[17890.645527] lprf: __lprf_write - end.
+		[17890.645544] lprf: __lprf_write - start: addr=62, data=66
+		[17890.645590] lprf: __lprf_write - end.
+		[17890.645609] lprf: __lprf_write - start: addr=03, data=39
+		[17890.645655] lprf: __lprf_write - end.
+		[17890.645673] lprf: lprf_write_subreg: addr=6	data=15	mask=31	shift=0
+		[17890.645759] lprf: lprf_write_subreg: addr=9	data=31	mask=31	shift=0
+		[17890.645847] lprf: lprf_write_subreg: addr=10	data=28	mask=31	shift=0
+		[17890.645932] lprf: lprf_write_subreg: addr=13	data=25	mask=31	shift=0
+		[17890.646019] lprf: lprf_write_subreg: addr=36	data=105	mask=127	shift=0
+		[17890.646111] lprf: lprf_write_subreg: addr=42	data=196	mask=255	shift=0
+		[17890.646198] lprf: lprf_write_subreg: addr=16	data=0	mask=7	shift=0
+		[17890.646284] lprf: __lprf_write - start: addr=20, data=98
+		[17890.646331] lprf: __lprf_write - end.
+		[17890.646350] lprf: lprf_write_subreg: addr=32	data=0	mask=8	shift=3
+		[17890.646402] lprf: lprf_write_subreg: addr=32	data=1	mask=8	shift=3
+		[17890.646455] lprf: lprf_write_subreg: addr=96	data=1	mask=128	shift=7
+		[17890.646509] lprf: lprf_write_subreg: addr=138	data=0	mask=16	shift=4
+		[17890.646603] lprf: lprf_write_subreg: addr=144	data=112	mask=127	shift=0
+		[17890.646692] lprf: lprf_write_subreg: addr=42	data=152	mask=255	shift=0
+		[17890.646750] lprf: lprf_write_subreg: addr=129	data=0	mask=128	shift=7
+		[17890.646810] lprf: lprf_write_subreg: addr=33	data=1	mask=16	shift=4
+		[17890.646896] lprf: lprf_write_subreg: addr=33	data=1	mask=3	shift=0
+		[17890.646951] lprf: lprf_write_subreg: addr=139	data=15	mask=30	shift=1
+		[17890.647037] lprf: lprf_write_subreg: addr=113	data=8	mask=15	shift=0
+		[17890.647126] lprf: __lprf_write - start: addr=7E, data=60
+		[17890.647176] lprf: __lprf_write - end.
+		[17890.647193] lprf: __lprf_write - start: addr=70, data=3C
+		[17890.647237] lprf: __lprf_write - end.
+		[17890.647254] lprf: lprf_write_subreg: addr=118	data=240	mask=255	shift=0
+		[17890.647335] lprf: __lprf_write - start: addr=8B, data=1F
+		[17890.647384] lprf: __lprf_write - end.
+		[17890.647401] lprf: lprf_write_subreg: addr=43	data=0	mask=1	shift=0
+
+		// time registers 
+		[17890.647485] lprf: lprf_write_subreg: addr=160	data=32	mask=255	shift=0
+		[17890.647543] lprf: lprf_write_subreg: addr=161	data=32	mask=255	shift=0
+		[17890.647605] lprf: lprf_write_subreg: addr=162	data=96	mask=255	shift=0
+		[17890.647662] lprf: lprf_write_subreg: addr=163	data=96	mask=255	shift=0
+		[17890.647716] lprf: lprf_write_subreg: addr=164	data=64	mask=255	shift=0
+		[17890.647775] lprf: lprf_write_subreg: addr=167	data=32	mask=255	shift=0
+		
+		// enable state machine	
+		[17890.647830] lprf: lprf_write_subreg: addr=128	data=1	mask=4	shift=2			
+		// enable tx mode 2.4 GHz
+		[17890.647922] lprf: lprf_write_subreg: addr=129	data=0	mask=48	shift=4
+		// enable direct rx
+		[17890.647944] lprf: lprf_write_subreg: addr=129	data=1	mask=8	shift=3
+	[17890.645232] lprf: lprf_hw_init - end.
+
+	[17890.648008] lprf: scull_setup_cdev index 0 - start: /home/pi/lprf/lprf_mod_1.c:2092
+	[17890.648031] lprf: scull_setup_cdev - end: /home/pi/lprf/lprf_mod_1.c:2100
+
+	[17890.648045] lprf: scull_init_module registered lprf0  quantum=1  qset=1
+[17890.669151] lprf: lprf_probe - end: /home/pi/lprf/lprf_mod_1.c:1582
+
+
+// is called by: ip link set wpan0 up
+[17907.530170] lprf: lprf_start - initialise state change. /home/pi/lprf/lprf_mod_1.c:913
+
+
+// is called by starting the client user space program 
+[17923.586361] lprf: lprf_xmit - start. /home/pi/lprf/lprf_mod_1.c:831
+	// data that should be sended 
+	[17923.586397] lprf: lprf_xmit, skb->data=97. /home/pi/lprf/lprf_mod_1.c:841
+	[17923.586411] lprf: lprf_xmit, *(skb->data + 11)=116. /home/pi/lprf/lprf_mod_1.c:842
+	[17923.586424] lprf: lprf_xmit, skb->head=0. /home/pi/lprf/lprf_mod_1.c:843
+
+	[17923.586435] lprf: lprf_xmit_start - start. /home/pi/lprf/lprf_mod_1.c:810
+		// is directly called in lprf_xmit_start		
+		[17923.586450] lprf: lprf_write_frame - start. buf=0 /home/pi/lprf/lprf_mod_1.c:751
+			// output from frame 
+			[17923.586464] lprf: lprf_write_frame, buf[0]=96  /home/pi/lprf/lprf_mod_1.c:770
+			[17923.586477] lprf: lprf_write_frame, buf[1]=15  /home/pi/lprf/lprf_mod_1.c:770
+			[17923.586489] lprf: lprf_write_frame, buf[2]=97  /home/pi/lprf/lprf_mod_1.c:770
+			[17923.586501] lprf: lprf_write_frame, buf[3]=136  /home/pi/lprf/lprf_mod_1.c:770
+			[17923.586514] lprf: lprf_write_frame, buf[4]=233  /home/pi/lprf/lprf_mod_1.c:770
+			[17923.586526] lprf: lprf_write_frame, buf[5]=173  /home/pi/lprf/lprf_mod_1.c:770
+			[17923.586539] lprf: lprf_write_frame, buf[6]=222  /home/pi/lprf/lprf_mod_1.c:770
+			[17923.586551] lprf: lprf_write_frame, buf[7]=238  /home/pi/lprf/lprf_mod_1.c:770
+			[17923.586563] lprf: lprf_write_frame, buf[8]=190  /home/pi/lprf/lprf_mod_1.c:770
+			[17923.586577] lprf: lprf_write_frame, buf[9]=239  /home/pi/lprf/lprf_mod_1.c:770
+			[17923.586590] lprf: lprf_write_frame, buf[10]=190  /home/pi/lprf/lprf_mod_1.c:770
+			[17923.586602] lprf: lprf_write_frame, buf[11]=114  /home/pi/lprf/lprf_mod_1.c:770
+			[17923.586614] lprf: lprf_write_frame, buf[12]=115  /home/pi/lprf/lprf_mod_1.c:770
+			[17923.586627] lprf: lprf_write_frame, buf[13]=116  /home/pi/lprf/lprf_mod_1.c:770
+			[17923.586638] lprf: lprf_write_frame - skb->data=97 /home/pi/lprf/lprf_mod_1.c:773
+			[17923.586650] lprf: lprf_write_frame - skb->len=13 /home/pi/lprf/lprf_mod_1.c:774
+			// here spi_async() is called (completion function: lprf_write_frame_complete)
+		[17923.586685] lprf: lprf_write_frame - end. /home/pi/lprf/lprf_mod_1.c:785
+	[17923.586701] lprf: lprf_xmit_start - end. /home/pi/lprf/lprf_mod_1.c:822
+[17923.586713] lprf: lprf_xmit - end. /home/pi/lprf/lprf_mod_1.c:849
+
+// completion function of spi_async()
+[17923.586915] lprf: lprf_write_frame_complete - start. /home/pi/lprf/lprf_mod_1.c:714
+	// enable FIFO mode 
+	[17923.586939] lprf: lprf_write_subreg: addr=128	data=1	mask=1	shift=0
+
+	[17923.587085] lprf: lprf_async_state_change - start, state=4. /home/pi/lprf/lprf_mod_1.c:508
+		// lprf_async_state_change_complete is stored in ctx->complete
+		[17923.587101] lprf: lprf_async_read_reg - start: reg=176
+		[17923.587114] lprf: lprf_async_read_reg - end.
+	[17923.587128] lprf: lprf_async_state_change - end, state=4. /home/pi/lprf/lprf_mod_1.c:517
+[17923.587140] lprf: lprf_write_frame_complete - end. /home/pi/lprf/lprf_mod_1.c:738
+
+// callback function of lprf_async_red_reg()
+[17923.587181] lprf: lprf_async_state_change_start - start, state=4 /home/pi/lprf/lprf_mod_1.c:460
+	//spi_async()
+[17923.587201] lprf: lprf_async_state_change_start - end. /home/pi/lprf/lprf_mod_1.c:501
+
+// callback function from spi_async()
+[17923.587239] lprf: lprf_async_state_delay - start. /home/pi/lprf/lprf_mod_1.c:279
+	// set correct time for timer
+[17923.587267] lprf: lprf_async_state_delay - end. /home/pi/lprf/lprf_mod_1.c:376
+
+// callback function of the timer
+[17923.587324] lprf: lprf_async_state_timer - start. /home/pi/lprf/lprf_mod_1.c:261
+	[17923.587340] lprf: lprf_async_read_reg - start: reg=176
+	[17923.587364] lprf: lprf_async_read_reg - end.
+[17923.587380] lprf: lprf_async_state_timer - end. /home/pi/lprf/lprf_mod_1.c:265
+
+// callback function of lprf_async_read_reg()
+[17923.587456] lprf: lprf_async_state_assert - start. /home/pi/lprf/lprf_mod_1.c:237
+	// is called via ctx->complete()
+	[17923.587475] lprf: lprf_async_state_change_complete - start. /home/pi/lprf/lprf_mod_1.c:430
+	[17923.587488] lprf: lprf_async_state_change_complete - from TX. /home/pi/lprf/lprf_mod_1.c:434
+	[17923.587500] lprf: lprf_async_state_change_complete - end. /home/pi/lprf/lprf_mod_1.c:448
+[17923.587456] lprf: lprf_async_state_assert - end.
+
+
+
+// remove driver (sudo rmmod lprf)
+[17861.945409] lprf: lprf_remove - start: /home/pi/lprf/lprf_mod_1.c:1591
+[17861.945816] lprf: lprf_stop - not implemented. /home/pi/lprf/lprf_mod_1.c:919
+[17861.962421] lprf: scull_cleanup_module - start: /home/pi/lprf/lprf_mod_1.c:2063
+[17861.962458] lprf: scull_trim - start: /home/pi/lprf/lprf_mod_1.c:1626
+[17861.962475] lprf: scull_trim - end: quantum=1  /home/pi/lprf/lprf_mod_1.c:1641
+[17861.962497] lprf: scull_cleanup_module - end: /home/pi/lprf/lprf_mod_1.c:2076
+[17861.962511] lprf: lprf_remove - end: /home/pi/lprf/lprf_mod_1.c:1600
+[17890.644307] 

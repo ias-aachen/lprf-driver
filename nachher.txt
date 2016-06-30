@@ -1,0 +1,1856 @@
+Jun 21 06:25:14 rpi2 rsyslogd: [origin software="rsyslogd" swVersion="8.4.2" x-pid="507" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Jun 21 07:03:47 rpi2 kernel: [70757.450168] lprf_mod_1: Unknown symbol ieee802154_free_hw (err 0)
+Jun 21 07:03:47 rpi2 kernel: [70757.450277] lprf_mod_1: Unknown symbol ieee802154_register_hw (err 0)
+Jun 21 07:03:47 rpi2 kernel: [70757.450334] lprf_mod_1: Unknown symbol ieee802154_alloc_hw (err 0)
+Jun 21 07:03:47 rpi2 kernel: [70757.450415] lprf_mod_1: Unknown symbol devm_regmap_init_spi (err 0)
+Jun 21 07:03:47 rpi2 kernel: [70757.450578] lprf_mod_1: Unknown symbol ieee802154_unregister_hw (err 0)
+Jun 21 07:05:14 rpi2 rsyslogd: [origin software="rsyslogd" swVersion="8.4.2" x-pid="507" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Jun 21 07:05:33 rpi2 rsyslogd: [origin software="rsyslogd" swVersion="8.4.2" x-pid="506" x-info="http://www.rsyslog.com"] start
+Jun 21 07:05:33 rpi2 kernel: [    0.000000] Booting Linux on physical CPU 0x0
+Jun 21 07:05:33 rpi2 kernel: [    0.000000] Initializing cgroup subsys cpuset
+Jun 21 07:05:33 rpi2 kernel: [    0.000000] Initializing cgroup subsys cpu
+Jun 21 07:05:33 rpi2 kernel: [    0.000000] Initializing cgroup subsys cpuacct
+Jun 21 07:05:33 rpi2 kernel: [    0.000000] Linux version 4.1.18+ (pi@raspberrypi) (gcc version 4.9.2 (Raspbian 4.9.2-10) ) #1 Tue Feb 23 04:01:39 UTC 2016
+Jun 21 07:05:33 rpi2 kernel: [    0.000000] CPU: ARMv6-compatible processor [410fb767] revision 7 (ARMv7), cr=00c5387d
+Jun 21 07:05:33 rpi2 kernel: [    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+Jun 21 07:05:33 rpi2 kernel: [    0.000000] Machine model: Raspberry Pi Model B Plus Rev 1.2
+Jun 21 07:05:33 rpi2 kernel: [    0.000000] cma: Reserved 8 MiB at 0x1b400000
+Jun 21 07:05:33 rpi2 kernel: [    0.000000] Memory policy: Data cache writeback
+Jun 21 07:05:33 rpi2 kernel: [    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 113680
+Jun 21 07:05:33 rpi2 kernel: [    0.000000] Kernel command line: dma.dmachans=0x7f35 bcm2708_fb.fbwidth=656 bcm2708_fb.fbheight=416 bcm2708.boardrev=0x10 bcm2708.serial=0xa62e8378 smsc95xx.macaddr=B8:27:EB:2E:83:78 bcm2708_fb.fbswap=1 bcm2708.uart_clock=3000000 bcm2708.disk_led_gpio=47 bcm2708.disk_led_active_low=0 vc_mem.mem_base=0x1ec00000 vc_mem.mem_size=0x20000000  dwc_otg.lpm_enable=0 console=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait
+Jun 21 07:05:33 rpi2 kernel: [    0.000000] PID hash table entries: 2048 (order: 1, 8192 bytes)
+Jun 21 07:05:33 rpi2 kernel: [    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+Jun 21 07:05:33 rpi2 kernel: [    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+Jun 21 07:05:33 rpi2 kernel: [    0.000000] Memory: 436824K/458752K available (5800K kernel code, 488K rwdata, 1788K rodata, 352K init, 720K bss, 13736K reserved, 8192K cma-reserved)
+Jun 21 07:05:33 rpi2 kernel: [    0.000000] Virtual kernel memory layout:
+Jun 21 07:05:33 rpi2 kernel: [    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+Jun 21 07:05:33 rpi2 kernel: [    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+Jun 21 07:05:33 rpi2 kernel: [    0.000000]     vmalloc : 0xdc800000 - 0xff000000   ( 552 MB)
+Jun 21 07:05:33 rpi2 kernel: [    0.000000]     lowmem  : 0xc0000000 - 0xdc000000   ( 448 MB)
+Jun 21 07:05:33 rpi2 kernel: [    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB)
+Jun 21 07:05:33 rpi2 kernel: [    0.000000]       .text : 0xc0008000 - 0xc07712e0   (7589 kB)
+Jun 21 07:05:33 rpi2 kernel: [    0.000000]       .init : 0xc0772000 - 0xc07ca000   ( 352 kB)
+Jun 21 07:05:33 rpi2 kernel: [    0.000000]       .data : 0xc07ca000 - 0xc0844260   ( 489 kB)
+Jun 21 07:05:33 rpi2 kernel: [    0.000000]        .bss : 0xc0844260 - 0xc08f83e0   ( 721 kB)
+Jun 21 07:05:33 rpi2 kernel: [    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Jun 21 07:05:33 rpi2 kernel: [    0.000000] NR_IRQS:522
+Jun 21 07:05:33 rpi2 kernel: [    0.000000] clocksource stc: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275 ns
+Jun 21 07:05:33 rpi2 kernel: [    0.000014] sched_clock: 32 bits at 1000kHz, resolution 1000ns, wraps every 2147483647500ns
+Jun 21 07:05:33 rpi2 kernel: [    0.000056] Switching to timer-based delay loop, resolution 1000ns
+Jun 21 07:05:33 rpi2 kernel: [    0.000341] Console: colour dummy device 80x30
+Jun 21 07:05:33 rpi2 kernel: [    0.001281] console [tty1] enabled
+Jun 21 07:05:33 rpi2 kernel: [    0.001336] Calibrating delay loop (skipped), value calculated using timer frequency.. 2.00 BogoMIPS (lpj=10000)
+Jun 21 07:05:33 rpi2 kernel: [    0.001416] pid_max: default: 32768 minimum: 301
+Jun 21 07:05:33 rpi2 kernel: [    0.001788] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Jun 21 07:05:33 rpi2 kernel: [    0.001856] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Jun 21 07:05:33 rpi2 kernel: [    0.002914] Initializing cgroup subsys blkio
+Jun 21 07:05:33 rpi2 kernel: [    0.003006] Initializing cgroup subsys memory
+Jun 21 07:05:33 rpi2 kernel: [    0.003076] Initializing cgroup subsys devices
+Jun 21 07:05:33 rpi2 kernel: [    0.003138] Initializing cgroup subsys freezer
+Jun 21 07:05:33 rpi2 kernel: [    0.003200] Initializing cgroup subsys net_cls
+Jun 21 07:05:33 rpi2 kernel: [    0.003317] CPU: Testing write buffer coherency: ok
+Jun 21 07:05:33 rpi2 kernel: [    0.003429] ftrace: allocating 19759 entries in 58 pages
+Jun 21 07:05:33 rpi2 kernel: [    0.105177] Setting up static identity map for 0x81c0 - 0x81f8
+Jun 21 07:05:33 rpi2 kernel: [    0.107329] devtmpfs: initialized
+Jun 21 07:05:33 rpi2 kernel: [    0.118644] VFP support v0.3: implementor 41 architecture 1 part 20 variant b rev 5
+Jun 21 07:05:33 rpi2 kernel: [    0.119095] clocksource jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+Jun 21 07:05:33 rpi2 kernel: [    0.121070] pinctrl core: initialized pinctrl subsystem
+Jun 21 07:05:33 rpi2 kernel: [    0.121953] NET: Registered protocol family 16
+Jun 21 07:05:33 rpi2 kernel: [    0.127465] DMA: preallocated 4096 KiB pool for atomic coherent allocations
+Jun 21 07:05:33 rpi2 kernel: [    0.129001] bcm2708.uart_clock = 3000000
+Jun 21 07:05:33 rpi2 kernel: [    0.134100] hw-breakpoint: found 6 breakpoint and 1 watchpoint registers.
+Jun 21 07:05:33 rpi2 kernel: [    0.134179] hw-breakpoint: maximum watchpoint size is 4 bytes.
+Jun 21 07:05:33 rpi2 kernel: [    0.134394] Serial: AMBA PL011 UART driver
+Jun 21 07:05:33 rpi2 kernel: [    0.134714] 20201000.uart: ttyAMA0 at MMIO 0x20201000 (irq = 83, base_baud = 0) is a PL011 rev2
+Jun 21 07:05:33 rpi2 kernel: [    0.505298] console [ttyAMA0] enabled
+Jun 21 07:05:33 rpi2 kernel: [    0.509672] bcm2835-mbox 2000b880.mailbox: mailbox enabled
+Jun 21 07:05:33 rpi2 kernel: [    0.556451] bcm2708-dmaengine 20007000.dma: DMA legacy API manager at f2007000, dmachans=0xf35
+Jun 21 07:05:33 rpi2 kernel: [    0.565180] bcm2708-dmaengine 20007000.dma: Initialized 7 DMA channels (+ 1 legacy)
+Jun 21 07:05:33 rpi2 kernel: [    0.573778] bcm2708-dmaengine 20007000.dma: Load BCM2835 DMA engine driver
+Jun 21 07:05:33 rpi2 kernel: [    0.580707] bcm2708-dmaengine 20007000.dma: dma_debug:0
+Jun 21 07:05:33 rpi2 kernel: [    0.586885] SCSI subsystem initialized
+Jun 21 07:05:33 rpi2 kernel: [    0.591030] usbcore: registered new interface driver usbfs
+Jun 21 07:05:33 rpi2 kernel: [    0.596761] usbcore: registered new interface driver hub
+Jun 21 07:05:33 rpi2 kernel: [    0.602275] usbcore: registered new device driver usb
+Jun 21 07:05:33 rpi2 kernel: [    0.608294] raspberrypi-firmware soc:firmware: Attached to firmware from 2016-03-15 14:47
+Jun 21 07:05:33 rpi2 kernel: [    0.644021] Switched to clocksource stc
+Jun 21 07:05:33 rpi2 kernel: [    0.697124] FS-Cache: Loaded
+Jun 21 07:05:33 rpi2 kernel: [    0.700428] CacheFiles: Loaded
+Jun 21 07:05:33 rpi2 kernel: [    0.718927] NET: Registered protocol family 2
+Jun 21 07:05:33 rpi2 kernel: [    0.724869] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+Jun 21 07:05:33 rpi2 kernel: [    0.732059] TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+Jun 21 07:05:33 rpi2 kernel: [    0.738689] TCP: Hash tables configured (established 4096 bind 4096)
+Jun 21 07:05:33 rpi2 kernel: [    0.745330] UDP hash table entries: 256 (order: 0, 4096 bytes)
+Jun 21 07:05:33 rpi2 kernel: [    0.751225] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+Jun 21 07:05:33 rpi2 kernel: [    0.757915] NET: Registered protocol family 1
+Jun 21 07:05:33 rpi2 kernel: [    0.762886] RPC: Registered named UNIX socket transport module.
+Jun 21 07:05:33 rpi2 kernel: [    0.768941] RPC: Registered udp transport module.
+Jun 21 07:05:33 rpi2 kernel: [    0.773678] RPC: Registered tcp transport module.
+Jun 21 07:05:33 rpi2 kernel: [    0.778443] RPC: Registered tcp NFSv4.1 backchannel transport module.
+Jun 21 07:05:33 rpi2 kernel: [    0.786207] hw perfevents: enabled with armv6_1176 PMU driver, 3 counters available
+Jun 21 07:05:33 rpi2 kernel: [    0.795328] futex hash table entries: 256 (order: -1, 3072 bytes)
+Jun 21 07:05:33 rpi2 kernel: [    0.817910] VFS: Disk quotas dquot_6.6.0
+Jun 21 07:05:33 rpi2 kernel: [    0.822298] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Jun 21 07:05:33 rpi2 kernel: [    0.832011] FS-Cache: Netfs 'nfs' registered for caching
+Jun 21 07:05:33 rpi2 kernel: [    0.838790] NFS: Registering the id_resolver key type
+Jun 21 07:05:33 rpi2 kernel: [    0.843968] Key type id_resolver registered
+Jun 21 07:05:33 rpi2 kernel: [    0.848305] Key type id_legacy registered
+Jun 21 07:05:33 rpi2 kernel: [    0.856199] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+Jun 21 07:05:33 rpi2 kernel: [    0.864185] io scheduler noop registered
+Jun 21 07:05:33 rpi2 kernel: [    0.868185] io scheduler deadline registered (default)
+Jun 21 07:05:33 rpi2 kernel: [    0.873770] io scheduler cfq registered
+Jun 21 07:05:33 rpi2 kernel: [    0.880215] BCM2708FB: allocated DMA memory 5b800000
+Jun 21 07:05:33 rpi2 kernel: [    0.885387] BCM2708FB: allocated DMA channel 0 @ f2007000
+Jun 21 07:05:33 rpi2 kernel: [    0.895949] Console: switching to colour frame buffer device 82x26
+Jun 21 07:05:33 rpi2 kernel: [    0.907233] Serial: 8250/16550 driver, 0 ports, IRQ sharing disabled
+Jun 21 07:05:33 rpi2 kernel: [    0.917026] vc-cma: Videocore CMA driver
+Jun 21 07:05:33 rpi2 kernel: [    0.922735] vc-cma: vc_cma_base      = 0x00000000
+Jun 21 07:05:33 rpi2 kernel: [    0.929192] vc-cma: vc_cma_size      = 0x00000000 (0 MiB)
+Jun 21 07:05:33 rpi2 kernel: [    0.936279] vc-cma: vc_cma_initial   = 0x00000000 (0 MiB)
+Jun 21 07:05:33 rpi2 kernel: [    0.943576] vc-mem: phys_addr:0x00000000 mem_base=0x1ec00000 mem_size:0x20000000(512 MiB)
+Jun 21 07:05:33 rpi2 kernel: [    0.974213] brd: module loaded
+Jun 21 07:05:33 rpi2 kernel: [    0.988154] loop: module loaded
+Jun 21 07:05:33 rpi2 kernel: [    0.993963] vchiq: vchiq_init_state: slot_zero = 0xdb880000, is_master = 0
+Jun 21 07:05:33 rpi2 kernel: [    1.004567] Loading iSCSI transport class v2.0-870.
+Jun 21 07:05:33 rpi2 kernel: [    1.012627] usbcore: registered new interface driver smsc95xx
+Jun 21 07:05:33 rpi2 kernel: [    1.020300] dwc_otg: version 3.00a 10-AUG-2012 (platform bus)
+Jun 21 07:05:33 rpi2 kernel: [    1.227984] Core Release: 2.80a
+Jun 21 07:05:33 rpi2 kernel: [    1.232683] Setting default values for core params
+Jun 21 07:05:33 rpi2 kernel: [    1.239069] Finished setting default values for core params
+Jun 21 07:05:33 rpi2 kernel: [    1.446445] Using Buffer DMA mode
+Jun 21 07:05:33 rpi2 kernel: [    1.451355] Periodic Transfer Interrupt Enhancement - disabled
+Jun 21 07:05:33 rpi2 kernel: [    1.458811] Multiprocessor Interrupt Enhancement - disabled
+Jun 21 07:05:33 rpi2 kernel: [    1.466045] OTG VER PARAM: 0, OTG VER FLAG: 0
+Jun 21 07:05:33 rpi2 kernel: [    1.472049] Dedicated Tx FIFOs mode
+Jun 21 07:05:33 rpi2 kernel: [    1.477661] WARN::dwc_otg_hcd_init:1047: FIQ DMA bounce buffers: virt = 0xdb814000 dma = 0x5b814000 len=9024
+Jun 21 07:05:33 rpi2 kernel: [    1.490837] FIQ FSM acceleration enabled for :
+Jun 21 07:05:33 rpi2 kernel: [    1.490837] Non-periodic Split Transactions
+Jun 21 07:05:33 rpi2 kernel: [    1.490837] Periodic Split Transactions
+Jun 21 07:05:33 rpi2 kernel: [    1.490837] High-Speed Isochronous Endpoints
+Jun 21 07:05:33 rpi2 kernel: [    1.514231] WARN::hcd_init_fiq:412: FIQ on core 0 at 0xc03ddc3c
+Jun 21 07:05:33 rpi2 kernel: [    1.521824] WARN::hcd_init_fiq:413: FIQ ASM at 0xc03ddf18 length 36
+Jun 21 07:05:33 rpi2 kernel: [    1.529753] WARN::hcd_init_fiq:438: MPHI regs_base at 0xdc896000
+Jun 21 07:05:33 rpi2 kernel: [    1.537495] dwc_otg 20980000.usb: DWC OTG Controller
+Jun 21 07:05:33 rpi2 kernel: [    1.544169] dwc_otg 20980000.usb: new USB bus registered, assigned bus number 1
+Jun 21 07:05:33 rpi2 kernel: [    1.553175] dwc_otg 20980000.usb: irq 32, io mem 0x00000000
+Jun 21 07:05:33 rpi2 kernel: [    1.560422] Init: Port Power? op_state=1
+Jun 21 07:05:33 rpi2 kernel: [    1.565958] Init: Power Port (0)
+Jun 21 07:05:33 rpi2 kernel: [    1.571074] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+Jun 21 07:05:33 rpi2 kernel: [    1.579543] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Jun 21 07:05:33 rpi2 kernel: [    1.588413] usb usb1: Product: DWC OTG Controller
+Jun 21 07:05:33 rpi2 kernel: [    1.594733] usb usb1: Manufacturer: Linux 4.1.18+ dwc_otg_hcd
+Jun 21 07:05:33 rpi2 kernel: [    1.602051] usb usb1: SerialNumber: 20980000.usb
+Jun 21 07:05:33 rpi2 kernel: [    1.609291] hub 1-0:1.0: USB hub found
+Jun 21 07:05:33 rpi2 kernel: [    1.614793] hub 1-0:1.0: 1 port detected
+Jun 21 07:05:33 rpi2 kernel: [    1.621498] usbcore: registered new interface driver usb-storage
+Jun 21 07:05:33 rpi2 kernel: [    1.629598] mousedev: PS/2 mouse device common for all mice
+Jun 21 07:05:33 rpi2 kernel: [    1.637850] bcm2835-cpufreq: min=700000 max=700000
+Jun 21 07:05:33 rpi2 kernel: [    1.644665] sdhci: Secure Digital Host Controller Interface driver
+Jun 21 07:05:33 rpi2 kernel: [    1.652423] sdhci: Copyright(c) Pierre Ossman
+Jun 21 07:05:33 rpi2 kernel: [    1.659120] mmc-bcm2835 20300000.mmc: mmc_debug:0 mmc_debug2:0
+Jun 21 07:05:33 rpi2 kernel: [    1.666650] mmc-bcm2835 20300000.mmc: DMA channels allocated
+Jun 21 07:05:33 rpi2 kernel: [    1.714624] sdhci-pltfm: SDHCI platform and OF driver helper
+Jun 21 07:05:33 rpi2 kernel: [    1.722701] ledtrig-cpu: registered to indicate activity on CPUs
+Jun 21 07:05:33 rpi2 kernel: [    1.732969] hidraw: raw HID events driver (C) Jiri Kosina
+Jun 21 07:05:33 rpi2 kernel: [    1.745790] usbcore: registered new interface driver usbhid
+Jun 21 07:05:33 rpi2 kernel: [    1.753034] usbhid: USB HID core driver
+Jun 21 07:05:33 rpi2 kernel: [    1.762359] Initializing XFRM netlink socket
+Jun 21 07:05:33 rpi2 kernel: [    1.770480] NET: Registered protocol family 17
+Jun 21 07:05:33 rpi2 kernel: [    1.777858] Key type dns_resolver registered
+Jun 21 07:05:33 rpi2 kernel: [    1.789101] registered taskstats version 1
+Jun 21 07:05:33 rpi2 kernel: [    1.795388] vc-sm: Videocore shared memory driver
+Jun 21 07:05:33 rpi2 kernel: [    1.801652] [vc_sm_connected_init]: start
+Jun 21 07:05:33 rpi2 kernel: [    1.808108] [vc_sm_connected_init]: end - returning 0
+Jun 21 07:05:33 rpi2 kernel: [    1.815093] Indeed it is in host mode hprt0 = 00021501
+Jun 21 07:05:33 rpi2 kernel: [    1.884778] Waiting for root device /dev/mmcblk0p2...
+Jun 21 07:05:33 rpi2 kernel: [    1.898096] mmc0: host does not support reading read-only switch, assuming write-enable
+Jun 21 07:05:33 rpi2 kernel: [    1.912334] mmc0: new high speed SDHC card at address 0007
+Jun 21 07:05:33 rpi2 kernel: [    1.920340] mmcblk0: mmc0:0007 SD08G 7.42 GiB 
+Jun 21 07:05:33 rpi2 kernel: [    1.928734]  mmcblk0: p1 p2
+Jun 21 07:05:33 rpi2 kernel: [    2.004136] usb 1-1: new high-speed USB device number 2 using dwc_otg
+Jun 21 07:05:33 rpi2 kernel: [    2.013333] Indeed it is in host mode hprt0 = 00001101
+Jun 21 07:05:33 rpi2 kernel: [    2.082443] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+Jun 21 07:05:33 rpi2 kernel: [    2.094151] VFS: Mounted root (ext4 filesystem) readonly on device 179:2.
+Jun 21 07:05:33 rpi2 kernel: [    2.104400] devtmpfs: mounted
+Jun 21 07:05:33 rpi2 kernel: [    2.110296] Freeing unused kernel memory: 352K (c0772000 - c07ca000)
+Jun 21 07:05:33 rpi2 kernel: [    2.234571] usb 1-1: New USB device found, idVendor=0424, idProduct=9514
+Jun 21 07:05:33 rpi2 kernel: [    2.243362] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+Jun 21 07:05:33 rpi2 kernel: [    2.253785] hub 1-1:1.0: USB hub found
+Jun 21 07:05:33 rpi2 kernel: [    2.260371] hub 1-1:1.0: 5 ports detected
+Jun 21 07:05:33 rpi2 kernel: [    2.544136] usb 1-1.1: new high-speed USB device number 3 using dwc_otg
+Jun 21 07:05:33 rpi2 kernel: [    2.581145] random: systemd urandom read with 65 bits of entropy available
+Jun 21 07:05:33 rpi2 kernel: [    2.664582] usb 1-1.1: New USB device found, idVendor=0424, idProduct=ec00
+Jun 21 07:05:33 rpi2 kernel: [    2.673617] usb 1-1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+Jun 21 07:05:33 rpi2 kernel: [    2.687398] smsc95xx v1.0.4
+Jun 21 07:05:33 rpi2 kernel: [    2.760629] smsc95xx 1-1.1:1.0 eth0: register 'smsc95xx' at usb-20980000.usb-1.1, smsc95xx USB 2.0 Ethernet, b8:27:eb:2e:83:78
+Jun 21 07:05:33 rpi2 kernel: [    2.803010] NET: Registered protocol family 10
+Jun 21 07:05:33 rpi2 kernel: [    3.036723] uart-pl011 20201000.uart: no DMA platform data
+Jun 21 07:05:33 rpi2 kernel: [    4.662378] fuse init (API version 7.23)
+Jun 21 07:05:33 rpi2 kernel: [    4.694425] i2c /dev entries driver
+Jun 21 07:05:33 rpi2 kernel: [    8.447415] bcm2835-rng 20104000.rng: hwrng registered
+Jun 21 07:05:33 rpi2 kernel: [    8.549531] EXT4-fs (mmcblk0p2): re-mounted. Opts: (null)
+Jun 21 07:05:33 rpi2 kernel: [    8.874155] random: nonblocking pool is initialized
+Jun 21 07:05:33 rpi2 kernel: [   11.624307] gpiomem-bcm2835 20200000.gpiomem: Initialised: Registers at 0x20200000
+Jun 21 07:05:33 rpi2 kernel: [   11.647814] spi spi0.0: setting up native-CS0 as GPIO 8
+Jun 21 07:05:33 rpi2 kernel: [   11.648121] spi spi0.1: setting up native-CS1 as GPIO 7
+Jun 21 07:05:33 rpi2 kernel: [   11.966360] at86rf230: probe of spi0.0 failed with error -22
+Jun 21 07:05:33 rpi2 kernel: [   13.357318] smsc95xx 1-1.1:1.0 eth0: hardware isn't capable of remote wakeup
+Jun 21 07:05:33 rpi2 kernel: [   13.358059] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+Jun 21 07:05:33 rpi2 kernel: [   14.889919] smsc95xx 1-1.1:1.0 eth0: link up, 100Mbps, full-duplex, lpa 0x45E1
+Jun 21 07:05:33 rpi2 kernel: [   14.893765] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+Jun 21 07:05:33 rpi2 kernel: [   21.540758] cfg80211: Calling CRDA to update world regulatory domain
+Jun 21 07:05:33 rpi2 kernel: [   21.832818] cfg80211: World regulatory domain updated:
+Jun 21 07:05:33 rpi2 kernel: [   21.832864] cfg80211:  DFS Master region: unset
+Jun 21 07:05:33 rpi2 kernel: [   21.832880] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp), (dfs_cac_time)
+Jun 21 07:05:33 rpi2 kernel: [   21.832903] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 21 07:05:33 rpi2 kernel: [   21.832920] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 21 07:05:33 rpi2 kernel: [   21.832936] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 21 07:05:33 rpi2 kernel: [   21.832955] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (N/A)
+Jun 21 07:05:33 rpi2 kernel: [   21.832973] cfg80211:   (5250000 KHz - 5330000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (0 s)
+Jun 21 07:05:33 rpi2 kernel: [   21.832991] cfg80211:   (5490000 KHz - 5730000 KHz @ 160000 KHz), (N/A, 2000 mBm), (0 s)
+Jun 21 07:05:33 rpi2 kernel: [   21.833006] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 21 07:05:33 rpi2 kernel: [   21.833021] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm), (N/A)
+Jun 21 07:05:33 rpi2 kernel: [   22.293484] Adding 102396k swap on /var/swap.  Priority:-1 extents:5 across:339968k SSFS
+Jun 21 07:33:20 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 07:33:50 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 07:33:55 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 07:34:25 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 07:37:31 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 07:38:01 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 07:38:13 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 07:38:43 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 07:40:09 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 07:40:39 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 07:44:23 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 07:44:53 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 07:45:02 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 07:45:32 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 07:45:59 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 07:46:29 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 07:47:15 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 07:47:45 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 07:52:21 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 07:52:51 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 07:52:56 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 07:53:56 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 07:55:01 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 07:56:01 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 07:59:52 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 08:00:52 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 08:01:15 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 08:02:15 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 08:04:05 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 08:05:05 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 08:07:22 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 08:08:22 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 08:08:38 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 08:09:38 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 08:09:40 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 08:10:40 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 08:10:40 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 08:11:40 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 08:11:40 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 08:12:40 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 08:13:33 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 08:15:03 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 08:17:01 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 08:18:31 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 08:19:13 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 08:20:43 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 08:19:13 rpi2 kernel: [ 4430.793205] NET: Registered protocol family 36
+Jun 21 08:17:21 rpi2 rsyslogd: [origin software="rsyslogd" swVersion="8.4.2" x-pid="490" x-info="http://www.rsyslog.com"] start
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Booting Linux on physical CPU 0x0
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Initializing cgroup subsys cpuset
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Initializing cgroup subsys cpu
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Initializing cgroup subsys cpuacct
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Linux version 4.1.18+ (pi@raspberrypi) (gcc version 4.9.2 (Raspbian 4.9.2-10) ) #1 Tue Feb 23 04:01:39 UTC 2016
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] CPU: ARMv6-compatible processor [410fb767] revision 7 (ARMv7), cr=00c5387d
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Machine model: Raspberry Pi Model B Plus Rev 1.2
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] cma: Reserved 8 MiB at 0x1b400000
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Memory policy: Data cache writeback
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 113680
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Kernel command line: dma.dmachans=0x7f35 bcm2708_fb.fbwidth=656 bcm2708_fb.fbheight=416 bcm2708.boardrev=0x10 bcm2708.serial=0xa62e8378 smsc95xx.macaddr=B8:27:EB:2E:83:78 bcm2708_fb.fbswap=1 bcm2708.uart_clock=3000000 bcm2708.disk_led_gpio=47 bcm2708.disk_led_active_low=0 vc_mem.mem_base=0x1ec00000 vc_mem.mem_size=0x20000000  dwc_otg.lpm_enable=0 console=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] PID hash table entries: 2048 (order: 1, 8192 bytes)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Memory: 436824K/458752K available (5800K kernel code, 488K rwdata, 1788K rodata, 352K init, 720K bss, 13736K reserved, 8192K cma-reserved)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Virtual kernel memory layout:
+Jun 21 08:17:21 rpi2 kernel: [    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000]     vmalloc : 0xdc800000 - 0xff000000   ( 552 MB)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000]     lowmem  : 0xc0000000 - 0xdc000000   ( 448 MB)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000]       .text : 0xc0008000 - 0xc07712e0   (7589 kB)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000]       .init : 0xc0772000 - 0xc07ca000   ( 352 kB)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000]       .data : 0xc07ca000 - 0xc0844260   ( 489 kB)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000]        .bss : 0xc0844260 - 0xc08f83e0   ( 721 kB)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] NR_IRQS:522
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] clocksource stc: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275 ns
+Jun 21 08:17:21 rpi2 kernel: [    0.000014] sched_clock: 32 bits at 1000kHz, resolution 1000ns, wraps every 2147483647500ns
+Jun 21 08:17:21 rpi2 kernel: [    0.000058] Switching to timer-based delay loop, resolution 1000ns
+Jun 21 08:17:21 rpi2 kernel: [    0.000339] Console: colour dummy device 80x30
+Jun 21 08:17:21 rpi2 kernel: [    0.001278] console [tty1] enabled
+Jun 21 08:17:21 rpi2 kernel: [    0.001334] Calibrating delay loop (skipped), value calculated using timer frequency.. 2.00 BogoMIPS (lpj=10000)
+Jun 21 08:17:21 rpi2 kernel: [    0.001414] pid_max: default: 32768 minimum: 301
+Jun 21 08:17:21 rpi2 kernel: [    0.001791] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Jun 21 08:17:21 rpi2 kernel: [    0.001860] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Jun 21 08:17:21 rpi2 kernel: [    0.002921] Initializing cgroup subsys blkio
+Jun 21 08:17:21 rpi2 kernel: [    0.003012] Initializing cgroup subsys memory
+Jun 21 08:17:21 rpi2 kernel: [    0.003082] Initializing cgroup subsys devices
+Jun 21 08:17:21 rpi2 kernel: [    0.003146] Initializing cgroup subsys freezer
+Jun 21 08:17:21 rpi2 kernel: [    0.003206] Initializing cgroup subsys net_cls
+Jun 21 08:17:21 rpi2 kernel: [    0.003322] CPU: Testing write buffer coherency: ok
+Jun 21 08:17:21 rpi2 kernel: [    0.003438] ftrace: allocating 19759 entries in 58 pages
+Jun 21 08:17:21 rpi2 kernel: [    0.105169] Setting up static identity map for 0x81c0 - 0x81f8
+Jun 21 08:17:21 rpi2 kernel: [    0.107332] devtmpfs: initialized
+Jun 21 08:17:21 rpi2 kernel: [    0.118652] VFP support v0.3: implementor 41 architecture 1 part 20 variant b rev 5
+Jun 21 08:17:21 rpi2 kernel: [    0.119100] clocksource jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+Jun 21 08:17:21 rpi2 kernel: [    0.121087] pinctrl core: initialized pinctrl subsystem
+Jun 21 08:17:21 rpi2 kernel: [    0.121971] NET: Registered protocol family 16
+Jun 21 08:17:21 rpi2 kernel: [    0.127485] DMA: preallocated 4096 KiB pool for atomic coherent allocations
+Jun 21 08:17:21 rpi2 kernel: [    0.129021] bcm2708.uart_clock = 3000000
+Jun 21 08:17:21 rpi2 kernel: [    0.134116] hw-breakpoint: found 6 breakpoint and 1 watchpoint registers.
+Jun 21 08:17:21 rpi2 kernel: [    0.134192] hw-breakpoint: maximum watchpoint size is 4 bytes.
+Jun 21 08:17:21 rpi2 kernel: [    0.134406] Serial: AMBA PL011 UART driver
+Jun 21 08:17:21 rpi2 kernel: [    0.134724] 20201000.uart: ttyAMA0 at MMIO 0x20201000 (irq = 83, base_baud = 0) is a PL011 rev2
+Jun 21 08:17:21 rpi2 kernel: [    0.505300] console [ttyAMA0] enabled
+Jun 21 08:17:21 rpi2 kernel: [    0.509678] bcm2835-mbox 2000b880.mailbox: mailbox enabled
+Jun 21 08:17:21 rpi2 kernel: [    0.556464] bcm2708-dmaengine 20007000.dma: DMA legacy API manager at f2007000, dmachans=0xf35
+Jun 21 08:17:21 rpi2 kernel: [    0.565192] bcm2708-dmaengine 20007000.dma: Initialized 7 DMA channels (+ 1 legacy)
+Jun 21 08:17:21 rpi2 kernel: [    0.573794] bcm2708-dmaengine 20007000.dma: Load BCM2835 DMA engine driver
+Jun 21 08:17:21 rpi2 kernel: [    0.580723] bcm2708-dmaengine 20007000.dma: dma_debug:0
+Jun 21 08:17:21 rpi2 kernel: [    0.586898] SCSI subsystem initialized
+Jun 21 08:17:21 rpi2 kernel: [    0.591049] usbcore: registered new interface driver usbfs
+Jun 21 08:17:21 rpi2 kernel: [    0.596777] usbcore: registered new interface driver hub
+Jun 21 08:17:21 rpi2 kernel: [    0.602292] usbcore: registered new device driver usb
+Jun 21 08:17:21 rpi2 kernel: [    0.608309] raspberrypi-firmware soc:firmware: Attached to firmware from 2016-03-15 14:47
+Jun 21 08:17:21 rpi2 kernel: [    0.644043] Switched to clocksource stc
+Jun 21 08:17:21 rpi2 kernel: [    0.697142] FS-Cache: Loaded
+Jun 21 08:17:21 rpi2 kernel: [    0.700451] CacheFiles: Loaded
+Jun 21 08:17:21 rpi2 kernel: [    0.718921] NET: Registered protocol family 2
+Jun 21 08:17:21 rpi2 kernel: [    0.724873] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+Jun 21 08:17:21 rpi2 kernel: [    0.732064] TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+Jun 21 08:17:21 rpi2 kernel: [    0.738694] TCP: Hash tables configured (established 4096 bind 4096)
+Jun 21 08:17:21 rpi2 kernel: [    0.745336] UDP hash table entries: 256 (order: 0, 4096 bytes)
+Jun 21 08:17:21 rpi2 kernel: [    0.751232] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+Jun 21 08:17:21 rpi2 kernel: [    0.757917] NET: Registered protocol family 1
+Jun 21 08:17:21 rpi2 kernel: [    0.762886] RPC: Registered named UNIX socket transport module.
+Jun 21 08:17:21 rpi2 kernel: [    0.768940] RPC: Registered udp transport module.
+Jun 21 08:17:21 rpi2 kernel: [    0.773677] RPC: Registered tcp transport module.
+Jun 21 08:17:21 rpi2 kernel: [    0.778443] RPC: Registered tcp NFSv4.1 backchannel transport module.
+Jun 21 08:17:21 rpi2 kernel: [    0.786209] hw perfevents: enabled with armv6_1176 PMU driver, 3 counters available
+Jun 21 08:17:21 rpi2 kernel: [    0.795342] futex hash table entries: 256 (order: -1, 3072 bytes)
+Jun 21 08:17:21 rpi2 kernel: [    0.817918] VFS: Disk quotas dquot_6.6.0
+Jun 21 08:17:21 rpi2 kernel: [    0.822306] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Jun 21 08:17:21 rpi2 kernel: [    0.831995] FS-Cache: Netfs 'nfs' registered for caching
+Jun 21 08:17:21 rpi2 kernel: [    0.838778] NFS: Registering the id_resolver key type
+Jun 21 08:17:21 rpi2 kernel: [    0.843973] Key type id_resolver registered
+Jun 21 08:17:21 rpi2 kernel: [    0.848311] Key type id_legacy registered
+Jun 21 08:17:21 rpi2 kernel: [    0.856198] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+Jun 21 08:17:21 rpi2 kernel: [    0.864178] io scheduler noop registered
+Jun 21 08:17:21 rpi2 kernel: [    0.868179] io scheduler deadline registered (default)
+Jun 21 08:17:21 rpi2 kernel: [    0.873761] io scheduler cfq registered
+Jun 21 08:17:21 rpi2 kernel: [    0.880209] BCM2708FB: allocated DMA memory 5b800000
+Jun 21 08:17:21 rpi2 kernel: [    0.885382] BCM2708FB: allocated DMA channel 0 @ f2007000
+Jun 21 08:17:21 rpi2 kernel: [    0.895948] Console: switching to colour frame buffer device 82x26
+Jun 21 08:17:21 rpi2 kernel: [    0.907240] Serial: 8250/16550 driver, 0 ports, IRQ sharing disabled
+Jun 21 08:17:21 rpi2 kernel: [    0.917047] vc-cma: Videocore CMA driver
+Jun 21 08:17:21 rpi2 kernel: [    0.922761] vc-cma: vc_cma_base      = 0x00000000
+Jun 21 08:17:21 rpi2 kernel: [    0.929222] vc-cma: vc_cma_size      = 0x00000000 (0 MiB)
+Jun 21 08:17:21 rpi2 kernel: [    0.936307] vc-cma: vc_cma_initial   = 0x00000000 (0 MiB)
+Jun 21 08:17:21 rpi2 kernel: [    0.943618] vc-mem: phys_addr:0x00000000 mem_base=0x1ec00000 mem_size:0x20000000(512 MiB)
+Jun 21 08:17:21 rpi2 kernel: [    0.974205] brd: module loaded
+Jun 21 08:17:21 rpi2 kernel: [    0.988170] loop: module loaded
+Jun 21 08:17:21 rpi2 kernel: [    0.993994] vchiq: vchiq_init_state: slot_zero = 0xdb880000, is_master = 0
+Jun 21 08:17:21 rpi2 kernel: [    1.004606] Loading iSCSI transport class v2.0-870.
+Jun 21 08:17:21 rpi2 kernel: [    1.012657] usbcore: registered new interface driver smsc95xx
+Jun 21 08:17:21 rpi2 kernel: [    1.020340] dwc_otg: version 3.00a 10-AUG-2012 (platform bus)
+Jun 21 08:17:21 rpi2 kernel: [    1.228025] Core Release: 2.80a
+Jun 21 08:17:21 rpi2 kernel: [    1.232728] Setting default values for core params
+Jun 21 08:17:21 rpi2 kernel: [    1.239118] Finished setting default values for core params
+Jun 21 08:17:21 rpi2 kernel: [    1.446493] Using Buffer DMA mode
+Jun 21 08:17:21 rpi2 kernel: [    1.451405] Periodic Transfer Interrupt Enhancement - disabled
+Jun 21 08:17:21 rpi2 kernel: [    1.458865] Multiprocessor Interrupt Enhancement - disabled
+Jun 21 08:17:21 rpi2 kernel: [    1.466100] OTG VER PARAM: 0, OTG VER FLAG: 0
+Jun 21 08:17:21 rpi2 kernel: [    1.472105] Dedicated Tx FIFOs mode
+Jun 21 08:17:21 rpi2 kernel: [    1.477720] WARN::dwc_otg_hcd_init:1047: FIQ DMA bounce buffers: virt = 0xdb814000 dma = 0x5b814000 len=9024
+Jun 21 08:17:21 rpi2 kernel: [    1.490888] FIQ FSM acceleration enabled for :
+Jun 21 08:17:21 rpi2 kernel: [    1.490888] Non-periodic Split Transactions
+Jun 21 08:17:21 rpi2 kernel: [    1.490888] Periodic Split Transactions
+Jun 21 08:17:21 rpi2 kernel: [    1.490888] High-Speed Isochronous Endpoints
+Jun 21 08:17:21 rpi2 kernel: [    1.514264] WARN::hcd_init_fiq:412: FIQ on core 0 at 0xc03ddc3c
+Jun 21 08:17:21 rpi2 kernel: [    1.521859] WARN::hcd_init_fiq:413: FIQ ASM at 0xc03ddf18 length 36
+Jun 21 08:17:21 rpi2 kernel: [    1.529787] WARN::hcd_init_fiq:438: MPHI regs_base at 0xdc896000
+Jun 21 08:17:21 rpi2 kernel: [    1.537528] dwc_otg 20980000.usb: DWC OTG Controller
+Jun 21 08:17:21 rpi2 kernel: [    1.544203] dwc_otg 20980000.usb: new USB bus registered, assigned bus number 1
+Jun 21 08:17:21 rpi2 kernel: [    1.553209] dwc_otg 20980000.usb: irq 32, io mem 0x00000000
+Jun 21 08:17:21 rpi2 kernel: [    1.560457] Init: Port Power? op_state=1
+Jun 21 08:17:21 rpi2 kernel: [    1.565992] Init: Power Port (0)
+Jun 21 08:17:21 rpi2 kernel: [    1.571103] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+Jun 21 08:17:21 rpi2 kernel: [    1.579573] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Jun 21 08:17:21 rpi2 kernel: [    1.588434] usb usb1: Product: DWC OTG Controller
+Jun 21 08:17:21 rpi2 kernel: [    1.594750] usb usb1: Manufacturer: Linux 4.1.18+ dwc_otg_hcd
+Jun 21 08:17:21 rpi2 kernel: [    1.602066] usb usb1: SerialNumber: 20980000.usb
+Jun 21 08:17:21 rpi2 kernel: [    1.609305] hub 1-0:1.0: USB hub found
+Jun 21 08:17:21 rpi2 kernel: [    1.614815] hub 1-0:1.0: 1 port detected
+Jun 21 08:17:21 rpi2 kernel: [    1.621518] usbcore: registered new interface driver usb-storage
+Jun 21 08:17:21 rpi2 kernel: [    1.629618] mousedev: PS/2 mouse device common for all mice
+Jun 21 08:17:21 rpi2 kernel: [    1.637873] bcm2835-cpufreq: min=700000 max=700000
+Jun 21 08:17:21 rpi2 kernel: [    1.644684] sdhci: Secure Digital Host Controller Interface driver
+Jun 21 08:17:21 rpi2 kernel: [    1.652446] sdhci: Copyright(c) Pierre Ossman
+Jun 21 08:17:21 rpi2 kernel: [    1.659151] mmc-bcm2835 20300000.mmc: mmc_debug:0 mmc_debug2:0
+Jun 21 08:17:21 rpi2 kernel: [    1.666679] mmc-bcm2835 20300000.mmc: DMA channels allocated
+Jun 21 08:17:21 rpi2 kernel: [    1.714647] sdhci-pltfm: SDHCI platform and OF driver helper
+Jun 21 08:17:21 rpi2 kernel: [    1.722723] ledtrig-cpu: registered to indicate activity on CPUs
+Jun 21 08:17:21 rpi2 kernel: [    1.732987] hidraw: raw HID events driver (C) Jiri Kosina
+Jun 21 08:17:21 rpi2 kernel: [    1.745803] usbcore: registered new interface driver usbhid
+Jun 21 08:17:21 rpi2 kernel: [    1.753048] usbhid: USB HID core driver
+Jun 21 08:17:21 rpi2 kernel: [    1.761373] Initializing XFRM netlink socket
+Jun 21 08:17:21 rpi2 kernel: [    1.769498] NET: Registered protocol family 17
+Jun 21 08:17:21 rpi2 kernel: [    1.777005] Key type dns_resolver registered
+Jun 21 08:17:21 rpi2 kernel: [    1.788032] registered taskstats version 1
+Jun 21 08:17:21 rpi2 kernel: [    1.794296] vc-sm: Videocore shared memory driver
+Jun 21 08:17:21 rpi2 kernel: [    1.800562] [vc_sm_connected_init]: start
+Jun 21 08:17:21 rpi2 kernel: [    1.807043] [vc_sm_connected_init]: end - returning 0
+Jun 21 08:17:21 rpi2 kernel: [    1.814416] Indeed it is in host mode hprt0 = 00021501
+Jun 21 08:17:21 rpi2 kernel: [    1.883615] Waiting for root device /dev/mmcblk0p2...
+Jun 21 08:17:21 rpi2 kernel: [    1.896721] mmc0: host does not support reading read-only switch, assuming write-enable
+Jun 21 08:17:21 rpi2 kernel: [    1.910842] mmc0: new high speed SDHC card at address 0007
+Jun 21 08:17:21 rpi2 kernel: [    1.918842] mmcblk0: mmc0:0007 SD08G 7.42 GiB 
+Jun 21 08:17:21 rpi2 kernel: [    1.927240]  mmcblk0: p1 p2
+Jun 21 08:17:21 rpi2 kernel: [    1.998108] EXT4-fs (mmcblk0p2): INFO: recovery required on readonly filesystem
+Jun 21 08:17:21 rpi2 kernel: [    2.007298] EXT4-fs (mmcblk0p2): write access will be enabled during recovery
+Jun 21 08:17:21 rpi2 kernel: [    2.016197] usb 1-1: new high-speed USB device number 2 using dwc_otg
+Jun 21 08:17:21 rpi2 kernel: [    2.024587] Indeed it is in host mode hprt0 = 00001101
+Jun 21 08:17:21 rpi2 kernel: [    2.224601] usb 1-1: New USB device found, idVendor=0424, idProduct=9514
+Jun 21 08:17:21 rpi2 kernel: [    2.233245] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+Jun 21 08:17:21 rpi2 kernel: [    2.243615] hub 1-1:1.0: USB hub found
+Jun 21 08:17:21 rpi2 kernel: [    2.251148] hub 1-1:1.0: 5 ports detected
+Jun 21 08:17:21 rpi2 kernel: [    2.534147] usb 1-1.1: new high-speed USB device number 3 using dwc_otg
+Jun 21 08:17:21 rpi2 kernel: [    2.644608] usb 1-1.1: New USB device found, idVendor=0424, idProduct=ec00
+Jun 21 08:17:21 rpi2 kernel: [    2.653453] usb 1-1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+Jun 21 08:17:21 rpi2 kernel: [    2.666868] smsc95xx v1.0.4
+Jun 21 08:17:21 rpi2 kernel: [    2.740843] smsc95xx 1-1.1:1.0 eth0: register 'smsc95xx' at usb-20980000.usb-1.1, smsc95xx USB 2.0 Ethernet, b8:27:eb:2e:83:78
+Jun 21 08:17:21 rpi2 kernel: [    5.619274] EXT4-fs (mmcblk0p2): recovery complete
+Jun 21 08:17:21 rpi2 kernel: [    5.632878] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+Jun 21 08:17:21 rpi2 kernel: [    5.644754] VFS: Mounted root (ext4 filesystem) readonly on device 179:2.
+Jun 21 08:17:21 rpi2 kernel: [    5.654993] devtmpfs: mounted
+Jun 21 08:17:21 rpi2 kernel: [    5.660965] Freeing unused kernel memory: 352K (c0772000 - c07ca000)
+Jun 21 08:17:21 rpi2 kernel: [    6.092076] random: systemd urandom read with 91 bits of entropy available
+Jun 21 08:17:21 rpi2 kernel: [    6.290593] NET: Registered protocol family 10
+Jun 21 08:17:21 rpi2 kernel: [    6.525933] uart-pl011 20201000.uart: no DMA platform data
+Jun 21 08:17:21 rpi2 kernel: [    8.169142] fuse init (API version 7.23)
+Jun 21 08:17:21 rpi2 kernel: [    8.208498] i2c /dev entries driver
+Jun 21 08:17:21 rpi2 kernel: [    8.837707] random: nonblocking pool is initialized
+Jun 21 08:17:21 rpi2 kernel: [   11.956026] bcm2835-rng 20104000.rng: hwrng registered
+Jun 21 08:17:21 rpi2 kernel: [   12.051506] EXT4-fs (mmcblk0p2): re-mounted. Opts: (null)
+Jun 21 08:17:21 rpi2 kernel: [   14.809901] gpiomem-bcm2835 20200000.gpiomem: Initialised: Registers at 0x20200000
+Jun 21 08:17:21 rpi2 kernel: [   14.825204] spi spi0.0: setting up native-CS0 as GPIO 8
+Jun 21 08:17:21 rpi2 kernel: [   14.826914] spi spi0.1: setting up native-CS1 as GPIO 7
+Jun 21 08:17:21 rpi2 kernel: [   15.276993] at86rf230: probe of spi0.0 failed with error -22
+Jun 21 08:17:21 rpi2 kernel: [   16.740292] smsc95xx 1-1.1:1.0 eth0: hardware isn't capable of remote wakeup
+Jun 21 08:17:21 rpi2 kernel: [   16.741040] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+Jun 21 08:17:21 rpi2 kernel: [   18.264612] smsc95xx 1-1.1:1.0 eth0: link up, 100Mbps, full-duplex, lpa 0x45E1
+Jun 21 08:17:21 rpi2 kernel: [   18.268367] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+Jun 21 08:17:21 rpi2 kernel: [   27.095270] cfg80211: Calling CRDA to update world regulatory domain
+Jun 21 08:17:21 rpi2 kernel: [   27.349804] cfg80211: World regulatory domain updated:
+Jun 21 08:17:21 rpi2 kernel: [   27.349849] cfg80211:  DFS Master region: unset
+Jun 21 08:17:21 rpi2 kernel: [   27.349865] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp), (dfs_cac_time)
+Jun 21 08:17:21 rpi2 kernel: [   27.349887] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 21 08:17:21 rpi2 kernel: [   27.349903] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 21 08:17:21 rpi2 kernel: [   27.349917] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 21 08:17:21 rpi2 kernel: [   27.349936] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (N/A)
+Jun 21 08:17:21 rpi2 kernel: [   27.349954] cfg80211:   (5250000 KHz - 5330000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (0 s)
+Jun 21 08:17:21 rpi2 kernel: [   27.349972] cfg80211:   (5490000 KHz - 5730000 KHz @ 160000 KHz), (N/A, 2000 mBm), (0 s)
+Jun 21 08:17:21 rpi2 kernel: [   27.349987] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 21 08:17:21 rpi2 kernel: [   27.350002] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm), (N/A)
+Jun 21 08:17:21 rpi2 kernel: [   27.915509] Adding 102396k swap on /var/swap.  Priority:-1 extents:5 across:339968k SSFS
+Jun 21 08:17:21 rpi2 rsyslogd: [origin software="rsyslogd" swVersion="8.4.2" x-pid="488" x-info="http://www.rsyslog.com"] start
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Booting Linux on physical CPU 0x0
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Initializing cgroup subsys cpuset
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Initializing cgroup subsys cpu
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Initializing cgroup subsys cpuacct
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Linux version 4.1.18+ (pi@raspberrypi) (gcc version 4.9.2 (Raspbian 4.9.2-10) ) #1 Tue Feb 23 04:01:39 UTC 2016
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] CPU: ARMv6-compatible processor [410fb767] revision 7 (ARMv7), cr=00c5387d
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Machine model: Raspberry Pi Model B Plus Rev 1.2
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] cma: Reserved 8 MiB at 0x1b400000
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Memory policy: Data cache writeback
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 113680
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Kernel command line: dma.dmachans=0x7f35 bcm2708_fb.fbwidth=656 bcm2708_fb.fbheight=416 bcm2708.boardrev=0x10 bcm2708.serial=0xa62e8378 smsc95xx.macaddr=B8:27:EB:2E:83:78 bcm2708_fb.fbswap=1 bcm2708.uart_clock=3000000 bcm2708.disk_led_gpio=47 bcm2708.disk_led_active_low=0 vc_mem.mem_base=0x1ec00000 vc_mem.mem_size=0x20000000  dwc_otg.lpm_enable=0 console=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] PID hash table entries: 2048 (order: 1, 8192 bytes)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Memory: 436824K/458752K available (5800K kernel code, 488K rwdata, 1788K rodata, 352K init, 720K bss, 13736K reserved, 8192K cma-reserved)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] Virtual kernel memory layout:
+Jun 21 08:17:21 rpi2 kernel: [    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000]     vmalloc : 0xdc800000 - 0xff000000   ( 552 MB)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000]     lowmem  : 0xc0000000 - 0xdc000000   ( 448 MB)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000]       .text : 0xc0008000 - 0xc07712e0   (7589 kB)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000]       .init : 0xc0772000 - 0xc07ca000   ( 352 kB)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000]       .data : 0xc07ca000 - 0xc0844260   ( 489 kB)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000]        .bss : 0xc0844260 - 0xc08f83e0   ( 721 kB)
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] NR_IRQS:522
+Jun 21 08:17:21 rpi2 kernel: [    0.000000] clocksource stc: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275 ns
+Jun 21 08:17:21 rpi2 kernel: [    0.000014] sched_clock: 32 bits at 1000kHz, resolution 1000ns, wraps every 2147483647500ns
+Jun 21 08:17:21 rpi2 kernel: [    0.000056] Switching to timer-based delay loop, resolution 1000ns
+Jun 21 08:17:21 rpi2 kernel: [    0.000338] Console: colour dummy device 80x30
+Jun 21 08:17:21 rpi2 kernel: [    0.001277] console [tty1] enabled
+Jun 21 08:17:21 rpi2 kernel: [    0.001332] Calibrating delay loop (skipped), value calculated using timer frequency.. 2.00 BogoMIPS (lpj=10000)
+Jun 21 08:17:21 rpi2 kernel: [    0.001411] pid_max: default: 32768 minimum: 301
+Jun 21 08:17:21 rpi2 kernel: [    0.001789] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Jun 21 08:17:21 rpi2 kernel: [    0.001856] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Jun 21 08:17:21 rpi2 kernel: [    0.002917] Initializing cgroup subsys blkio
+Jun 21 08:17:21 rpi2 kernel: [    0.003009] Initializing cgroup subsys memory
+Jun 21 08:17:21 rpi2 kernel: [    0.003077] Initializing cgroup subsys devices
+Jun 21 08:17:21 rpi2 kernel: [    0.003140] Initializing cgroup subsys freezer
+Jun 21 08:17:21 rpi2 kernel: [    0.003200] Initializing cgroup subsys net_cls
+Jun 21 08:17:21 rpi2 kernel: [    0.003319] CPU: Testing write buffer coherency: ok
+Jun 21 08:17:21 rpi2 kernel: [    0.003433] ftrace: allocating 19759 entries in 58 pages
+Jun 21 08:17:21 rpi2 kernel: [    0.105128] Setting up static identity map for 0x81c0 - 0x81f8
+Jun 21 08:17:21 rpi2 kernel: [    0.107291] devtmpfs: initialized
+Jun 21 08:17:21 rpi2 kernel: [    0.118605] VFP support v0.3: implementor 41 architecture 1 part 20 variant b rev 5
+Jun 21 08:17:21 rpi2 kernel: [    0.119054] clocksource jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+Jun 21 08:17:21 rpi2 kernel: [    0.121042] pinctrl core: initialized pinctrl subsystem
+Jun 21 08:17:21 rpi2 kernel: [    0.121924] NET: Registered protocol family 16
+Jun 21 08:17:21 rpi2 kernel: [    0.127445] DMA: preallocated 4096 KiB pool for atomic coherent allocations
+Jun 21 08:17:21 rpi2 kernel: [    0.128982] bcm2708.uart_clock = 3000000
+Jun 21 08:17:21 rpi2 kernel: [    0.134091] hw-breakpoint: found 6 breakpoint and 1 watchpoint registers.
+Jun 21 08:17:21 rpi2 kernel: [    0.134169] hw-breakpoint: maximum watchpoint size is 4 bytes.
+Jun 21 08:17:21 rpi2 kernel: [    0.134385] Serial: AMBA PL011 UART driver
+Jun 21 08:17:21 rpi2 kernel: [    0.134705] 20201000.uart: ttyAMA0 at MMIO 0x20201000 (irq = 83, base_baud = 0) is a PL011 rev2
+Jun 21 08:17:21 rpi2 kernel: [    0.505280] console [ttyAMA0] enabled
+Jun 21 08:17:21 rpi2 kernel: [    0.509656] bcm2835-mbox 2000b880.mailbox: mailbox enabled
+Jun 21 08:17:21 rpi2 kernel: [    0.556429] bcm2708-dmaengine 20007000.dma: DMA legacy API manager at f2007000, dmachans=0xf35
+Jun 21 08:17:21 rpi2 kernel: [    0.565159] bcm2708-dmaengine 20007000.dma: Initialized 7 DMA channels (+ 1 legacy)
+Jun 21 08:17:21 rpi2 kernel: [    0.573752] bcm2708-dmaengine 20007000.dma: Load BCM2835 DMA engine driver
+Jun 21 08:17:21 rpi2 kernel: [    0.580681] bcm2708-dmaengine 20007000.dma: dma_debug:0
+Jun 21 08:17:21 rpi2 kernel: [    0.586859] SCSI subsystem initialized
+Jun 21 08:17:21 rpi2 kernel: [    0.591006] usbcore: registered new interface driver usbfs
+Jun 21 08:17:21 rpi2 kernel: [    0.596739] usbcore: registered new interface driver hub
+Jun 21 08:17:21 rpi2 kernel: [    0.602252] usbcore: registered new device driver usb
+Jun 21 08:17:21 rpi2 kernel: [    0.608270] raspberrypi-firmware soc:firmware: Attached to firmware from 2016-03-15 14:47
+Jun 21 08:17:21 rpi2 kernel: [    0.643991] Switched to clocksource stc
+Jun 21 08:17:21 rpi2 kernel: [    0.697116] FS-Cache: Loaded
+Jun 21 08:17:21 rpi2 kernel: [    0.700420] CacheFiles: Loaded
+Jun 21 08:17:21 rpi2 kernel: [    0.718889] NET: Registered protocol family 2
+Jun 21 08:17:21 rpi2 kernel: [    0.724843] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+Jun 21 08:17:21 rpi2 kernel: [    0.732032] TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+Jun 21 08:17:21 rpi2 kernel: [    0.738661] TCP: Hash tables configured (established 4096 bind 4096)
+Jun 21 08:17:21 rpi2 kernel: [    0.745302] UDP hash table entries: 256 (order: 0, 4096 bytes)
+Jun 21 08:17:21 rpi2 kernel: [    0.751197] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+Jun 21 08:17:21 rpi2 kernel: [    0.757889] NET: Registered protocol family 1
+Jun 21 08:17:21 rpi2 kernel: [    0.762855] RPC: Registered named UNIX socket transport module.
+Jun 21 08:17:21 rpi2 kernel: [    0.768911] RPC: Registered udp transport module.
+Jun 21 08:17:21 rpi2 kernel: [    0.773647] RPC: Registered tcp transport module.
+Jun 21 08:17:21 rpi2 kernel: [    0.778413] RPC: Registered tcp NFSv4.1 backchannel transport module.
+Jun 21 08:17:21 rpi2 kernel: [    0.786181] hw perfevents: enabled with armv6_1176 PMU driver, 3 counters available
+Jun 21 08:17:21 rpi2 kernel: [    0.795301] futex hash table entries: 256 (order: -1, 3072 bytes)
+Jun 21 08:17:21 rpi2 kernel: [    0.817885] VFS: Disk quotas dquot_6.6.0
+Jun 21 08:17:21 rpi2 kernel: [    0.822275] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Jun 21 08:17:21 rpi2 kernel: [    0.831969] FS-Cache: Netfs 'nfs' registered for caching
+Jun 21 08:17:21 rpi2 kernel: [    0.838747] NFS: Registering the id_resolver key type
+Jun 21 08:17:21 rpi2 kernel: [    0.843948] Key type id_resolver registered
+Jun 21 08:17:21 rpi2 kernel: [    0.848284] Key type id_legacy registered
+Jun 21 08:17:21 rpi2 kernel: [    0.856189] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+Jun 21 08:17:21 rpi2 kernel: [    0.864176] io scheduler noop registered
+Jun 21 08:17:21 rpi2 kernel: [    0.868175] io scheduler deadline registered (default)
+Jun 21 08:17:21 rpi2 kernel: [    0.873757] io scheduler cfq registered
+Jun 21 08:17:21 rpi2 kernel: [    0.880210] BCM2708FB: allocated DMA memory 5b800000
+Jun 21 08:17:21 rpi2 kernel: [    0.885383] BCM2708FB: allocated DMA channel 0 @ f2007000
+Jun 21 08:17:21 rpi2 kernel: [    0.895944] Console: switching to colour frame buffer device 82x26
+Jun 21 08:17:21 rpi2 kernel: [    0.907236] Serial: 8250/16550 driver, 0 ports, IRQ sharing disabled
+Jun 21 08:17:21 rpi2 kernel: [    0.917029] vc-cma: Videocore CMA driver
+Jun 21 08:17:21 rpi2 kernel: [    0.922740] vc-cma: vc_cma_base      = 0x00000000
+Jun 21 08:17:21 rpi2 kernel: [    0.929198] vc-cma: vc_cma_size      = 0x00000000 (0 MiB)
+Jun 21 08:17:21 rpi2 kernel: [    0.936281] vc-cma: vc_cma_initial   = 0x00000000 (0 MiB)
+Jun 21 08:17:21 rpi2 kernel: [    0.943591] vc-mem: phys_addr:0x00000000 mem_base=0x1ec00000 mem_size:0x20000000(512 MiB)
+Jun 21 08:17:21 rpi2 kernel: [    0.974175] brd: module loaded
+Jun 21 08:17:21 rpi2 kernel: [    0.988126] loop: module loaded
+Jun 21 08:17:21 rpi2 kernel: [    0.993943] vchiq: vchiq_init_state: slot_zero = 0xdb880000, is_master = 0
+Jun 21 08:17:21 rpi2 kernel: [    1.004546] Loading iSCSI transport class v2.0-870.
+Jun 21 08:17:21 rpi2 kernel: [    1.012605] usbcore: registered new interface driver smsc95xx
+Jun 21 08:17:21 rpi2 kernel: [    1.020284] dwc_otg: version 3.00a 10-AUG-2012 (platform bus)
+Jun 21 08:17:21 rpi2 kernel: [    1.227971] Core Release: 2.80a
+Jun 21 08:17:21 rpi2 kernel: [    1.232673] Setting default values for core params
+Jun 21 08:17:21 rpi2 kernel: [    1.239061] Finished setting default values for core params
+Jun 21 08:17:21 rpi2 kernel: [    1.446439] Using Buffer DMA mode
+Jun 21 08:17:21 rpi2 kernel: [    1.451352] Periodic Transfer Interrupt Enhancement - disabled
+Jun 21 08:17:21 rpi2 kernel: [    1.458815] Multiprocessor Interrupt Enhancement - disabled
+Jun 21 08:17:21 rpi2 kernel: [    1.466055] OTG VER PARAM: 0, OTG VER FLAG: 0
+Jun 21 08:17:21 rpi2 kernel: [    1.472065] Dedicated Tx FIFOs mode
+Jun 21 08:17:21 rpi2 kernel: [    1.477686] WARN::dwc_otg_hcd_init:1047: FIQ DMA bounce buffers: virt = 0xdb814000 dma = 0x5b814000 len=9024
+Jun 21 08:17:21 rpi2 kernel: [    1.490856] FIQ FSM acceleration enabled for :
+Jun 21 08:17:21 rpi2 kernel: [    1.490856] Non-periodic Split Transactions
+Jun 21 08:17:21 rpi2 kernel: [    1.490856] Periodic Split Transactions
+Jun 21 08:17:21 rpi2 kernel: [    1.490856] High-Speed Isochronous Endpoints
+Jun 21 08:17:21 rpi2 kernel: [    1.514229] WARN::hcd_init_fiq:412: FIQ on core 0 at 0xc03ddc3c
+Jun 21 08:17:21 rpi2 kernel: [    1.521821] WARN::hcd_init_fiq:413: FIQ ASM at 0xc03ddf18 length 36
+Jun 21 08:17:21 rpi2 kernel: [    1.529751] WARN::hcd_init_fiq:438: MPHI regs_base at 0xdc896000
+Jun 21 08:17:21 rpi2 kernel: [    1.537492] dwc_otg 20980000.usb: DWC OTG Controller
+Jun 21 08:17:21 rpi2 kernel: [    1.544167] dwc_otg 20980000.usb: new USB bus registered, assigned bus number 1
+Jun 21 08:17:21 rpi2 kernel: [    1.553168] dwc_otg 20980000.usb: irq 32, io mem 0x00000000
+Jun 21 08:17:21 rpi2 kernel: [    1.560410] Init: Port Power? op_state=1
+Jun 21 08:17:21 rpi2 kernel: [    1.565944] Init: Power Port (0)
+Jun 21 08:17:21 rpi2 kernel: [    1.571054] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+Jun 21 08:17:21 rpi2 kernel: [    1.579517] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Jun 21 08:17:21 rpi2 kernel: [    1.588384] usb usb1: Product: DWC OTG Controller
+Jun 21 08:17:21 rpi2 kernel: [    1.594699] usb usb1: Manufacturer: Linux 4.1.18+ dwc_otg_hcd
+Jun 21 08:17:21 rpi2 kernel: [    1.602015] usb usb1: SerialNumber: 20980000.usb
+Jun 21 08:17:21 rpi2 kernel: [    1.609258] hub 1-0:1.0: USB hub found
+Jun 21 08:17:21 rpi2 kernel: [    1.614758] hub 1-0:1.0: 1 port detected
+Jun 21 08:17:21 rpi2 kernel: [    1.621457] usbcore: registered new interface driver usb-storage
+Jun 21 08:17:21 rpi2 kernel: [    1.629557] mousedev: PS/2 mouse device common for all mice
+Jun 21 08:17:21 rpi2 kernel: [    1.637800] bcm2835-cpufreq: min=700000 max=700000
+Jun 21 08:17:21 rpi2 kernel: [    1.644620] sdhci: Secure Digital Host Controller Interface driver
+Jun 21 08:17:21 rpi2 kernel: [    1.652380] sdhci: Copyright(c) Pierre Ossman
+Jun 21 08:17:21 rpi2 kernel: [    1.659080] mmc-bcm2835 20300000.mmc: mmc_debug:0 mmc_debug2:0
+Jun 21 08:17:21 rpi2 kernel: [    1.666597] mmc-bcm2835 20300000.mmc: DMA channels allocated
+Jun 21 08:17:21 rpi2 kernel: [    1.714592] sdhci-pltfm: SDHCI platform and OF driver helper
+Jun 21 08:17:21 rpi2 kernel: [    1.722667] ledtrig-cpu: registered to indicate activity on CPUs
+Jun 21 08:17:21 rpi2 kernel: [    1.731924] hidraw: raw HID events driver (C) Jiri Kosina
+Jun 21 08:17:21 rpi2 kernel: [    1.744744] usbcore: registered new interface driver usbhid
+Jun 21 08:17:21 rpi2 kernel: [    1.751980] usbhid: USB HID core driver
+Jun 21 08:17:21 rpi2 kernel: [    1.762285] Initializing XFRM netlink socket
+Jun 21 08:17:21 rpi2 kernel: [    1.769400] NET: Registered protocol family 17
+Jun 21 08:17:21 rpi2 kernel: [    1.777766] Key type dns_resolver registered
+Jun 21 08:17:21 rpi2 kernel: [    1.789001] registered taskstats version 1
+Jun 21 08:17:21 rpi2 kernel: [    1.795247] vc-sm: Videocore shared memory driver
+Jun 21 08:17:21 rpi2 kernel: [    1.801504] [vc_sm_connected_init]: start
+Jun 21 08:17:21 rpi2 kernel: [    1.807944] [vc_sm_connected_init]: end - returning 0
+Jun 21 08:17:21 rpi2 kernel: [    1.814914] Indeed it is in host mode hprt0 = 00021501
+Jun 21 08:17:21 rpi2 kernel: [    1.884463] Waiting for root device /dev/mmcblk0p2...
+Jun 21 08:17:21 rpi2 kernel: [    1.898256] mmc0: host does not support reading read-only switch, assuming write-enable
+Jun 21 08:17:21 rpi2 kernel: [    1.912388] mmc0: new high speed SDHC card at address 0007
+Jun 21 08:17:21 rpi2 kernel: [    1.920391] mmcblk0: mmc0:0007 SD08G 7.42 GiB 
+Jun 21 08:17:21 rpi2 kernel: [    1.928784]  mmcblk0: p1 p2
+Jun 21 08:17:21 rpi2 kernel: [    1.998069] EXT4-fs (mmcblk0p2): INFO: recovery required on readonly filesystem
+Jun 21 08:17:21 rpi2 kernel: [    2.007261] EXT4-fs (mmcblk0p2): write access will be enabled during recovery
+Jun 21 08:17:21 rpi2 kernel: [    2.016161] usb 1-1: new high-speed USB device number 2 using dwc_otg
+Jun 21 08:17:21 rpi2 kernel: [    2.024548] Indeed it is in host mode hprt0 = 00001101
+Jun 21 08:17:21 rpi2 kernel: [    2.224482] usb 1-1: New USB device found, idVendor=0424, idProduct=9514
+Jun 21 08:17:21 rpi2 kernel: [    2.232997] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+Jun 21 08:17:21 rpi2 kernel: [    2.242989] hub 1-1:1.0: USB hub found
+Jun 21 08:17:21 rpi2 kernel: [    2.248728] hub 1-1:1.0: 5 ports detected
+Jun 21 08:17:21 rpi2 kernel: [    2.534068] usb 1-1.1: new high-speed USB device number 3 using dwc_otg
+Jun 21 08:17:21 rpi2 kernel: [    2.654445] usb 1-1.1: New USB device found, idVendor=0424, idProduct=ec00
+Jun 21 08:17:21 rpi2 kernel: [    2.663133] usb 1-1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+Jun 21 08:17:21 rpi2 kernel: [    2.675371] smsc95xx v1.0.4
+Jun 21 08:17:21 rpi2 kernel: [    2.738480] smsc95xx 1-1.1:1.0 eth0: register 'smsc95xx' at usb-20980000.usb-1.1, smsc95xx USB 2.0 Ethernet, b8:27:eb:2e:83:78
+Jun 21 08:17:21 rpi2 kernel: [    5.281101] EXT4-fs (mmcblk0p2): recovery complete
+Jun 21 08:17:21 rpi2 kernel: [    5.295299] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+Jun 21 08:17:21 rpi2 kernel: [    5.307160] VFS: Mounted root (ext4 filesystem) readonly on device 179:2.
+Jun 21 08:17:21 rpi2 kernel: [    5.317459] devtmpfs: mounted
+Jun 21 08:17:21 rpi2 kernel: [    5.323443] Freeing unused kernel memory: 352K (c0772000 - c07ca000)
+Jun 21 08:17:21 rpi2 kernel: [    5.748581] random: systemd urandom read with 77 bits of entropy available
+Jun 21 08:17:21 rpi2 kernel: [    5.946403] NET: Registered protocol family 10
+Jun 21 08:17:21 rpi2 kernel: [    6.162175] uart-pl011 20201000.uart: no DMA platform data
+Jun 21 08:17:21 rpi2 kernel: [    7.797804] fuse init (API version 7.23)
+Jun 21 08:17:21 rpi2 kernel: [    7.829582] i2c /dev entries driver
+Jun 21 08:17:21 rpi2 kernel: [    9.704314] random: nonblocking pool is initialized
+Jun 21 08:17:21 rpi2 kernel: [   11.505845] bcm2835-rng 20104000.rng: hwrng registered
+Jun 21 08:17:21 rpi2 kernel: [   11.748463] EXT4-fs (mmcblk0p2): re-mounted. Opts: (null)
+Jun 21 08:17:21 rpi2 kernel: [   14.764922] gpiomem-bcm2835 20200000.gpiomem: Initialised: Registers at 0x20200000
+Jun 21 08:17:21 rpi2 kernel: [   14.784699] spi spi0.0: setting up native-CS0 as GPIO 8
+Jun 21 08:17:21 rpi2 kernel: [   14.785004] spi spi0.1: setting up native-CS1 as GPIO 7
+Jun 21 08:17:21 rpi2 kernel: [   15.133748] at86rf230: probe of spi0.0 failed with error -22
+Jun 21 08:17:21 rpi2 kernel: [   16.487460] smsc95xx 1-1.1:1.0 eth0: hardware isn't capable of remote wakeup
+Jun 21 08:17:21 rpi2 kernel: [   16.488210] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+Jun 21 08:17:21 rpi2 kernel: [   18.147462] smsc95xx 1-1.1:1.0 eth0: link up, 100Mbps, full-duplex, lpa 0x45E1
+Jun 21 08:17:21 rpi2 kernel: [   18.151291] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+Jun 21 08:17:21 rpi2 kernel: [   26.383110] cfg80211: Calling CRDA to update world regulatory domain
+Jun 21 08:17:21 rpi2 kernel: [   26.673551] cfg80211: World regulatory domain updated:
+Jun 21 08:17:21 rpi2 kernel: [   26.673596] cfg80211:  DFS Master region: unset
+Jun 21 08:17:21 rpi2 kernel: [   26.673612] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp), (dfs_cac_time)
+Jun 21 08:17:21 rpi2 kernel: [   26.673635] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 21 08:17:21 rpi2 kernel: [   26.673651] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 21 08:17:21 rpi2 kernel: [   26.673666] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 21 08:17:21 rpi2 kernel: [   26.673685] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (N/A)
+Jun 21 08:17:21 rpi2 kernel: [   26.673705] cfg80211:   (5250000 KHz - 5330000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (0 s)
+Jun 21 08:17:21 rpi2 kernel: [   26.673722] cfg80211:   (5490000 KHz - 5730000 KHz @ 160000 KHz), (N/A, 2000 mBm), (0 s)
+Jun 21 08:17:21 rpi2 kernel: [   26.673736] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 21 08:17:21 rpi2 kernel: [   26.673751] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm), (N/A)
+Jun 21 08:17:21 rpi2 kernel: [   27.132224] Adding 102396k swap on /var/swap.  Priority:-1 extents:5 across:339968k SSFS
+Jun 21 08:17:17 rpi2 rsyslogd: [origin software="rsyslogd" swVersion="8.4.2" x-pid="489" x-info="http://www.rsyslog.com"] start
+Jun 21 08:17:17 rpi2 kernel: [    0.000000] Booting Linux on physical CPU 0x0
+Jun 21 08:17:17 rpi2 kernel: [    0.000000] Initializing cgroup subsys cpuset
+Jun 21 08:17:17 rpi2 kernel: [    0.000000] Initializing cgroup subsys cpu
+Jun 21 08:17:17 rpi2 kernel: [    0.000000] Initializing cgroup subsys cpuacct
+Jun 21 08:17:17 rpi2 kernel: [    0.000000] Linux version 4.1.18+ (pi@raspberrypi) (gcc version 4.9.2 (Raspbian 4.9.2-10) ) #1 Tue Feb 23 04:01:39 UTC 2016
+Jun 21 08:17:17 rpi2 kernel: [    0.000000] CPU: ARMv6-compatible processor [410fb767] revision 7 (ARMv7), cr=00c5387d
+Jun 21 08:17:17 rpi2 kernel: [    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+Jun 21 08:17:17 rpi2 kernel: [    0.000000] Machine model: Raspberry Pi Model B Plus Rev 1.2
+Jun 21 08:17:17 rpi2 kernel: [    0.000000] cma: Reserved 8 MiB at 0x1b400000
+Jun 21 08:17:17 rpi2 kernel: [    0.000000] Memory policy: Data cache writeback
+Jun 21 08:17:17 rpi2 kernel: [    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 113680
+Jun 21 08:17:17 rpi2 kernel: [    0.000000] Kernel command line: dma.dmachans=0x7f35 bcm2708_fb.fbwidth=656 bcm2708_fb.fbheight=416 bcm2708.boardrev=0x10 bcm2708.serial=0xa62e8378 smsc95xx.macaddr=B8:27:EB:2E:83:78 bcm2708_fb.fbswap=1 bcm2708.uart_clock=3000000 bcm2708.disk_led_gpio=47 bcm2708.disk_led_active_low=0 vc_mem.mem_base=0x1ec00000 vc_mem.mem_size=0x20000000  dwc_otg.lpm_enable=0 console=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait
+Jun 21 08:17:17 rpi2 kernel: [    0.000000] PID hash table entries: 2048 (order: 1, 8192 bytes)
+Jun 21 08:17:17 rpi2 kernel: [    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+Jun 21 08:17:17 rpi2 kernel: [    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+Jun 21 08:17:17 rpi2 kernel: [    0.000000] Memory: 436824K/458752K available (5800K kernel code, 488K rwdata, 1788K rodata, 352K init, 720K bss, 13736K reserved, 8192K cma-reserved)
+Jun 21 08:17:17 rpi2 kernel: [    0.000000] Virtual kernel memory layout:
+Jun 21 08:17:17 rpi2 kernel: [    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+Jun 21 08:17:17 rpi2 kernel: [    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+Jun 21 08:17:17 rpi2 kernel: [    0.000000]     vmalloc : 0xdc800000 - 0xff000000   ( 552 MB)
+Jun 21 08:17:17 rpi2 kernel: [    0.000000]     lowmem  : 0xc0000000 - 0xdc000000   ( 448 MB)
+Jun 21 08:17:17 rpi2 kernel: [    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB)
+Jun 21 08:17:17 rpi2 kernel: [    0.000000]       .text : 0xc0008000 - 0xc07712e0   (7589 kB)
+Jun 21 08:17:17 rpi2 kernel: [    0.000000]       .init : 0xc0772000 - 0xc07ca000   ( 352 kB)
+Jun 21 08:17:17 rpi2 kernel: [    0.000000]       .data : 0xc07ca000 - 0xc0844260   ( 489 kB)
+Jun 21 08:17:17 rpi2 kernel: [    0.000000]        .bss : 0xc0844260 - 0xc08f83e0   ( 721 kB)
+Jun 21 08:17:17 rpi2 kernel: [    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Jun 21 08:17:17 rpi2 kernel: [    0.000000] NR_IRQS:522
+Jun 21 08:17:17 rpi2 kernel: [    0.000000] clocksource stc: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275 ns
+Jun 21 08:17:17 rpi2 kernel: [    0.000015] sched_clock: 32 bits at 1000kHz, resolution 1000ns, wraps every 2147483647500ns
+Jun 21 08:17:17 rpi2 kernel: [    0.000058] Switching to timer-based delay loop, resolution 1000ns
+Jun 21 08:17:17 rpi2 kernel: [    0.000341] Console: colour dummy device 80x30
+Jun 21 08:17:17 rpi2 kernel: [    0.001282] console [tty1] enabled
+Jun 21 08:17:17 rpi2 kernel: [    0.001338] Calibrating delay loop (skipped), value calculated using timer frequency.. 2.00 BogoMIPS (lpj=10000)
+Jun 21 08:17:17 rpi2 kernel: [    0.001418] pid_max: default: 32768 minimum: 301
+Jun 21 08:17:17 rpi2 kernel: [    0.001793] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Jun 21 08:17:17 rpi2 kernel: [    0.001861] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Jun 21 08:17:17 rpi2 kernel: [    0.002919] Initializing cgroup subsys blkio
+Jun 21 08:17:17 rpi2 kernel: [    0.003011] Initializing cgroup subsys memory
+Jun 21 08:17:17 rpi2 kernel: [    0.003080] Initializing cgroup subsys devices
+Jun 21 08:17:17 rpi2 kernel: [    0.003143] Initializing cgroup subsys freezer
+Jun 21 08:17:17 rpi2 kernel: [    0.003203] Initializing cgroup subsys net_cls
+Jun 21 08:17:17 rpi2 kernel: [    0.003322] CPU: Testing write buffer coherency: ok
+Jun 21 08:17:17 rpi2 kernel: [    0.003435] ftrace: allocating 19759 entries in 58 pages
+Jun 21 08:17:17 rpi2 kernel: [    0.105116] Setting up static identity map for 0x81c0 - 0x81f8
+Jun 21 08:17:17 rpi2 kernel: [    0.107272] devtmpfs: initialized
+Jun 21 08:17:17 rpi2 kernel: [    0.118564] VFP support v0.3: implementor 41 architecture 1 part 20 variant b rev 5
+Jun 21 08:17:17 rpi2 kernel: [    0.119013] clocksource jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+Jun 21 08:17:17 rpi2 kernel: [    0.120996] pinctrl core: initialized pinctrl subsystem
+Jun 21 08:17:17 rpi2 kernel: [    0.121875] NET: Registered protocol family 16
+Jun 21 08:17:17 rpi2 kernel: [    0.127389] DMA: preallocated 4096 KiB pool for atomic coherent allocations
+Jun 21 08:17:17 rpi2 kernel: [    0.128933] bcm2708.uart_clock = 3000000
+Jun 21 08:17:17 rpi2 kernel: [    0.134029] hw-breakpoint: found 6 breakpoint and 1 watchpoint registers.
+Jun 21 08:17:17 rpi2 kernel: [    0.134108] hw-breakpoint: maximum watchpoint size is 4 bytes.
+Jun 21 08:17:17 rpi2 kernel: [    0.134323] Serial: AMBA PL011 UART driver
+Jun 21 08:17:17 rpi2 kernel: [    0.134638] 20201000.uart: ttyAMA0 at MMIO 0x20201000 (irq = 83, base_baud = 0) is a PL011 rev2
+Jun 21 08:17:17 rpi2 kernel: [    0.505217] console [ttyAMA0] enabled
+Jun 21 08:17:17 rpi2 kernel: [    0.509595] bcm2835-mbox 2000b880.mailbox: mailbox enabled
+Jun 21 08:17:17 rpi2 kernel: [    0.556332] bcm2708-dmaengine 20007000.dma: DMA legacy API manager at f2007000, dmachans=0xf35
+Jun 21 08:17:17 rpi2 kernel: [    0.565060] bcm2708-dmaengine 20007000.dma: Initialized 7 DMA channels (+ 1 legacy)
+Jun 21 08:17:17 rpi2 kernel: [    0.573651] bcm2708-dmaengine 20007000.dma: Load BCM2835 DMA engine driver
+Jun 21 08:17:17 rpi2 kernel: [    0.580581] bcm2708-dmaengine 20007000.dma: dma_debug:0
+Jun 21 08:17:17 rpi2 kernel: [    0.586755] SCSI subsystem initialized
+Jun 21 08:17:17 rpi2 kernel: [    0.590903] usbcore: registered new interface driver usbfs
+Jun 21 08:17:17 rpi2 kernel: [    0.596635] usbcore: registered new interface driver hub
+Jun 21 08:17:17 rpi2 kernel: [    0.602147] usbcore: registered new device driver usb
+Jun 21 08:17:17 rpi2 kernel: [    0.608173] raspberrypi-firmware soc:firmware: Attached to firmware from 2016-03-15 14:47
+Jun 21 08:17:17 rpi2 kernel: [    0.643897] Switched to clocksource stc
+Jun 21 08:17:17 rpi2 kernel: [    0.696983] FS-Cache: Loaded
+Jun 21 08:17:17 rpi2 kernel: [    0.700291] CacheFiles: Loaded
+Jun 21 08:17:17 rpi2 kernel: [    0.718756] NET: Registered protocol family 2
+Jun 21 08:17:17 rpi2 kernel: [    0.724695] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+Jun 21 08:17:17 rpi2 kernel: [    0.731886] TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+Jun 21 08:17:17 rpi2 kernel: [    0.738511] TCP: Hash tables configured (established 4096 bind 4096)
+Jun 21 08:17:17 rpi2 kernel: [    0.745155] UDP hash table entries: 256 (order: 0, 4096 bytes)
+Jun 21 08:17:17 rpi2 kernel: [    0.751050] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+Jun 21 08:17:17 rpi2 kernel: [    0.757744] NET: Registered protocol family 1
+Jun 21 08:17:17 rpi2 kernel: [    0.762714] RPC: Registered named UNIX socket transport module.
+Jun 21 08:17:17 rpi2 kernel: [    0.768766] RPC: Registered udp transport module.
+Jun 21 08:17:17 rpi2 kernel: [    0.773503] RPC: Registered tcp transport module.
+Jun 21 08:17:17 rpi2 kernel: [    0.778268] RPC: Registered tcp NFSv4.1 backchannel transport module.
+Jun 21 08:17:17 rpi2 kernel: [    0.786036] hw perfevents: enabled with armv6_1176 PMU driver, 3 counters available
+Jun 21 08:17:17 rpi2 kernel: [    0.795164] futex hash table entries: 256 (order: -1, 3072 bytes)
+Jun 21 08:17:17 rpi2 kernel: [    0.817751] VFS: Disk quotas dquot_6.6.0
+Jun 21 08:17:17 rpi2 kernel: [    0.822142] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Jun 21 08:17:17 rpi2 kernel: [    0.831825] FS-Cache: Netfs 'nfs' registered for caching
+Jun 21 08:17:17 rpi2 kernel: [    0.838612] NFS: Registering the id_resolver key type
+Jun 21 08:17:17 rpi2 kernel: [    0.843799] Key type id_resolver registered
+Jun 21 08:17:17 rpi2 kernel: [    0.848138] Key type id_legacy registered
+Jun 21 08:17:17 rpi2 kernel: [    0.856027] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+Jun 21 08:17:17 rpi2 kernel: [    0.864009] io scheduler noop registered
+Jun 21 08:17:17 rpi2 kernel: [    0.868007] io scheduler deadline registered (default)
+Jun 21 08:17:17 rpi2 kernel: [    0.873589] io scheduler cfq registered
+Jun 21 08:17:17 rpi2 kernel: [    0.880037] BCM2708FB: allocated DMA memory 5b800000
+Jun 21 08:17:17 rpi2 kernel: [    0.885208] BCM2708FB: allocated DMA channel 0 @ f2007000
+Jun 21 08:17:17 rpi2 kernel: [    0.895771] Console: switching to colour frame buffer device 82x26
+Jun 21 08:17:17 rpi2 kernel: [    0.907058] Serial: 8250/16550 driver, 0 ports, IRQ sharing disabled
+Jun 21 08:17:17 rpi2 kernel: [    0.916853] vc-cma: Videocore CMA driver
+Jun 21 08:17:17 rpi2 kernel: [    0.922563] vc-cma: vc_cma_base      = 0x00000000
+Jun 21 08:17:17 rpi2 kernel: [    0.929020] vc-cma: vc_cma_size      = 0x00000000 (0 MiB)
+Jun 21 08:17:17 rpi2 kernel: [    0.936100] vc-cma: vc_cma_initial   = 0x00000000 (0 MiB)
+Jun 21 08:17:17 rpi2 kernel: [    0.943405] vc-mem: phys_addr:0x00000000 mem_base=0x1ec00000 mem_size:0x20000000(512 MiB)
+Jun 21 08:17:17 rpi2 kernel: [    0.974015] brd: module loaded
+Jun 21 08:17:17 rpi2 kernel: [    0.987953] loop: module loaded
+Jun 21 08:17:17 rpi2 kernel: [    0.993770] vchiq: vchiq_init_state: slot_zero = 0xdb880000, is_master = 0
+Jun 21 08:17:17 rpi2 kernel: [    1.004372] Loading iSCSI transport class v2.0-870.
+Jun 21 08:17:17 rpi2 kernel: [    1.012423] usbcore: registered new interface driver smsc95xx
+Jun 21 08:17:17 rpi2 kernel: [    1.020101] dwc_otg: version 3.00a 10-AUG-2012 (platform bus)
+Jun 21 08:17:17 rpi2 kernel: [    1.227786] Core Release: 2.80a
+Jun 21 08:17:17 rpi2 kernel: [    1.232489] Setting default values for core params
+Jun 21 08:17:17 rpi2 kernel: [    1.238877] Finished setting default values for core params
+Jun 21 08:17:17 rpi2 kernel: [    1.446252] Using Buffer DMA mode
+Jun 21 08:17:17 rpi2 kernel: [    1.451168] Periodic Transfer Interrupt Enhancement - disabled
+Jun 21 08:17:17 rpi2 kernel: [    1.458623] Multiprocessor Interrupt Enhancement - disabled
+Jun 21 08:17:17 rpi2 kernel: [    1.465858] OTG VER PARAM: 0, OTG VER FLAG: 0
+Jun 21 08:17:17 rpi2 kernel: [    1.471865] Dedicated Tx FIFOs mode
+Jun 21 08:17:17 rpi2 kernel: [    1.477480] WARN::dwc_otg_hcd_init:1047: FIQ DMA bounce buffers: virt = 0xdb814000 dma = 0x5b814000 len=9024
+Jun 21 08:17:17 rpi2 kernel: [    1.490652] FIQ FSM acceleration enabled for :
+Jun 21 08:17:17 rpi2 kernel: [    1.490652] Non-periodic Split Transactions
+Jun 21 08:17:17 rpi2 kernel: [    1.490652] Periodic Split Transactions
+Jun 21 08:17:17 rpi2 kernel: [    1.490652] High-Speed Isochronous Endpoints
+Jun 21 08:17:17 rpi2 kernel: [    1.514067] WARN::hcd_init_fiq:412: FIQ on core 0 at 0xc03ddc3c
+Jun 21 08:17:17 rpi2 kernel: [    1.521666] WARN::hcd_init_fiq:413: FIQ ASM at 0xc03ddf18 length 36
+Jun 21 08:17:17 rpi2 kernel: [    1.529599] WARN::hcd_init_fiq:438: MPHI regs_base at 0xdc896000
+Jun 21 08:17:17 rpi2 kernel: [    1.537343] dwc_otg 20980000.usb: DWC OTG Controller
+Jun 21 08:17:17 rpi2 kernel: [    1.544018] dwc_otg 20980000.usb: new USB bus registered, assigned bus number 1
+Jun 21 08:17:17 rpi2 kernel: [    1.553022] dwc_otg 20980000.usb: irq 32, io mem 0x00000000
+Jun 21 08:17:17 rpi2 kernel: [    1.560269] Init: Port Power? op_state=1
+Jun 21 08:17:17 rpi2 kernel: [    1.565812] Init: Power Port (0)
+Jun 21 08:17:17 rpi2 kernel: [    1.570929] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+Jun 21 08:17:17 rpi2 kernel: [    1.579397] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Jun 21 08:17:17 rpi2 kernel: [    1.588272] usb usb1: Product: DWC OTG Controller
+Jun 21 08:17:17 rpi2 kernel: [    1.594591] usb usb1: Manufacturer: Linux 4.1.18+ dwc_otg_hcd
+Jun 21 08:17:17 rpi2 kernel: [    1.601914] usb usb1: SerialNumber: 20980000.usb
+Jun 21 08:17:17 rpi2 kernel: [    1.609158] hub 1-0:1.0: USB hub found
+Jun 21 08:17:17 rpi2 kernel: [    1.614662] hub 1-0:1.0: 1 port detected
+Jun 21 08:17:17 rpi2 kernel: [    1.621369] usbcore: registered new interface driver usb-storage
+Jun 21 08:17:17 rpi2 kernel: [    1.629463] mousedev: PS/2 mouse device common for all mice
+Jun 21 08:17:17 rpi2 kernel: [    1.637725] bcm2835-cpufreq: min=700000 max=700000
+Jun 21 08:17:17 rpi2 kernel: [    1.644552] sdhci: Secure Digital Host Controller Interface driver
+Jun 21 08:17:17 rpi2 kernel: [    1.652320] sdhci: Copyright(c) Pierre Ossman
+Jun 21 08:17:17 rpi2 kernel: [    1.659031] mmc-bcm2835 20300000.mmc: mmc_debug:0 mmc_debug2:0
+Jun 21 08:17:17 rpi2 kernel: [    1.666564] mmc-bcm2835 20300000.mmc: DMA channels allocated
+Jun 21 08:17:17 rpi2 kernel: [    1.714502] sdhci-pltfm: SDHCI platform and OF driver helper
+Jun 21 08:17:17 rpi2 kernel: [    1.722580] ledtrig-cpu: registered to indicate activity on CPUs
+Jun 21 08:17:17 rpi2 kernel: [    1.732851] hidraw: raw HID events driver (C) Jiri Kosina
+Jun 21 08:17:17 rpi2 kernel: [    1.744682] usbcore: registered new interface driver usbhid
+Jun 21 08:17:17 rpi2 kernel: [    1.751937] usbhid: USB HID core driver
+Jun 21 08:17:17 rpi2 kernel: [    1.761268] Initializing XFRM netlink socket
+Jun 21 08:17:17 rpi2 kernel: [    1.769404] NET: Registered protocol family 17
+Jun 21 08:17:17 rpi2 kernel: [    1.777784] Key type dns_resolver registered
+Jun 21 08:17:17 rpi2 kernel: [    1.789026] registered taskstats version 1
+Jun 21 08:17:17 rpi2 kernel: [    1.795282] vc-sm: Videocore shared memory driver
+Jun 21 08:17:17 rpi2 kernel: [    1.801550] [vc_sm_connected_init]: start
+Jun 21 08:17:17 rpi2 kernel: [    1.808000] [vc_sm_connected_init]: end - returning 0
+Jun 21 08:17:17 rpi2 kernel: [    1.814986] Indeed it is in host mode hprt0 = 00021501
+Jun 21 08:17:17 rpi2 kernel: [    1.884677] Waiting for root device /dev/mmcblk0p2...
+Jun 21 08:17:17 rpi2 kernel: [    1.897909] mmc0: host does not support reading read-only switch, assuming write-enable
+Jun 21 08:17:17 rpi2 kernel: [    1.912100] mmc0: new high speed SDHC card at address 0007
+Jun 21 08:17:17 rpi2 kernel: [    1.920110] mmcblk0: mmc0:0007 SD08G 7.42 GiB 
+Jun 21 08:17:17 rpi2 kernel: [    1.928504]  mmcblk0: p1 p2
+Jun 21 08:17:17 rpi2 kernel: [    1.998014] EXT4-fs (mmcblk0p2): INFO: recovery required on readonly filesystem
+Jun 21 08:17:17 rpi2 kernel: [    2.007193] EXT4-fs (mmcblk0p2): write access will be enabled during recovery
+Jun 21 08:17:17 rpi2 kernel: [    2.016099] usb 1-1: new high-speed USB device number 2 using dwc_otg
+Jun 21 08:17:17 rpi2 kernel: [    2.024471] Indeed it is in host mode hprt0 = 00001101
+Jun 21 08:17:17 rpi2 kernel: [    2.224411] usb 1-1: New USB device found, idVendor=0424, idProduct=9514
+Jun 21 08:17:17 rpi2 kernel: [    2.232916] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+Jun 21 08:17:17 rpi2 kernel: [    2.242925] hub 1-1:1.0: USB hub found
+Jun 21 08:17:17 rpi2 kernel: [    2.248667] hub 1-1:1.0: 5 ports detected
+Jun 21 08:17:17 rpi2 kernel: [    2.533975] usb 1-1.1: new high-speed USB device number 3 using dwc_otg
+Jun 21 08:17:17 rpi2 kernel: [    2.654358] usb 1-1.1: New USB device found, idVendor=0424, idProduct=ec00
+Jun 21 08:17:17 rpi2 kernel: [    2.663041] usb 1-1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+Jun 21 08:17:17 rpi2 kernel: [    2.675281] smsc95xx v1.0.4
+Jun 21 08:17:17 rpi2 kernel: [    2.738470] smsc95xx 1-1.1:1.0 eth0: register 'smsc95xx' at usb-20980000.usb-1.1, smsc95xx USB 2.0 Ethernet, b8:27:eb:2e:83:78
+Jun 21 08:17:17 rpi2 kernel: [    4.910316] EXT4-fs (mmcblk0p2): recovery complete
+Jun 21 08:17:17 rpi2 kernel: [    4.924467] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+Jun 21 08:17:17 rpi2 kernel: [    4.936332] VFS: Mounted root (ext4 filesystem) readonly on device 179:2.
+Jun 21 08:17:17 rpi2 kernel: [    4.946619] devtmpfs: mounted
+Jun 21 08:17:17 rpi2 kernel: [    4.952598] Freeing unused kernel memory: 352K (c0772000 - c07ca000)
+Jun 21 08:17:17 rpi2 kernel: [    5.376351] random: systemd urandom read with 77 bits of entropy available
+Jun 21 08:17:17 rpi2 kernel: [    5.573341] NET: Registered protocol family 10
+Jun 21 08:17:17 rpi2 kernel: [    5.732173] uart-pl011 20201000.uart: no DMA platform data
+Jun 21 08:17:17 rpi2 kernel: [    7.420222] fuse init (API version 7.23)
+Jun 21 08:17:17 rpi2 kernel: [    7.452117] i2c /dev entries driver
+Jun 21 08:17:17 rpi2 kernel: [    9.415951] random: nonblocking pool is initialized
+Jun 21 08:17:17 rpi2 kernel: [   11.243251] bcm2835-rng 20104000.rng: hwrng registered
+Jun 21 08:17:17 rpi2 kernel: [   11.328509] EXT4-fs (mmcblk0p2): re-mounted. Opts: (null)
+Jun 21 08:17:17 rpi2 kernel: [   14.391407] gpiomem-bcm2835 20200000.gpiomem: Initialised: Registers at 0x20200000
+Jun 21 08:17:17 rpi2 kernel: [   14.438832] spi spi0.0: setting up native-CS0 as GPIO 8
+Jun 21 08:17:17 rpi2 kernel: [   14.439150] spi spi0.1: setting up native-CS1 as GPIO 7
+Jun 21 08:17:17 rpi2 kernel: [   14.743068] at86rf230: probe of spi0.0 failed with error -22
+Jun 21 08:17:17 rpi2 kernel: [   16.117319] smsc95xx 1-1.1:1.0 eth0: hardware isn't capable of remote wakeup
+Jun 21 08:17:17 rpi2 kernel: [   16.118081] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+Jun 21 08:17:17 rpi2 kernel: [   17.649248] smsc95xx 1-1.1:1.0 eth0: link up, 100Mbps, full-duplex, lpa 0x45E1
+Jun 21 08:17:17 rpi2 kernel: [   17.653054] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+Jun 21 08:17:17 rpi2 kernel: [   22.004711] cfg80211: Calling CRDA to update world regulatory domain
+Jun 21 08:17:17 rpi2 kernel: [   22.309328] cfg80211: World regulatory domain updated:
+Jun 21 08:17:17 rpi2 kernel: [   22.309372] cfg80211:  DFS Master region: unset
+Jun 21 08:17:17 rpi2 kernel: [   22.309388] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp), (dfs_cac_time)
+Jun 21 08:17:17 rpi2 kernel: [   22.309412] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 21 08:17:17 rpi2 kernel: [   22.309429] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 21 08:17:17 rpi2 kernel: [   22.309445] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 21 08:17:17 rpi2 kernel: [   22.309467] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (N/A)
+Jun 21 08:17:17 rpi2 kernel: [   22.309486] cfg80211:   (5250000 KHz - 5330000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (0 s)
+Jun 21 08:17:17 rpi2 kernel: [   22.309502] cfg80211:   (5490000 KHz - 5730000 KHz @ 160000 KHz), (N/A, 2000 mBm), (0 s)
+Jun 21 08:17:17 rpi2 kernel: [   22.309517] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 21 08:17:17 rpi2 kernel: [   22.309531] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm), (N/A)
+Jun 21 08:17:17 rpi2 kernel: [   22.855139] Adding 102396k swap on /var/swap.  Priority:-1 extents:5 across:339968k SSFS
+Jun 21 09:14:06 rpi2 kernel: [  159.163288] at86rf230: probe of spi0.0 failed with error -22
+Jun 21 09:17:16 rpi2 rsyslogd: [origin software="rsyslogd" swVersion="8.4.2" x-pid="490" x-info="http://www.rsyslog.com"] start
+Jun 21 09:17:16 rpi2 kernel: [    0.000000] Booting Linux on physical CPU 0x0
+Jun 21 09:17:16 rpi2 kernel: [    0.000000] Initializing cgroup subsys cpuset
+Jun 21 09:17:16 rpi2 kernel: [    0.000000] Initializing cgroup subsys cpu
+Jun 21 09:17:16 rpi2 kernel: [    0.000000] Initializing cgroup subsys cpuacct
+Jun 21 09:17:16 rpi2 kernel: [    0.000000] Linux version 4.1.18+ (pi@raspberrypi) (gcc version 4.9.2 (Raspbian 4.9.2-10) ) #1 Tue Feb 23 04:01:39 UTC 2016
+Jun 21 09:17:16 rpi2 kernel: [    0.000000] CPU: ARMv6-compatible processor [410fb767] revision 7 (ARMv7), cr=00c5387d
+Jun 21 09:17:16 rpi2 kernel: [    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+Jun 21 09:17:16 rpi2 kernel: [    0.000000] Machine model: Raspberry Pi Model B Plus Rev 1.2
+Jun 21 09:17:16 rpi2 kernel: [    0.000000] cma: Reserved 8 MiB at 0x1b400000
+Jun 21 09:17:16 rpi2 kernel: [    0.000000] Memory policy: Data cache writeback
+Jun 21 09:17:16 rpi2 kernel: [    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 113680
+Jun 21 09:17:16 rpi2 kernel: [    0.000000] Kernel command line: dma.dmachans=0x7f35 bcm2708_fb.fbwidth=656 bcm2708_fb.fbheight=416 bcm2708.boardrev=0x10 bcm2708.serial=0xa62e8378 smsc95xx.macaddr=B8:27:EB:2E:83:78 bcm2708_fb.fbswap=1 bcm2708.uart_clock=3000000 bcm2708.disk_led_gpio=47 bcm2708.disk_led_active_low=0 vc_mem.mem_base=0x1ec00000 vc_mem.mem_size=0x20000000  dwc_otg.lpm_enable=0 console=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait
+Jun 21 09:17:16 rpi2 kernel: [    0.000000] PID hash table entries: 2048 (order: 1, 8192 bytes)
+Jun 21 09:17:16 rpi2 kernel: [    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+Jun 21 09:17:16 rpi2 kernel: [    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+Jun 21 09:17:16 rpi2 kernel: [    0.000000] Memory: 436824K/458752K available (5800K kernel code, 488K rwdata, 1788K rodata, 352K init, 720K bss, 13736K reserved, 8192K cma-reserved)
+Jun 21 09:17:16 rpi2 kernel: [    0.000000] Virtual kernel memory layout:
+Jun 21 09:17:16 rpi2 kernel: [    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+Jun 21 09:17:16 rpi2 kernel: [    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+Jun 21 09:17:16 rpi2 kernel: [    0.000000]     vmalloc : 0xdc800000 - 0xff000000   ( 552 MB)
+Jun 21 09:17:16 rpi2 kernel: [    0.000000]     lowmem  : 0xc0000000 - 0xdc000000   ( 448 MB)
+Jun 21 09:17:16 rpi2 kernel: [    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB)
+Jun 21 09:17:16 rpi2 kernel: [    0.000000]       .text : 0xc0008000 - 0xc07712e0   (7589 kB)
+Jun 21 09:17:16 rpi2 kernel: [    0.000000]       .init : 0xc0772000 - 0xc07ca000   ( 352 kB)
+Jun 21 09:17:16 rpi2 kernel: [    0.000000]       .data : 0xc07ca000 - 0xc0844260   ( 489 kB)
+Jun 21 09:17:16 rpi2 kernel: [    0.000000]        .bss : 0xc0844260 - 0xc08f83e0   ( 721 kB)
+Jun 21 09:17:16 rpi2 kernel: [    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Jun 21 09:17:16 rpi2 kernel: [    0.000000] NR_IRQS:522
+Jun 21 09:17:16 rpi2 kernel: [    0.000000] clocksource stc: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275 ns
+Jun 21 09:17:16 rpi2 kernel: [    0.000016] sched_clock: 32 bits at 1000kHz, resolution 1000ns, wraps every 2147483647500ns
+Jun 21 09:17:16 rpi2 kernel: [    0.000058] Switching to timer-based delay loop, resolution 1000ns
+Jun 21 09:17:16 rpi2 kernel: [    0.000339] Console: colour dummy device 80x30
+Jun 21 09:17:16 rpi2 kernel: [    0.001283] console [tty1] enabled
+Jun 21 09:17:16 rpi2 kernel: [    0.001340] Calibrating delay loop (skipped), value calculated using timer frequency.. 2.00 BogoMIPS (lpj=10000)
+Jun 21 09:17:16 rpi2 kernel: [    0.001419] pid_max: default: 32768 minimum: 301
+Jun 21 09:17:16 rpi2 kernel: [    0.001795] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Jun 21 09:17:16 rpi2 kernel: [    0.001864] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Jun 21 09:17:16 rpi2 kernel: [    0.002924] Initializing cgroup subsys blkio
+Jun 21 09:17:16 rpi2 kernel: [    0.003017] Initializing cgroup subsys memory
+Jun 21 09:17:16 rpi2 kernel: [    0.003088] Initializing cgroup subsys devices
+Jun 21 09:17:16 rpi2 kernel: [    0.003151] Initializing cgroup subsys freezer
+Jun 21 09:17:16 rpi2 kernel: [    0.003212] Initializing cgroup subsys net_cls
+Jun 21 09:17:16 rpi2 kernel: [    0.003329] CPU: Testing write buffer coherency: ok
+Jun 21 09:17:16 rpi2 kernel: [    0.003444] ftrace: allocating 19759 entries in 58 pages
+Jun 21 09:17:16 rpi2 kernel: [    0.105108] Setting up static identity map for 0x81c0 - 0x81f8
+Jun 21 09:17:16 rpi2 kernel: [    0.107258] devtmpfs: initialized
+Jun 21 09:17:16 rpi2 kernel: [    0.118557] VFP support v0.3: implementor 41 architecture 1 part 20 variant b rev 5
+Jun 21 09:17:16 rpi2 kernel: [    0.119009] clocksource jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+Jun 21 09:17:16 rpi2 kernel: [    0.120986] pinctrl core: initialized pinctrl subsystem
+Jun 21 09:17:16 rpi2 kernel: [    0.121870] NET: Registered protocol family 16
+Jun 21 09:17:16 rpi2 kernel: [    0.127382] DMA: preallocated 4096 KiB pool for atomic coherent allocations
+Jun 21 09:17:16 rpi2 kernel: [    0.128921] bcm2708.uart_clock = 3000000
+Jun 21 09:17:16 rpi2 kernel: [    0.134021] hw-breakpoint: found 6 breakpoint and 1 watchpoint registers.
+Jun 21 09:17:16 rpi2 kernel: [    0.134097] hw-breakpoint: maximum watchpoint size is 4 bytes.
+Jun 21 09:17:16 rpi2 kernel: [    0.134313] Serial: AMBA PL011 UART driver
+Jun 21 09:17:16 rpi2 kernel: [    0.134633] 20201000.uart: ttyAMA0 at MMIO 0x20201000 (irq = 83, base_baud = 0) is a PL011 rev2
+Jun 21 09:17:16 rpi2 kernel: [    0.505210] console [ttyAMA0] enabled
+Jun 21 09:17:16 rpi2 kernel: [    0.509585] bcm2835-mbox 2000b880.mailbox: mailbox enabled
+Jun 21 09:17:16 rpi2 kernel: [    0.556334] bcm2708-dmaengine 20007000.dma: DMA legacy API manager at f2007000, dmachans=0xf35
+Jun 21 09:17:16 rpi2 kernel: [    0.565063] bcm2708-dmaengine 20007000.dma: Initialized 7 DMA channels (+ 1 legacy)
+Jun 21 09:17:16 rpi2 kernel: [    0.573659] bcm2708-dmaengine 20007000.dma: Load BCM2835 DMA engine driver
+Jun 21 09:17:16 rpi2 kernel: [    0.580589] bcm2708-dmaengine 20007000.dma: dma_debug:0
+Jun 21 09:17:16 rpi2 kernel: [    0.586767] SCSI subsystem initialized
+Jun 21 09:17:16 rpi2 kernel: [    0.590912] usbcore: registered new interface driver usbfs
+Jun 21 09:17:16 rpi2 kernel: [    0.596641] usbcore: registered new interface driver hub
+Jun 21 09:17:16 rpi2 kernel: [    0.602154] usbcore: registered new device driver usb
+Jun 21 09:17:16 rpi2 kernel: [    0.608172] raspberrypi-firmware soc:firmware: Attached to firmware from 2016-03-15 14:47
+Jun 21 09:17:16 rpi2 kernel: [    0.643894] Switched to clocksource stc
+Jun 21 09:17:16 rpi2 kernel: [    0.696987] FS-Cache: Loaded
+Jun 21 09:17:16 rpi2 kernel: [    0.700293] CacheFiles: Loaded
+Jun 21 09:17:16 rpi2 kernel: [    0.718759] NET: Registered protocol family 2
+Jun 21 09:17:16 rpi2 kernel: [    0.724706] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+Jun 21 09:17:16 rpi2 kernel: [    0.731898] TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+Jun 21 09:17:16 rpi2 kernel: [    0.738528] TCP: Hash tables configured (established 4096 bind 4096)
+Jun 21 09:17:16 rpi2 kernel: [    0.745171] UDP hash table entries: 256 (order: 0, 4096 bytes)
+Jun 21 09:17:16 rpi2 kernel: [    0.751067] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+Jun 21 09:17:16 rpi2 kernel: [    0.757758] NET: Registered protocol family 1
+Jun 21 09:17:16 rpi2 kernel: [    0.762729] RPC: Registered named UNIX socket transport module.
+Jun 21 09:17:16 rpi2 kernel: [    0.768783] RPC: Registered udp transport module.
+Jun 21 09:17:16 rpi2 kernel: [    0.773520] RPC: Registered tcp transport module.
+Jun 21 09:17:16 rpi2 kernel: [    0.778285] RPC: Registered tcp NFSv4.1 backchannel transport module.
+Jun 21 09:17:16 rpi2 kernel: [    0.786056] hw perfevents: enabled with armv6_1176 PMU driver, 3 counters available
+Jun 21 09:17:16 rpi2 kernel: [    0.795182] futex hash table entries: 256 (order: -1, 3072 bytes)
+Jun 21 09:17:16 rpi2 kernel: [    0.817782] VFS: Disk quotas dquot_6.6.0
+Jun 21 09:17:16 rpi2 kernel: [    0.822170] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Jun 21 09:17:16 rpi2 kernel: [    0.831860] FS-Cache: Netfs 'nfs' registered for caching
+Jun 21 09:17:16 rpi2 kernel: [    0.838640] NFS: Registering the id_resolver key type
+Jun 21 09:17:16 rpi2 kernel: [    0.843816] Key type id_resolver registered
+Jun 21 09:17:16 rpi2 kernel: [    0.848152] Key type id_legacy registered
+Jun 21 09:17:16 rpi2 kernel: [    0.856045] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+Jun 21 09:17:16 rpi2 kernel: [    0.864022] io scheduler noop registered
+Jun 21 09:17:16 rpi2 kernel: [    0.868020] io scheduler deadline registered (default)
+Jun 21 09:17:16 rpi2 kernel: [    0.873603] io scheduler cfq registered
+Jun 21 09:17:16 rpi2 kernel: [    0.880050] BCM2708FB: allocated DMA memory 5b800000
+Jun 21 09:17:16 rpi2 kernel: [    0.885225] BCM2708FB: allocated DMA channel 0 @ f2007000
+Jun 21 09:17:16 rpi2 kernel: [    0.895792] Console: switching to colour frame buffer device 82x26
+Jun 21 09:17:16 rpi2 kernel: [    0.907080] Serial: 8250/16550 driver, 0 ports, IRQ sharing disabled
+Jun 21 09:17:16 rpi2 kernel: [    0.916867] vc-cma: Videocore CMA driver
+Jun 21 09:17:16 rpi2 kernel: [    0.922576] vc-cma: vc_cma_base      = 0x00000000
+Jun 21 09:17:16 rpi2 kernel: [    0.929028] vc-cma: vc_cma_size      = 0x00000000 (0 MiB)
+Jun 21 09:17:16 rpi2 kernel: [    0.936107] vc-cma: vc_cma_initial   = 0x00000000 (0 MiB)
+Jun 21 09:17:16 rpi2 kernel: [    0.943414] vc-mem: phys_addr:0x00000000 mem_base=0x1ec00000 mem_size:0x20000000(512 MiB)
+Jun 21 09:17:16 rpi2 kernel: [    0.974001] brd: module loaded
+Jun 21 09:17:16 rpi2 kernel: [    0.987968] loop: module loaded
+Jun 21 09:17:16 rpi2 kernel: [    0.993777] vchiq: vchiq_init_state: slot_zero = 0xdb880000, is_master = 0
+Jun 21 09:17:16 rpi2 kernel: [    1.004386] Loading iSCSI transport class v2.0-870.
+Jun 21 09:17:16 rpi2 kernel: [    1.012458] usbcore: registered new interface driver smsc95xx
+Jun 21 09:17:16 rpi2 kernel: [    1.020138] dwc_otg: version 3.00a 10-AUG-2012 (platform bus)
+Jun 21 09:17:16 rpi2 kernel: [    1.227821] Core Release: 2.80a
+Jun 21 09:17:16 rpi2 kernel: [    1.232519] Setting default values for core params
+Jun 21 09:17:16 rpi2 kernel: [    1.238908] Finished setting default values for core params
+Jun 21 09:17:16 rpi2 kernel: [    1.446281] Using Buffer DMA mode
+Jun 21 09:17:16 rpi2 kernel: [    1.451189] Periodic Transfer Interrupt Enhancement - disabled
+Jun 21 09:17:16 rpi2 kernel: [    1.458645] Multiprocessor Interrupt Enhancement - disabled
+Jun 21 09:17:16 rpi2 kernel: [    1.465874] OTG VER PARAM: 0, OTG VER FLAG: 0
+Jun 21 09:17:16 rpi2 kernel: [    1.471879] Dedicated Tx FIFOs mode
+Jun 21 09:17:16 rpi2 kernel: [    1.477491] WARN::dwc_otg_hcd_init:1047: FIQ DMA bounce buffers: virt = 0xdb814000 dma = 0x5b814000 len=9024
+Jun 21 09:17:16 rpi2 kernel: [    1.490665] FIQ FSM acceleration enabled for :
+Jun 21 09:17:16 rpi2 kernel: [    1.490665] Non-periodic Split Transactions
+Jun 21 09:17:16 rpi2 kernel: [    1.490665] Periodic Split Transactions
+Jun 21 09:17:16 rpi2 kernel: [    1.490665] High-Speed Isochronous Endpoints
+Jun 21 09:17:16 rpi2 kernel: [    1.514084] WARN::hcd_init_fiq:412: FIQ on core 0 at 0xc03ddc3c
+Jun 21 09:17:16 rpi2 kernel: [    1.521676] WARN::hcd_init_fiq:413: FIQ ASM at 0xc03ddf18 length 36
+Jun 21 09:17:16 rpi2 kernel: [    1.529604] WARN::hcd_init_fiq:438: MPHI regs_base at 0xdc896000
+Jun 21 09:17:16 rpi2 kernel: [    1.537347] dwc_otg 20980000.usb: DWC OTG Controller
+Jun 21 09:17:16 rpi2 kernel: [    1.544023] dwc_otg 20980000.usb: new USB bus registered, assigned bus number 1
+Jun 21 09:17:16 rpi2 kernel: [    1.553033] dwc_otg 20980000.usb: irq 32, io mem 0x00000000
+Jun 21 09:17:16 rpi2 kernel: [    1.560282] Init: Port Power? op_state=1
+Jun 21 09:17:16 rpi2 kernel: [    1.565821] Init: Power Port (0)
+Jun 21 09:17:16 rpi2 kernel: [    1.570936] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+Jun 21 09:17:16 rpi2 kernel: [    1.579404] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Jun 21 09:17:16 rpi2 kernel: [    1.588272] usb usb1: Product: DWC OTG Controller
+Jun 21 09:17:16 rpi2 kernel: [    1.594593] usb usb1: Manufacturer: Linux 4.1.18+ dwc_otg_hcd
+Jun 21 09:17:16 rpi2 kernel: [    1.601912] usb usb1: SerialNumber: 20980000.usb
+Jun 21 09:17:16 rpi2 kernel: [    1.609156] hub 1-0:1.0: USB hub found
+Jun 21 09:17:16 rpi2 kernel: [    1.614665] hub 1-0:1.0: 1 port detected
+Jun 21 09:17:16 rpi2 kernel: [    1.621373] usbcore: registered new interface driver usb-storage
+Jun 21 09:17:16 rpi2 kernel: [    1.629475] mousedev: PS/2 mouse device common for all mice
+Jun 21 09:17:16 rpi2 kernel: [    1.637733] bcm2835-cpufreq: min=700000 max=700000
+Jun 21 09:17:16 rpi2 kernel: [    1.644556] sdhci: Secure Digital Host Controller Interface driver
+Jun 21 09:17:16 rpi2 kernel: [    1.652326] sdhci: Copyright(c) Pierre Ossman
+Jun 21 09:17:16 rpi2 kernel: [    1.659029] mmc-bcm2835 20300000.mmc: mmc_debug:0 mmc_debug2:0
+Jun 21 09:17:16 rpi2 kernel: [    1.666561] mmc-bcm2835 20300000.mmc: DMA channels allocated
+Jun 21 09:17:16 rpi2 kernel: [    1.714496] sdhci-pltfm: SDHCI platform and OF driver helper
+Jun 21 09:17:16 rpi2 kernel: [    1.722577] ledtrig-cpu: registered to indicate activity on CPUs
+Jun 21 09:17:16 rpi2 kernel: [    1.731860] hidraw: raw HID events driver (C) Jiri Kosina
+Jun 21 09:17:16 rpi2 kernel: [    1.743666] usbcore: registered new interface driver usbhid
+Jun 21 09:17:16 rpi2 kernel: [    1.750961] usbhid: USB HID core driver
+Jun 21 09:17:16 rpi2 kernel: [    1.759300] Initializing XFRM netlink socket
+Jun 21 09:17:16 rpi2 kernel: [    1.767426] NET: Registered protocol family 17
+Jun 21 09:17:16 rpi2 kernel: [    1.775773] Key type dns_resolver registered
+Jun 21 09:17:16 rpi2 kernel: [    1.786904] registered taskstats version 1
+Jun 21 09:17:16 rpi2 kernel: [    1.793127] vc-sm: Videocore shared memory driver
+Jun 21 09:17:16 rpi2 kernel: [    1.799454] [vc_sm_connected_init]: start
+Jun 21 09:17:16 rpi2 kernel: [    1.806130] [vc_sm_connected_init]: end - returning 0
+Jun 21 09:17:16 rpi2 kernel: [    1.815086] Waiting for root device /dev/mmcblk0p2...
+Jun 21 09:17:16 rpi2 kernel: [    1.822132] Indeed it is in host mode hprt0 = 00021501
+Jun 21 09:17:16 rpi2 kernel: [    1.894944] mmc0: host does not support reading read-only switch, assuming write-enable
+Jun 21 09:17:16 rpi2 kernel: [    1.909061] mmc0: new high speed SDHC card at address 0007
+Jun 21 09:17:16 rpi2 kernel: [    1.917046] mmcblk0: mmc0:0007 SD08G 7.42 GiB 
+Jun 21 09:17:16 rpi2 kernel: [    1.925488]  mmcblk0: p1 p2
+Jun 21 09:17:16 rpi2 kernel: [    2.003965] usb 1-1: new high-speed USB device number 2 using dwc_otg
+Jun 21 09:17:16 rpi2 kernel: [    2.012373] Indeed it is in host mode hprt0 = 00001101
+Jun 21 09:17:16 rpi2 kernel: [    2.083292] EXT4-fs (mmcblk0p2): INFO: recovery required on readonly filesystem
+Jun 21 09:17:16 rpi2 kernel: [    2.092516] EXT4-fs (mmcblk0p2): write access will be enabled during recovery
+Jun 21 09:17:16 rpi2 kernel: [    2.214383] usb 1-1: New USB device found, idVendor=0424, idProduct=9514
+Jun 21 09:17:16 rpi2 kernel: [    2.222924] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+Jun 21 09:17:16 rpi2 kernel: [    2.232947] hub 1-1:1.0: USB hub found
+Jun 21 09:17:16 rpi2 kernel: [    2.238702] hub 1-1:1.0: 5 ports detected
+Jun 21 09:17:16 rpi2 kernel: [    2.523970] usb 1-1.1: new high-speed USB device number 3 using dwc_otg
+Jun 21 09:17:16 rpi2 kernel: [    2.644347] usb 1-1.1: New USB device found, idVendor=0424, idProduct=ec00
+Jun 21 09:17:16 rpi2 kernel: [    2.653029] usb 1-1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+Jun 21 09:17:16 rpi2 kernel: [    2.665278] smsc95xx v1.0.4
+Jun 21 09:17:16 rpi2 kernel: [    2.728436] smsc95xx 1-1.1:1.0 eth0: register 'smsc95xx' at usb-20980000.usb-1.1, smsc95xx USB 2.0 Ethernet, b8:27:eb:2e:83:78
+Jun 21 09:17:16 rpi2 kernel: [    4.614849] EXT4-fs (mmcblk0p2): recovery complete
+Jun 21 09:17:16 rpi2 kernel: [    4.628283] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+Jun 21 09:17:16 rpi2 kernel: [    4.640160] VFS: Mounted root (ext4 filesystem) readonly on device 179:2.
+Jun 21 09:17:16 rpi2 kernel: [    4.650455] devtmpfs: mounted
+Jun 21 09:17:16 rpi2 kernel: [    4.656506] Freeing unused kernel memory: 352K (c0772000 - c07ca000)
+Jun 21 09:17:16 rpi2 kernel: [    5.084928] random: systemd urandom read with 75 bits of entropy available
+Jun 21 09:17:16 rpi2 kernel: [    5.282436] NET: Registered protocol family 10
+Jun 21 09:17:16 rpi2 kernel: [    5.442367] uart-pl011 20201000.uart: no DMA platform data
+Jun 21 09:17:16 rpi2 kernel: [    7.138373] fuse init (API version 7.23)
+Jun 21 09:17:16 rpi2 kernel: [    7.170341] i2c /dev entries driver
+Jun 21 09:17:16 rpi2 kernel: [    9.714023] random: nonblocking pool is initialized
+Jun 21 09:17:16 rpi2 kernel: [   10.836341] bcm2835-rng 20104000.rng: hwrng registered
+Jun 21 09:17:16 rpi2 kernel: [   11.004152] gpiomem-bcm2835 20200000.gpiomem: Initialised: Registers at 0x20200000
+Jun 21 09:17:16 rpi2 kernel: [   11.078759] EXT4-fs (mmcblk0p2): re-mounted. Opts: (null)
+Jun 21 09:17:16 rpi2 kernel: [   11.145689] spi spi0.0: setting up native-CS0 as GPIO 8
+Jun 21 09:17:16 rpi2 kernel: [   11.145995] spi spi0.1: setting up native-CS1 as GPIO 7
+Jun 21 09:17:16 rpi2 kernel: [   14.195096] at86rf230: probe of spi0.0 failed with error -22
+Jun 21 09:17:16 rpi2 kernel: [   15.694299] smsc95xx 1-1.1:1.0 eth0: hardware isn't capable of remote wakeup
+Jun 21 09:17:16 rpi2 kernel: [   15.695054] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+Jun 21 09:17:16 rpi2 kernel: [   17.202191] smsc95xx 1-1.1:1.0 eth0: link up, 100Mbps, full-duplex, lpa 0x45E1
+Jun 21 09:17:16 rpi2 kernel: [   17.208205] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+Jun 21 09:17:16 rpi2 kernel: [   21.383306] cfg80211: Calling CRDA to update world regulatory domain
+Jun 21 09:17:16 rpi2 kernel: [   21.661650] cfg80211: World regulatory domain updated:
+Jun 21 09:17:16 rpi2 kernel: [   21.661692] cfg80211:  DFS Master region: unset
+Jun 21 09:17:16 rpi2 kernel: [   21.661708] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp), (dfs_cac_time)
+Jun 21 09:17:16 rpi2 kernel: [   21.661731] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 21 09:17:16 rpi2 kernel: [   21.661748] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 21 09:17:16 rpi2 kernel: [   21.661763] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 21 09:17:16 rpi2 kernel: [   21.661784] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (N/A)
+Jun 21 09:17:16 rpi2 kernel: [   21.661802] cfg80211:   (5250000 KHz - 5330000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (0 s)
+Jun 21 09:17:16 rpi2 kernel: [   21.661818] cfg80211:   (5490000 KHz - 5730000 KHz @ 160000 KHz), (N/A, 2000 mBm), (0 s)
+Jun 21 09:17:16 rpi2 kernel: [   21.661833] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 21 09:17:16 rpi2 kernel: [   21.661847] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm), (N/A)
+Jun 21 09:17:16 rpi2 kernel: [   22.194051] Adding 102396k swap on /var/swap.  Priority:-1 extents:5 across:339968k SSFS
+Jun 21 09:17:20 rpi2 rsyslogd: [origin software="rsyslogd" swVersion="8.4.2" x-pid="491" x-info="http://www.rsyslog.com"] start
+Jun 21 09:17:20 rpi2 kernel: [    0.000000] Booting Linux on physical CPU 0x0
+Jun 21 09:17:20 rpi2 kernel: [    0.000000] Initializing cgroup subsys cpuset
+Jun 21 09:17:20 rpi2 kernel: [    0.000000] Initializing cgroup subsys cpu
+Jun 21 09:17:20 rpi2 kernel: [    0.000000] Initializing cgroup subsys cpuacct
+Jun 21 09:17:20 rpi2 kernel: [    0.000000] Linux version 4.1.18+ (pi@raspberrypi) (gcc version 4.9.2 (Raspbian 4.9.2-10) ) #1 Tue Feb 23 04:01:39 UTC 2016
+Jun 21 09:17:20 rpi2 kernel: [    0.000000] CPU: ARMv6-compatible processor [410fb767] revision 7 (ARMv7), cr=00c5387d
+Jun 21 09:17:20 rpi2 kernel: [    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+Jun 21 09:17:20 rpi2 kernel: [    0.000000] Machine model: Raspberry Pi Model B Plus Rev 1.2
+Jun 21 09:17:20 rpi2 kernel: [    0.000000] cma: Reserved 8 MiB at 0x1b400000
+Jun 21 09:17:20 rpi2 kernel: [    0.000000] Memory policy: Data cache writeback
+Jun 21 09:17:20 rpi2 kernel: [    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 113680
+Jun 21 09:17:20 rpi2 kernel: [    0.000000] Kernel command line: dma.dmachans=0x7f35 bcm2708_fb.fbwidth=656 bcm2708_fb.fbheight=416 bcm2708.boardrev=0x10 bcm2708.serial=0xa62e8378 smsc95xx.macaddr=B8:27:EB:2E:83:78 bcm2708_fb.fbswap=1 bcm2708.uart_clock=3000000 bcm2708.disk_led_gpio=47 bcm2708.disk_led_active_low=0 vc_mem.mem_base=0x1ec00000 vc_mem.mem_size=0x20000000  dwc_otg.lpm_enable=0 console=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait
+Jun 21 09:17:20 rpi2 kernel: [    0.000000] PID hash table entries: 2048 (order: 1, 8192 bytes)
+Jun 21 09:17:20 rpi2 kernel: [    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+Jun 21 09:17:20 rpi2 kernel: [    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+Jun 21 09:17:20 rpi2 kernel: [    0.000000] Memory: 436824K/458752K available (5800K kernel code, 488K rwdata, 1788K rodata, 352K init, 720K bss, 13736K reserved, 8192K cma-reserved)
+Jun 21 09:17:20 rpi2 kernel: [    0.000000] Virtual kernel memory layout:
+Jun 21 09:17:20 rpi2 kernel: [    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+Jun 21 09:17:20 rpi2 kernel: [    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+Jun 21 09:17:20 rpi2 kernel: [    0.000000]     vmalloc : 0xdc800000 - 0xff000000   ( 552 MB)
+Jun 21 09:17:20 rpi2 kernel: [    0.000000]     lowmem  : 0xc0000000 - 0xdc000000   ( 448 MB)
+Jun 21 09:17:20 rpi2 kernel: [    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB)
+Jun 21 09:17:20 rpi2 kernel: [    0.000000]       .text : 0xc0008000 - 0xc07712e0   (7589 kB)
+Jun 21 09:17:20 rpi2 kernel: [    0.000000]       .init : 0xc0772000 - 0xc07ca000   ( 352 kB)
+Jun 21 09:17:20 rpi2 kernel: [    0.000000]       .data : 0xc07ca000 - 0xc0844260   ( 489 kB)
+Jun 21 09:17:20 rpi2 kernel: [    0.000000]        .bss : 0xc0844260 - 0xc08f83e0   ( 721 kB)
+Jun 21 09:17:20 rpi2 kernel: [    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Jun 21 09:17:20 rpi2 kernel: [    0.000000] NR_IRQS:522
+Jun 21 09:17:20 rpi2 kernel: [    0.000000] clocksource stc: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275 ns
+Jun 21 09:17:20 rpi2 kernel: [    0.000015] sched_clock: 32 bits at 1000kHz, resolution 1000ns, wraps every 2147483647500ns
+Jun 21 09:17:20 rpi2 kernel: [    0.000057] Switching to timer-based delay loop, resolution 1000ns
+Jun 21 09:17:20 rpi2 kernel: [    0.000338] Console: colour dummy device 80x30
+Jun 21 09:17:20 rpi2 kernel: [    0.001279] console [tty1] enabled
+Jun 21 09:17:20 rpi2 kernel: [    0.001336] Calibrating delay loop (skipped), value calculated using timer frequency.. 2.00 BogoMIPS (lpj=10000)
+Jun 21 09:17:20 rpi2 kernel: [    0.001417] pid_max: default: 32768 minimum: 301
+Jun 21 09:17:20 rpi2 kernel: [    0.001792] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Jun 21 09:17:20 rpi2 kernel: [    0.001859] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Jun 21 09:17:20 rpi2 kernel: [    0.002920] Initializing cgroup subsys blkio
+Jun 21 09:17:20 rpi2 kernel: [    0.003013] Initializing cgroup subsys memory
+Jun 21 09:17:20 rpi2 kernel: [    0.003082] Initializing cgroup subsys devices
+Jun 21 09:17:20 rpi2 kernel: [    0.003144] Initializing cgroup subsys freezer
+Jun 21 09:17:20 rpi2 kernel: [    0.003206] Initializing cgroup subsys net_cls
+Jun 21 09:17:20 rpi2 kernel: [    0.003324] CPU: Testing write buffer coherency: ok
+Jun 21 09:17:20 rpi2 kernel: [    0.003440] ftrace: allocating 19759 entries in 58 pages
+Jun 21 09:17:20 rpi2 kernel: [    0.105146] Setting up static identity map for 0x81c0 - 0x81f8
+Jun 21 09:17:20 rpi2 kernel: [    0.107307] devtmpfs: initialized
+Jun 21 09:17:20 rpi2 kernel: [    0.118627] VFP support v0.3: implementor 41 architecture 1 part 20 variant b rev 5
+Jun 21 09:17:20 rpi2 kernel: [    0.119078] clocksource jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+Jun 21 09:17:20 rpi2 kernel: [    0.121067] pinctrl core: initialized pinctrl subsystem
+Jun 21 09:17:20 rpi2 kernel: [    0.121950] NET: Registered protocol family 16
+Jun 21 09:17:20 rpi2 kernel: [    0.127463] DMA: preallocated 4096 KiB pool for atomic coherent allocations
+Jun 21 09:17:20 rpi2 kernel: [    0.128998] bcm2708.uart_clock = 3000000
+Jun 21 09:17:20 rpi2 kernel: [    0.134104] hw-breakpoint: found 6 breakpoint and 1 watchpoint registers.
+Jun 21 09:17:20 rpi2 kernel: [    0.134183] hw-breakpoint: maximum watchpoint size is 4 bytes.
+Jun 21 09:17:20 rpi2 kernel: [    0.134399] Serial: AMBA PL011 UART driver
+Jun 21 09:17:20 rpi2 kernel: [    0.134716] 20201000.uart: ttyAMA0 at MMIO 0x20201000 (irq = 83, base_baud = 0) is a PL011 rev2
+Jun 21 09:17:20 rpi2 kernel: [    0.505297] console [ttyAMA0] enabled
+Jun 21 09:17:20 rpi2 kernel: [    0.509672] bcm2835-mbox 2000b880.mailbox: mailbox enabled
+Jun 21 09:17:20 rpi2 kernel: [    0.556430] bcm2708-dmaengine 20007000.dma: DMA legacy API manager at f2007000, dmachans=0xf35
+Jun 21 09:17:20 rpi2 kernel: [    0.565159] bcm2708-dmaengine 20007000.dma: Initialized 7 DMA channels (+ 1 legacy)
+Jun 21 09:17:20 rpi2 kernel: [    0.573755] bcm2708-dmaengine 20007000.dma: Load BCM2835 DMA engine driver
+Jun 21 09:17:20 rpi2 kernel: [    0.580686] bcm2708-dmaengine 20007000.dma: dma_debug:0
+Jun 21 09:17:20 rpi2 kernel: [    0.586866] SCSI subsystem initialized
+Jun 21 09:17:20 rpi2 kernel: [    0.591012] usbcore: registered new interface driver usbfs
+Jun 21 09:17:20 rpi2 kernel: [    0.596741] usbcore: registered new interface driver hub
+Jun 21 09:17:20 rpi2 kernel: [    0.602254] usbcore: registered new device driver usb
+Jun 21 09:17:20 rpi2 kernel: [    0.608274] raspberrypi-firmware soc:firmware: Attached to firmware from 2016-03-15 14:47
+Jun 21 09:17:20 rpi2 kernel: [    0.643997] Switched to clocksource stc
+Jun 21 09:17:20 rpi2 kernel: [    0.697113] FS-Cache: Loaded
+Jun 21 09:17:20 rpi2 kernel: [    0.700422] CacheFiles: Loaded
+Jun 21 09:17:20 rpi2 kernel: [    0.718923] NET: Registered protocol family 2
+Jun 21 09:17:20 rpi2 kernel: [    0.724869] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+Jun 21 09:17:20 rpi2 kernel: [    0.732059] TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+Jun 21 09:17:20 rpi2 kernel: [    0.738688] TCP: Hash tables configured (established 4096 bind 4096)
+Jun 21 09:17:20 rpi2 kernel: [    0.745326] UDP hash table entries: 256 (order: 0, 4096 bytes)
+Jun 21 09:17:20 rpi2 kernel: [    0.751221] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+Jun 21 09:17:20 rpi2 kernel: [    0.757915] NET: Registered protocol family 1
+Jun 21 09:17:20 rpi2 kernel: [    0.762883] RPC: Registered named UNIX socket transport module.
+Jun 21 09:17:20 rpi2 kernel: [    0.768936] RPC: Registered udp transport module.
+Jun 21 09:17:20 rpi2 kernel: [    0.773671] RPC: Registered tcp transport module.
+Jun 21 09:17:20 rpi2 kernel: [    0.778436] RPC: Registered tcp NFSv4.1 backchannel transport module.
+Jun 21 09:17:20 rpi2 kernel: [    0.786205] hw perfevents: enabled with armv6_1176 PMU driver, 3 counters available
+Jun 21 09:17:20 rpi2 kernel: [    0.795325] futex hash table entries: 256 (order: -1, 3072 bytes)
+Jun 21 09:17:20 rpi2 kernel: [    0.817917] VFS: Disk quotas dquot_6.6.0
+Jun 21 09:17:20 rpi2 kernel: [    0.822305] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Jun 21 09:17:20 rpi2 kernel: [    0.831998] FS-Cache: Netfs 'nfs' registered for caching
+Jun 21 09:17:20 rpi2 kernel: [    0.838778] NFS: Registering the id_resolver key type
+Jun 21 09:17:20 rpi2 kernel: [    0.843956] Key type id_resolver registered
+Jun 21 09:17:20 rpi2 kernel: [    0.848294] Key type id_legacy registered
+Jun 21 09:17:20 rpi2 kernel: [    0.856191] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+Jun 21 09:17:20 rpi2 kernel: [    0.864179] io scheduler noop registered
+Jun 21 09:17:20 rpi2 kernel: [    0.868179] io scheduler deadline registered (default)
+Jun 21 09:17:20 rpi2 kernel: [    0.873764] io scheduler cfq registered
+Jun 21 09:17:20 rpi2 kernel: [    0.880215] BCM2708FB: allocated DMA memory 5b800000
+Jun 21 09:17:20 rpi2 kernel: [    0.885389] BCM2708FB: allocated DMA channel 0 @ f2007000
+Jun 21 09:17:20 rpi2 kernel: [    0.895957] Console: switching to colour frame buffer device 82x26
+Jun 21 09:17:20 rpi2 kernel: [    0.907241] Serial: 8250/16550 driver, 0 ports, IRQ sharing disabled
+Jun 21 09:17:20 rpi2 kernel: [    0.917036] vc-cma: Videocore CMA driver
+Jun 21 09:17:20 rpi2 kernel: [    0.922744] vc-cma: vc_cma_base      = 0x00000000
+Jun 21 09:17:20 rpi2 kernel: [    0.929196] vc-cma: vc_cma_size      = 0x00000000 (0 MiB)
+Jun 21 09:17:20 rpi2 kernel: [    0.936274] vc-cma: vc_cma_initial   = 0x00000000 (0 MiB)
+Jun 21 09:17:20 rpi2 kernel: [    0.943578] vc-mem: phys_addr:0x00000000 mem_base=0x1ec00000 mem_size:0x20000000(512 MiB)
+Jun 21 09:17:20 rpi2 kernel: [    0.974175] brd: module loaded
+Jun 21 09:17:20 rpi2 kernel: [    0.988132] loop: module loaded
+Jun 21 09:17:20 rpi2 kernel: [    0.993947] vchiq: vchiq_init_state: slot_zero = 0xdb880000, is_master = 0
+Jun 21 09:17:20 rpi2 kernel: [    1.004552] Loading iSCSI transport class v2.0-870.
+Jun 21 09:17:20 rpi2 kernel: [    1.012607] usbcore: registered new interface driver smsc95xx
+Jun 21 09:17:20 rpi2 kernel: [    1.020281] dwc_otg: version 3.00a 10-AUG-2012 (platform bus)
+Jun 21 09:17:20 rpi2 kernel: [    1.227969] Core Release: 2.80a
+Jun 21 09:17:20 rpi2 kernel: [    1.232672] Setting default values for core params
+Jun 21 09:17:20 rpi2 kernel: [    1.239056] Finished setting default values for core params
+Jun 21 09:17:20 rpi2 kernel: [    1.446431] Using Buffer DMA mode
+Jun 21 09:17:20 rpi2 kernel: [    1.451344] Periodic Transfer Interrupt Enhancement - disabled
+Jun 21 09:17:20 rpi2 kernel: [    1.458806] Multiprocessor Interrupt Enhancement - disabled
+Jun 21 09:17:20 rpi2 kernel: [    1.466039] OTG VER PARAM: 0, OTG VER FLAG: 0
+Jun 21 09:17:20 rpi2 kernel: [    1.472045] Dedicated Tx FIFOs mode
+Jun 21 09:17:20 rpi2 kernel: [    1.477668] WARN::dwc_otg_hcd_init:1047: FIQ DMA bounce buffers: virt = 0xdb814000 dma = 0x5b814000 len=9024
+Jun 21 09:17:20 rpi2 kernel: [    1.490842] FIQ FSM acceleration enabled for :
+Jun 21 09:17:20 rpi2 kernel: [    1.490842] Non-periodic Split Transactions
+Jun 21 09:17:20 rpi2 kernel: [    1.490842] Periodic Split Transactions
+Jun 21 09:17:20 rpi2 kernel: [    1.490842] High-Speed Isochronous Endpoints
+Jun 21 09:17:20 rpi2 kernel: [    1.514219] WARN::hcd_init_fiq:412: FIQ on core 0 at 0xc03ddc3c
+Jun 21 09:17:20 rpi2 kernel: [    1.521814] WARN::hcd_init_fiq:413: FIQ ASM at 0xc03ddf18 length 36
+Jun 21 09:17:20 rpi2 kernel: [    1.529744] WARN::hcd_init_fiq:438: MPHI regs_base at 0xdc896000
+Jun 21 09:17:20 rpi2 kernel: [    1.537487] dwc_otg 20980000.usb: DWC OTG Controller
+Jun 21 09:17:20 rpi2 kernel: [    1.544166] dwc_otg 20980000.usb: new USB bus registered, assigned bus number 1
+Jun 21 09:17:20 rpi2 kernel: [    1.553173] dwc_otg 20980000.usb: irq 32, io mem 0x00000000
+Jun 21 09:17:20 rpi2 kernel: [    1.560422] Init: Port Power? op_state=1
+Jun 21 09:17:20 rpi2 kernel: [    1.565966] Init: Power Port (0)
+Jun 21 09:17:20 rpi2 kernel: [    1.571080] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+Jun 21 09:17:20 rpi2 kernel: [    1.579550] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Jun 21 09:17:20 rpi2 kernel: [    1.588419] usb usb1: Product: DWC OTG Controller
+Jun 21 09:17:20 rpi2 kernel: [    1.594740] usb usb1: Manufacturer: Linux 4.1.18+ dwc_otg_hcd
+Jun 21 09:17:20 rpi2 kernel: [    1.602057] usb usb1: SerialNumber: 20980000.usb
+Jun 21 09:17:20 rpi2 kernel: [    1.609299] hub 1-0:1.0: USB hub found
+Jun 21 09:17:20 rpi2 kernel: [    1.614802] hub 1-0:1.0: 1 port detected
+Jun 21 09:17:20 rpi2 kernel: [    1.621507] usbcore: registered new interface driver usb-storage
+Jun 21 09:17:20 rpi2 kernel: [    1.629604] mousedev: PS/2 mouse device common for all mice
+Jun 21 09:17:20 rpi2 kernel: [    1.637888] bcm2835-cpufreq: min=700000 max=700000
+Jun 21 09:17:20 rpi2 kernel: [    1.644709] sdhci: Secure Digital Host Controller Interface driver
+Jun 21 09:17:20 rpi2 kernel: [    1.652476] sdhci: Copyright(c) Pierre Ossman
+Jun 21 09:17:20 rpi2 kernel: [    1.659191] mmc-bcm2835 20300000.mmc: mmc_debug:0 mmc_debug2:0
+Jun 21 09:17:20 rpi2 kernel: [    1.666724] mmc-bcm2835 20300000.mmc: DMA channels allocated
+Jun 21 09:17:20 rpi2 kernel: [    1.714599] sdhci-pltfm: SDHCI platform and OF driver helper
+Jun 21 09:17:20 rpi2 kernel: [    1.722681] ledtrig-cpu: registered to indicate activity on CPUs
+Jun 21 09:17:20 rpi2 kernel: [    1.731952] hidraw: raw HID events driver (C) Jiri Kosina
+Jun 21 09:17:20 rpi2 kernel: [    1.744776] usbcore: registered new interface driver usbhid
+Jun 21 09:17:20 rpi2 kernel: [    1.752026] usbhid: USB HID core driver
+Jun 21 09:17:20 rpi2 kernel: [    1.761352] Initializing XFRM netlink socket
+Jun 21 09:17:20 rpi2 kernel: [    1.768485] NET: Registered protocol family 17
+Jun 21 09:17:20 rpi2 kernel: [    1.775861] Key type dns_resolver registered
+Jun 21 09:17:20 rpi2 kernel: [    1.786996] registered taskstats version 1
+Jun 21 09:17:20 rpi2 kernel: [    1.793223] vc-sm: Videocore shared memory driver
+Jun 21 09:17:20 rpi2 kernel: [    1.799544] [vc_sm_connected_init]: start
+Jun 21 09:17:20 rpi2 kernel: [    1.806232] [vc_sm_connected_init]: end - returning 0
+Jun 21 09:17:20 rpi2 kernel: [    1.815192] Waiting for root device /dev/mmcblk0p2...
+Jun 21 09:17:20 rpi2 kernel: [    1.822226] Indeed it is in host mode hprt0 = 00021501
+Jun 21 09:17:20 rpi2 kernel: [    1.895102] mmc0: host does not support reading read-only switch, assuming write-enable
+Jun 21 09:17:20 rpi2 kernel: [    1.909234] mmc0: new high speed SDHC card at address 0007
+Jun 21 09:17:20 rpi2 kernel: [    1.917233] mmcblk0: mmc0:0007 SD08G 7.42 GiB 
+Jun 21 09:17:20 rpi2 kernel: [    1.925660]  mmcblk0: p1 p2
+Jun 21 09:17:20 rpi2 kernel: [    2.004067] usb 1-1: new high-speed USB device number 2 using dwc_otg
+Jun 21 09:17:20 rpi2 kernel: [    2.012439] Indeed it is in host mode hprt0 = 00001101
+Jun 21 09:17:20 rpi2 kernel: [    2.083033] EXT4-fs (mmcblk0p2): INFO: recovery required on readonly filesystem
+Jun 21 09:17:20 rpi2 kernel: [    2.092240] EXT4-fs (mmcblk0p2): write access will be enabled during recovery
+Jun 21 09:17:20 rpi2 kernel: [    2.214501] usb 1-1: New USB device found, idVendor=0424, idProduct=9514
+Jun 21 09:17:20 rpi2 kernel: [    2.223026] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+Jun 21 09:17:20 rpi2 kernel: [    2.233074] hub 1-1:1.0: USB hub found
+Jun 21 09:17:20 rpi2 kernel: [    2.238854] hub 1-1:1.0: 5 ports detected
+Jun 21 09:17:20 rpi2 kernel: [    2.524072] usb 1-1.1: new high-speed USB device number 3 using dwc_otg
+Jun 21 09:17:20 rpi2 kernel: [    2.644462] usb 1-1.1: New USB device found, idVendor=0424, idProduct=ec00
+Jun 21 09:17:20 rpi2 kernel: [    2.653144] usb 1-1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+Jun 21 09:17:20 rpi2 kernel: [    2.665400] smsc95xx v1.0.4
+Jun 21 09:17:20 rpi2 kernel: [    2.728556] smsc95xx 1-1.1:1.0 eth0: register 'smsc95xx' at usb-20980000.usb-1.1, smsc95xx USB 2.0 Ethernet, b8:27:eb:2e:83:78
+Jun 21 09:17:20 rpi2 kernel: [    5.266562] EXT4-fs (mmcblk0p2): recovery complete
+Jun 21 09:17:20 rpi2 kernel: [    5.280647] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+Jun 21 09:17:20 rpi2 kernel: [    5.292601] VFS: Mounted root (ext4 filesystem) readonly on device 179:2.
+Jun 21 09:17:20 rpi2 kernel: [    5.302897] devtmpfs: mounted
+Jun 21 09:17:20 rpi2 kernel: [    5.308949] Freeing unused kernel memory: 352K (c0772000 - c07ca000)
+Jun 21 09:17:20 rpi2 kernel: [    5.733382] random: systemd urandom read with 75 bits of entropy available
+Jun 21 09:17:20 rpi2 kernel: [    5.930384] NET: Registered protocol family 10
+Jun 21 09:17:20 rpi2 kernel: [    6.143980] uart-pl011 20201000.uart: no DMA platform data
+Jun 21 09:17:20 rpi2 kernel: [    7.798290] fuse init (API version 7.23)
+Jun 21 09:17:20 rpi2 kernel: [    7.828798] i2c /dev entries driver
+Jun 21 09:17:20 rpi2 kernel: [   10.304129] random: nonblocking pool is initialized
+Jun 21 09:17:20 rpi2 kernel: [   11.479663] bcm2835-rng 20104000.rng: hwrng registered
+Jun 21 09:17:20 rpi2 kernel: [   11.729879] EXT4-fs (mmcblk0p2): re-mounted. Opts: (null)
+Jun 21 09:17:20 rpi2 kernel: [   14.526202] gpiomem-bcm2835 20200000.gpiomem: Initialised: Registers at 0x20200000
+Jun 21 09:17:20 rpi2 kernel: [   14.537164] spi spi0.0: setting up native-CS0 as GPIO 8
+Jun 21 09:17:20 rpi2 kernel: [   14.537489] spi spi0.1: setting up native-CS1 as GPIO 7
+Jun 21 09:17:20 rpi2 kernel: [   15.037528] at86rf230: probe of spi0.0 failed with error -22
+Jun 21 09:17:20 rpi2 kernel: [   16.362659] smsc95xx 1-1.1:1.0 eth0: hardware isn't capable of remote wakeup
+Jun 21 09:17:20 rpi2 kernel: [   16.363438] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+Jun 21 09:17:20 rpi2 kernel: [   17.895427] smsc95xx 1-1.1:1.0 eth0: link up, 100Mbps, full-duplex, lpa 0x45E1
+Jun 21 09:17:20 rpi2 kernel: [   17.899242] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+Jun 21 09:17:20 rpi2 kernel: [   26.241511] cfg80211: Calling CRDA to update world regulatory domain
+Jun 21 09:17:20 rpi2 kernel: [   26.503451] cfg80211: World regulatory domain updated:
+Jun 21 09:17:20 rpi2 kernel: [   26.503498] cfg80211:  DFS Master region: unset
+Jun 21 09:17:20 rpi2 kernel: [   26.503514] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp), (dfs_cac_time)
+Jun 21 09:17:20 rpi2 kernel: [   26.503539] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 21 09:17:20 rpi2 kernel: [   26.503656] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 21 09:17:20 rpi2 kernel: [   26.503675] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 21 09:17:20 rpi2 kernel: [   26.503695] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (N/A)
+Jun 21 09:17:20 rpi2 kernel: [   26.503714] cfg80211:   (5250000 KHz - 5330000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (0 s)
+Jun 21 09:17:20 rpi2 kernel: [   26.503730] cfg80211:   (5490000 KHz - 5730000 KHz @ 160000 KHz), (N/A, 2000 mBm), (0 s)
+Jun 21 09:17:20 rpi2 kernel: [   26.503747] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 21 09:17:20 rpi2 kernel: [   26.503763] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm), (N/A)
+Jun 21 09:17:20 rpi2 kernel: [   27.052245] Adding 102396k swap on /var/swap.  Priority:-1 extents:5 across:339968k SSFS
+Jun 21 10:18:56 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 10:19:26 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 10:19:26 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 10:19:56 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 10:19:58 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 10:20:28 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 10:21:15 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 10:21:45 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 10:22:18 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 10:22:48 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 10:22:23 rpi2 kernel: [ 1366.929584] Modules linked in: lprf_mod_1(O) cfg80211 rfkill mac802154 ieee802154 crc_ccitt regmap_spi spi_bcm2835 bcm2835_gpiomem snd_bcm2835 bcm2835_rng snd_pcm snd_timer snd uio_pdrv_genirq uio i2c_dev fuse ipv6 [last unloaded: lprf_mod_1]
+Jun 21 10:22:23 rpi2 kernel: [ 1366.956107] CPU: 0 PID: 1496 Comm: userspace Tainted: G           O    4.1.18+ #1
+Jun 21 10:22:23 rpi2 kernel: [ 1366.966869] Hardware name: BCM2708
+Jun 21 10:22:23 rpi2 kernel: [ 1366.971946] task: d82428e0 ti: d8208000 task.ti: d8208000
+Jun 21 10:22:23 rpi2 kernel: [ 1366.979105] PC is at scull_read+0xac/0x184 [lprf_mod_1]
+Jun 21 10:22:23 rpi2 kernel: [ 1366.986081] LR is at 0x0
+Jun 21 10:22:23 rpi2 kernel: [ 1366.990326] pc : [<bf218b84>]    lr : [<00000000>]    psr: 60000013
+Jun 21 10:22:23 rpi2 kernel: [ 1366.990326] sp : d8209ea8  ip : 0000000a  fp : d8209edc
+Jun 21 10:22:23 rpi2 kernel: [ 1367.005372] r10: 00000000  r9 : d8208000  r8 : c000f988
+Jun 21 10:22:23 rpi2 kernel: [ 1367.012370] r7 : d8209f80  r6 : b6f0c000  r5 : 00000000  r4 : 000000ff
+Jun 21 10:22:23 rpi2 kernel: [ 1367.020673] r3 : 00000001  r2 : 00001000  r1 : b6f0c000  r0 : d8275320
+Jun 21 10:22:23 rpi2 kernel: [ 1367.029002] Flags: nZCv  IRQs on  FIQs on  Mode SVC_32  ISA ARM  Segment user
+Jun 21 10:22:23 rpi2 kernel: [ 1367.037999] Control: 00c5387d  Table: 18288008  DAC: 00000015
+Jun 21 10:22:23 rpi2 kernel: [ 1367.195678] [<bf218b84>] (scull_read [lprf_mod_1]) from [<c0123d64>] (__vfs_read+0x34/0xe0)
+Jun 21 10:22:23 rpi2 kernel: [ 1367.208846] [<c0123d64>] (__vfs_read) from [<c0124538>] (vfs_read+0x8c/0x158)
+Jun 21 10:22:23 rpi2 kernel: [ 1367.218443] [<c0124538>] (vfs_read) from [<c0124f6c>] (SyS_read+0x54/0xb0)
+Jun 21 10:22:23 rpi2 kernel: [ 1367.227755] [<c0124f6c>] (SyS_read) from [<c000f780>] (ret_fast_syscall+0x0/0x54)
+Jun 21 10:22:23 rpi2 kernel: [ 1367.273652] ---[ end trace ccc80292b8a302f9 ]---
+Jun 21 10:23:53 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 10:24:23 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 10:24:25 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 10:24:55 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 10:24:48 rpi2 kernel: [ 1512.107177] Modules linked in: lprf_mod_1(O) cfg80211 rfkill mac802154 ieee802154 crc_ccitt regmap_spi spi_bcm2835 bcm2835_gpiomem snd_bcm2835 bcm2835_rng snd_pcm snd_timer snd uio_pdrv_genirq uio i2c_dev fuse ipv6 [last unloaded: lprf_mod_1]
+Jun 21 10:24:48 rpi2 kernel: [ 1512.136361] CPU: 0 PID: 1747 Comm: userspace Tainted: G      D    O    4.1.18+ #1
+Jun 21 10:24:48 rpi2 kernel: [ 1512.148849] Hardware name: BCM2708
+Jun 21 10:24:48 rpi2 kernel: [ 1512.154880] task: d8245f60 ti: d8274000 task.ti: d8274000
+Jun 21 10:24:48 rpi2 kernel: [ 1512.162959] PC is at scull_read+0x40/0x170 [lprf_mod_1]
+Jun 21 10:24:48 rpi2 kernel: [ 1512.170805] LR is at __vfs_read+0x34/0xe0
+Jun 21 10:24:48 rpi2 kernel: [ 1512.177318] pc : [<bf222b18>]    lr : [<c0123d64>]    psr: 60000013
+Jun 21 10:24:48 rpi2 kernel: [ 1512.177318] sp : d8275ea8  ip : d8275ee0  fp : d8275edc
+Jun 21 10:24:48 rpi2 kernel: [ 1512.193798] r10: 00000000  r9 : d8274000  r8 : c000f988
+Jun 21 10:24:48 rpi2 kernel: [ 1512.201508] r7 : b6f04000  r6 : d8275f80  r5 : 00000000  r4 : 000000ff
+Jun 21 10:24:48 rpi2 kernel: [ 1512.210520] r3 : 00000000  r2 : 00001000  r1 : ffffffff  r0 : d823c8c0
+Jun 21 10:24:48 rpi2 kernel: [ 1512.219538] Flags: nZCv  IRQs on  FIQs on  Mode SVC_32  ISA ARM  Segment user
+Jun 21 10:24:48 rpi2 kernel: [ 1512.229263] Control: 00c5387d  Table: 18208008  DAC: 00000015
+Jun 21 10:24:48 rpi2 kernel: [ 1512.413795] [<bf222b18>] (scull_read [lprf_mod_1]) from [<c0123d64>] (__vfs_read+0x34/0xe0)
+Jun 21 10:24:48 rpi2 kernel: [ 1512.429951] [<c0123d64>] (__vfs_read) from [<c0124538>] (vfs_read+0x8c/0x158)
+Jun 21 10:24:48 rpi2 kernel: [ 1512.441115] [<c0124538>] (vfs_read) from [<c0124f6c>] (SyS_read+0x54/0xb0)
+Jun 21 10:24:48 rpi2 kernel: [ 1512.452001] [<c0124f6c>] (SyS_read) from [<c000f780>] (ret_fast_syscall+0x0/0x54)
+Jun 21 10:24:48 rpi2 kernel: [ 1512.477395] ---[ end trace ccc80292b8a302fa ]---
+Jun 21 10:25:46 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 10:26:16 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 10:26:16 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 10:26:46 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 10:26:27 rpi2 kernel: [ 1610.973326] Modules linked in: lprf_mod_1(O) cfg80211 rfkill mac802154 ieee802154 crc_ccitt regmap_spi spi_bcm2835 bcm2835_gpiomem snd_bcm2835 bcm2835_rng snd_pcm snd_timer snd uio_pdrv_genirq uio i2c_dev fuse ipv6 [last unloaded: lprf_mod_1]
+Jun 21 10:26:27 rpi2 kernel: [ 1611.002591] CPU: 0 PID: 1998 Comm: userspace Tainted: G      D    O    4.1.18+ #1
+Jun 21 10:26:27 rpi2 kernel: [ 1611.015134] Hardware name: BCM2708
+Jun 21 10:26:27 rpi2 kernel: [ 1611.021139] task: d8245f60 ti: da198000 task.ti: da198000
+Jun 21 10:26:27 rpi2 kernel: [ 1611.029156] PC is at scull_read+0xb4/0x18c [lprf_mod_1]
+Jun 21 10:26:27 rpi2 kernel: [ 1611.036934] LR is at irq_work_queue+0x9c/0xb8
+Jun 21 10:26:27 rpi2 kernel: [ 1611.043764] pc : [<bf22cb8c>]    lr : [<c00c4d5c>]    psr: 60000013
+Jun 21 10:26:27 rpi2 kernel: [ 1611.043764] sp : da199ea8  ip : da199d90  fp : da199edc
+Jun 21 10:26:27 rpi2 kernel: [ 1611.060158] r10: 00000000  r9 : da198000  r8 : c000f988
+Jun 21 10:26:27 rpi2 kernel: [ 1611.067848] r7 : b6fa4000  r6 : da199f80  r5 : 00000000  r4 : 000000ff
+Jun 21 10:26:27 rpi2 kernel: [ 1611.076821] r3 : 00000000  r2 : c07ef4b8  r1 : ffffffff  r0 : 0000002d
+Jun 21 10:26:27 rpi2 kernel: [ 1611.085861] Flags: nZCv  IRQs on  FIQs on  Mode SVC_32  ISA ARM  Segment user
+Jun 21 10:26:27 rpi2 kernel: [ 1611.095539] Control: 00c5387d  Table: 18230008  DAC: 00000015
+Jun 21 10:26:27 rpi2 kernel: [ 1611.279723] [<bf22cb8c>] (scull_read [lprf_mod_1]) from [<c0123d64>] (__vfs_read+0x34/0xe0)
+Jun 21 10:26:27 rpi2 kernel: [ 1611.295895] [<c0123d64>] (__vfs_read) from [<c0124538>] (vfs_read+0x8c/0x158)
+Jun 21 10:26:27 rpi2 kernel: [ 1611.307099] [<c0124538>] (vfs_read) from [<c0124f6c>] (SyS_read+0x54/0xb0)
+Jun 21 10:26:27 rpi2 kernel: [ 1611.317987] [<c0124f6c>] (SyS_read) from [<c000f780>] (ret_fast_syscall+0x0/0x54)
+Jun 21 10:26:27 rpi2 kernel: [ 1611.343481] ---[ end trace ccc80292b8a302fb ]---
+Jun 21 10:28:21 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 10:28:51 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 10:28:52 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 10:29:52 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 10:29:01 rpi2 kernel: [ 1764.720571] Modules linked in: lprf_mod_1(O) cfg80211 rfkill mac802154 ieee802154 crc_ccitt regmap_spi spi_bcm2835 bcm2835_gpiomem snd_bcm2835 bcm2835_rng snd_pcm snd_timer snd uio_pdrv_genirq uio i2c_dev fuse ipv6 [last unloaded: lprf_mod_1]
+Jun 21 10:29:01 rpi2 kernel: [ 1764.749849] CPU: 0 PID: 2465 Comm: userspace Tainted: G      D    O    4.1.18+ #1
+Jun 21 10:29:01 rpi2 kernel: [ 1764.762415] Hardware name: BCM2708
+Jun 21 10:29:01 rpi2 kernel: [ 1764.768425] task: d82451c0 ti: d8254000 task.ti: d8254000
+Jun 21 10:29:01 rpi2 kernel: [ 1764.776452] PC is at scull_read+0x130/0x194 [lprf_mod_1]
+Jun 21 10:29:01 rpi2 kernel: [ 1764.784332] LR is at irq_work_queue+0x9c/0xb8
+Jun 21 10:29:01 rpi2 kernel: [ 1764.791188] pc : [<bf236c08>]    lr : [<c00c4d5c>]    psr: 60000013
+Jun 21 10:29:01 rpi2 kernel: [ 1764.791188] sp : d8255ea8  ip : d8255d90  fp : d8255edc
+Jun 21 10:29:01 rpi2 kernel: [ 1764.807602] r10: 00000000  r9 : d8254000  r8 : c000f988
+Jun 21 10:29:01 rpi2 kernel: [ 1764.815280] r7 : d8255f80  r6 : b6ff5000  r5 : 00000000  r4 : 000000ff
+Jun 21 10:29:01 rpi2 kernel: [ 1764.824287] r3 : 00000000  r2 : c07ef4b8  r1 : ffffffff  r0 : 0000002d
+Jun 21 10:29:01 rpi2 kernel: [ 1764.833328] Flags: nZCv  IRQs on  FIQs on  Mode SVC_32  ISA ARM  Segment user
+Jun 21 10:29:01 rpi2 kernel: [ 1764.843061] Control: 00c5387d  Table: 181dc008  DAC: 00000015
+Jun 21 10:29:01 rpi2 kernel: [ 1765.028032] [<bf236c08>] (scull_read [lprf_mod_1]) from [<c0123d64>] (__vfs_read+0x34/0xe0)
+Jun 21 10:29:01 rpi2 kernel: [ 1765.044242] [<c0123d64>] (__vfs_read) from [<c0124538>] (vfs_read+0x8c/0x158)
+Jun 21 10:29:01 rpi2 kernel: [ 1765.055444] [<c0124538>] (vfs_read) from [<c0124f6c>] (SyS_read+0x54/0xb0)
+Jun 21 10:29:01 rpi2 kernel: [ 1765.066295] [<c0124f6c>] (SyS_read) from [<c000f780>] (ret_fast_syscall+0x0/0x54)
+Jun 21 10:29:01 rpi2 kernel: [ 1765.091836] ---[ end trace ccc80292b8a302fc ]---
+Jun 21 10:31:19 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 10:32:19 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 10:32:33 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 10:33:33 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 10:41:26 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 10:42:26 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 10:55:48 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 10:56:48 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 11:17:01 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 11:18:01 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 11:22:25 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 11:23:25 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 11:48:12 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 11:49:12 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 12:14:17 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 12:15:17 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 12:17:01 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 12:18:01 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 12:41:29 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 12:42:59 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 13:04:19 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 13:05:49 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 13:17:01 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 13:18:31 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 13:33:47 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 13:35:17 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 14:01:28 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 14:02:58 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 14:06:44 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 14:08:14 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 14:17:01 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 14:18:31 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 14:25:35 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 14:27:05 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 14:55:01 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 14:56:31 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 15:17:01 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 15:18:31 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 15:19:38 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 15:21:08 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 15:42:25 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 15:43:55 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 16:07:12 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 16:08:42 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 16:17:01 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 16:18:31 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 16:31:55 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 16:33:25 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 16:58:14 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 16:59:44 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 17:17:01 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 17:18:31 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 17:27:38 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 17:29:08 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 17:53:30 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 17:55:00 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 18:17:01 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 18:18:31 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 18:23:25 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 18:24:55 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 18:52:03 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 18:53:33 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 19:14:59 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 19:16:29 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 19:17:01 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 19:18:31 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 19:37:51 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 19:39:21 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 20:01:24 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 20:02:54 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 20:17:01 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 20:18:31 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 20:30:00 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 20:31:30 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 20:55:26 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 20:56:56 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 21:17:01 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 21:18:31 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 21:25:26 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 21:26:56 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 21:49:18 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 21:50:48 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 22:15:14 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 22:16:44 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 22:17:01 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 22:18:31 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 22:39:15 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 22:40:45 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 23:05:37 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 23:07:07 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 23:17:01 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 23:18:31 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 23:29:50 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 23:31:20 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 21 23:53:14 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Tue Jun 21 23:54:44 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 22 00:17:01 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Wed Jun 22 00:18:31 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 22 00:41:57 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Wed Jun 22 00:43:27 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 22 01:05:58 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Wed Jun 22 01:07:28 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 22 01:17:02 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Wed Jun 22 01:18:32 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 22 01:32:40 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Wed Jun 22 01:34:10 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 22 01:56:48 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Wed Jun 22 01:58:18 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 22 02:17:01 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Wed Jun 22 02:18:31 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 22 02:22:25 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Wed Jun 22 02:23:55 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 22 02:48:28 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Wed Jun 22 02:49:58 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 22 03:14:31 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Wed Jun 22 03:16:01 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 22 03:17:01 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Wed Jun 22 03:18:31 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 22 03:44:06 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Wed Jun 22 03:45:36 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 22 04:12:45 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Wed Jun 22 04:14:15 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 22 04:17:01 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Wed Jun 22 04:18:31 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 22 04:41:24 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Wed Jun 22 04:42:54 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 22 05:08:36 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Wed Jun 22 05:10:06 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 22 05:17:01 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Wed Jun 22 05:18:31 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 22 05:35:36 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Wed Jun 22 05:37:06 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 22 06:01:03 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Wed Jun 22 06:02:33 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 22 06:17:01 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Wed Jun 22 06:18:31 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 22 06:25:01 rpi2 rsyslogd-2007: action 'action 17' suspended, next retry is Wed Jun 22 06:26:31 2016 [try http://www.rsyslog.com/e/2007 ]
+Jun 22 06:25:13 rpi2 rsyslogd: [origin software="rsyslogd" swVersion="8.4.2" x-pid="491" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Jun 22 06:53:24 rpi2 rsyslogd0: action 'action 17' resumed (module 'builtin:ompipe') [try http://www.rsyslog.com/e/0 ]
+Jun 22 06:53:24 rpi2 rsyslogd-2359: action 'action 17' resumed (module 'builtin:ompipe') [try http://www.rsyslog.com/e/2359 ]
+Jun 22 08:17:18 rpi2 rsyslogd: [origin software="rsyslogd" swVersion="8.4.2" x-pid="469" x-info="http://www.rsyslog.com"] start
+Jun 22 08:17:18 rpi2 kernel: [    0.000000] Booting Linux on physical CPU 0x0
+Jun 22 08:17:18 rpi2 kernel: [    0.000000] Initializing cgroup subsys cpuset
+Jun 22 08:17:18 rpi2 kernel: [    0.000000] Initializing cgroup subsys cpu
+Jun 22 08:17:18 rpi2 kernel: [    0.000000] Initializing cgroup subsys cpuacct
+Jun 22 08:17:18 rpi2 kernel: [    0.000000] Linux version 4.1.18+ (pi@raspberrypi) (gcc version 4.9.2 (Raspbian 4.9.2-10) ) #1 Tue Feb 23 04:01:39 UTC 2016
+Jun 22 08:17:18 rpi2 kernel: [    0.000000] CPU: ARMv6-compatible processor [410fb767] revision 7 (ARMv7), cr=00c5387d
+Jun 22 08:17:18 rpi2 kernel: [    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+Jun 22 08:17:18 rpi2 kernel: [    0.000000] Machine model: Raspberry Pi Model B Plus Rev 1.2
+Jun 22 08:17:18 rpi2 kernel: [    0.000000] cma: Reserved 8 MiB at 0x1b400000
+Jun 22 08:17:18 rpi2 kernel: [    0.000000] Memory policy: Data cache writeback
+Jun 22 08:17:18 rpi2 kernel: [    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 113680
+Jun 22 08:17:18 rpi2 kernel: [    0.000000] Kernel command line: dma.dmachans=0x7f35 bcm2708_fb.fbwidth=656 bcm2708_fb.fbheight=416 bcm2708.boardrev=0x10 bcm2708.serial=0xa62e8378 smsc95xx.macaddr=B8:27:EB:2E:83:78 bcm2708_fb.fbswap=1 bcm2708.uart_clock=3000000 bcm2708.disk_led_gpio=47 bcm2708.disk_led_active_low=0 vc_mem.mem_base=0x1ec00000 vc_mem.mem_size=0x20000000  dwc_otg.lpm_enable=0 console=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait
+Jun 22 08:17:18 rpi2 kernel: [    0.000000] PID hash table entries: 2048 (order: 1, 8192 bytes)
+Jun 22 08:17:18 rpi2 kernel: [    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+Jun 22 08:17:18 rpi2 kernel: [    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+Jun 22 08:17:18 rpi2 kernel: [    0.000000] Memory: 436824K/458752K available (5800K kernel code, 488K rwdata, 1788K rodata, 352K init, 720K bss, 13736K reserved, 8192K cma-reserved)
+Jun 22 08:17:18 rpi2 kernel: [    0.000000] Virtual kernel memory layout:
+Jun 22 08:17:18 rpi2 kernel: [    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+Jun 22 08:17:18 rpi2 kernel: [    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+Jun 22 08:17:18 rpi2 kernel: [    0.000000]     vmalloc : 0xdc800000 - 0xff000000   ( 552 MB)
+Jun 22 08:17:18 rpi2 kernel: [    0.000000]     lowmem  : 0xc0000000 - 0xdc000000   ( 448 MB)
+Jun 22 08:17:18 rpi2 kernel: [    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB)
+Jun 22 08:17:18 rpi2 kernel: [    0.000000]       .text : 0xc0008000 - 0xc07712e0   (7589 kB)
+Jun 22 08:17:18 rpi2 kernel: [    0.000000]       .init : 0xc0772000 - 0xc07ca000   ( 352 kB)
+Jun 22 08:17:18 rpi2 kernel: [    0.000000]       .data : 0xc07ca000 - 0xc0844260   ( 489 kB)
+Jun 22 08:17:18 rpi2 kernel: [    0.000000]        .bss : 0xc0844260 - 0xc08f83e0   ( 721 kB)
+Jun 22 08:17:18 rpi2 kernel: [    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Jun 22 08:17:18 rpi2 kernel: [    0.000000] NR_IRQS:522
+Jun 22 08:17:18 rpi2 kernel: [    0.000000] clocksource stc: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275 ns
+Jun 22 08:17:18 rpi2 kernel: [    0.000015] sched_clock: 32 bits at 1000kHz, resolution 1000ns, wraps every 2147483647500ns
+Jun 22 08:17:18 rpi2 kernel: [    0.000057] Switching to timer-based delay loop, resolution 1000ns
+Jun 22 08:17:18 rpi2 kernel: [    0.000341] Console: colour dummy device 80x30
+Jun 22 08:17:18 rpi2 kernel: [    0.001280] console [tty1] enabled
+Jun 22 08:17:18 rpi2 kernel: [    0.001336] Calibrating delay loop (skipped), value calculated using timer frequency.. 2.00 BogoMIPS (lpj=10000)
+Jun 22 08:17:18 rpi2 kernel: [    0.001416] pid_max: default: 32768 minimum: 301
+Jun 22 08:17:18 rpi2 kernel: [    0.001792] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Jun 22 08:17:18 rpi2 kernel: [    0.001860] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Jun 22 08:17:18 rpi2 kernel: [    0.002922] Initializing cgroup subsys blkio
+Jun 22 08:17:18 rpi2 kernel: [    0.003014] Initializing cgroup subsys memory
+Jun 22 08:17:18 rpi2 kernel: [    0.003085] Initializing cgroup subsys devices
+Jun 22 08:17:18 rpi2 kernel: [    0.003147] Initializing cgroup subsys freezer
+Jun 22 08:17:18 rpi2 kernel: [    0.003207] Initializing cgroup subsys net_cls
+Jun 22 08:17:18 rpi2 kernel: [    0.003325] CPU: Testing write buffer coherency: ok
+Jun 22 08:17:18 rpi2 kernel: [    0.003440] ftrace: allocating 19759 entries in 58 pages
+Jun 22 08:17:18 rpi2 kernel: [    0.105165] Setting up static identity map for 0x81c0 - 0x81f8
+Jun 22 08:17:18 rpi2 kernel: [    0.107335] devtmpfs: initialized
+Jun 22 08:17:18 rpi2 kernel: [    0.118626] VFP support v0.3: implementor 41 architecture 1 part 20 variant b rev 5
+Jun 22 08:17:18 rpi2 kernel: [    0.119077] clocksource jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+Jun 22 08:17:18 rpi2 kernel: [    0.121054] pinctrl core: initialized pinctrl subsystem
+Jun 22 08:17:18 rpi2 kernel: [    0.121935] NET: Registered protocol family 16
+Jun 22 08:17:18 rpi2 kernel: [    0.127450] DMA: preallocated 4096 KiB pool for atomic coherent allocations
+Jun 22 08:17:18 rpi2 kernel: [    0.128992] bcm2708.uart_clock = 3000000
+Jun 22 08:17:18 rpi2 kernel: [    0.134092] hw-breakpoint: found 6 breakpoint and 1 watchpoint registers.
+Jun 22 08:17:18 rpi2 kernel: [    0.134170] hw-breakpoint: maximum watchpoint size is 4 bytes.
+Jun 22 08:17:18 rpi2 kernel: [    0.134384] Serial: AMBA PL011 UART driver
+Jun 22 08:17:18 rpi2 kernel: [    0.134699] 20201000.uart: ttyAMA0 at MMIO 0x20201000 (irq = 83, base_baud = 0) is a PL011 rev2
+Jun 22 08:17:18 rpi2 kernel: [    0.505279] console [ttyAMA0] enabled
+Jun 22 08:17:18 rpi2 kernel: [    0.509661] bcm2835-mbox 2000b880.mailbox: mailbox enabled
+Jun 22 08:17:18 rpi2 kernel: [    0.556416] bcm2708-dmaengine 20007000.dma: DMA legacy API manager at f2007000, dmachans=0xf35
+Jun 22 08:17:18 rpi2 kernel: [    0.565145] bcm2708-dmaengine 20007000.dma: Initialized 7 DMA channels (+ 1 legacy)
+Jun 22 08:17:18 rpi2 kernel: [    0.573744] bcm2708-dmaengine 20007000.dma: Load BCM2835 DMA engine driver
+Jun 22 08:17:18 rpi2 kernel: [    0.580674] bcm2708-dmaengine 20007000.dma: dma_debug:0
+Jun 22 08:17:18 rpi2 kernel: [    0.586857] SCSI subsystem initialized
+Jun 22 08:17:18 rpi2 kernel: [    0.591003] usbcore: registered new interface driver usbfs
+Jun 22 08:17:18 rpi2 kernel: [    0.596737] usbcore: registered new interface driver hub
+Jun 22 08:17:18 rpi2 kernel: [    0.602251] usbcore: registered new device driver usb
+Jun 22 08:17:18 rpi2 kernel: [    0.608271] raspberrypi-firmware soc:firmware: Attached to firmware from 2016-03-15 14:47
+Jun 22 08:17:18 rpi2 kernel: [    0.643998] Switched to clocksource stc
+Jun 22 08:17:18 rpi2 kernel: [    0.697083] FS-Cache: Loaded
+Jun 22 08:17:18 rpi2 kernel: [    0.700388] CacheFiles: Loaded
+Jun 22 08:17:18 rpi2 kernel: [    0.718870] NET: Registered protocol family 2
+Jun 22 08:17:18 rpi2 kernel: [    0.724817] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+Jun 22 08:17:18 rpi2 kernel: [    0.732006] TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+Jun 22 08:17:18 rpi2 kernel: [    0.738636] TCP: Hash tables configured (established 4096 bind 4096)
+Jun 22 08:17:18 rpi2 kernel: [    0.745280] UDP hash table entries: 256 (order: 0, 4096 bytes)
+Jun 22 08:17:18 rpi2 kernel: [    0.751177] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+Jun 22 08:17:18 rpi2 kernel: [    0.757866] NET: Registered protocol family 1
+Jun 22 08:17:18 rpi2 kernel: [    0.762838] RPC: Registered named UNIX socket transport module.
+Jun 22 08:17:18 rpi2 kernel: [    0.768890] RPC: Registered udp transport module.
+Jun 22 08:17:18 rpi2 kernel: [    0.773626] RPC: Registered tcp transport module.
+Jun 22 08:17:18 rpi2 kernel: [    0.778393] RPC: Registered tcp NFSv4.1 backchannel transport module.
+Jun 22 08:17:18 rpi2 kernel: [    0.786164] hw perfevents: enabled with armv6_1176 PMU driver, 3 counters available
+Jun 22 08:17:18 rpi2 kernel: [    0.795287] futex hash table entries: 256 (order: -1, 3072 bytes)
+Jun 22 08:17:18 rpi2 kernel: [    0.817895] VFS: Disk quotas dquot_6.6.0
+Jun 22 08:17:18 rpi2 kernel: [    0.822284] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Jun 22 08:17:18 rpi2 kernel: [    0.831977] FS-Cache: Netfs 'nfs' registered for caching
+Jun 22 08:17:18 rpi2 kernel: [    0.838764] NFS: Registering the id_resolver key type
+Jun 22 08:17:18 rpi2 kernel: [    0.843958] Key type id_resolver registered
+Jun 22 08:17:18 rpi2 kernel: [    0.848296] Key type id_legacy registered
+Jun 22 08:17:18 rpi2 kernel: [    0.856183] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+Jun 22 08:17:18 rpi2 kernel: [    0.864171] io scheduler noop registered
+Jun 22 08:17:18 rpi2 kernel: [    0.868170] io scheduler deadline registered (default)
+Jun 22 08:17:18 rpi2 kernel: [    0.873750] io scheduler cfq registered
+Jun 22 08:17:18 rpi2 kernel: [    0.880204] BCM2708FB: allocated DMA memory 5b800000
+Jun 22 08:17:18 rpi2 kernel: [    0.885375] BCM2708FB: allocated DMA channel 0 @ f2007000
+Jun 22 08:17:18 rpi2 kernel: [    0.895938] Console: switching to colour frame buffer device 82x26
+Jun 22 08:17:18 rpi2 kernel: [    0.907224] Serial: 8250/16550 driver, 0 ports, IRQ sharing disabled
+Jun 22 08:17:18 rpi2 kernel: [    0.917029] vc-cma: Videocore CMA driver
+Jun 22 08:17:18 rpi2 kernel: [    0.922742] vc-cma: vc_cma_base      = 0x00000000
+Jun 22 08:17:18 rpi2 kernel: [    0.929196] vc-cma: vc_cma_size      = 0x00000000 (0 MiB)
+Jun 22 08:17:18 rpi2 kernel: [    0.936283] vc-cma: vc_cma_initial   = 0x00000000 (0 MiB)
+Jun 22 08:17:18 rpi2 kernel: [    0.943590] vc-mem: phys_addr:0x00000000 mem_base=0x1ec00000 mem_size:0x20000000(512 MiB)
+Jun 22 08:17:18 rpi2 kernel: [    0.974157] brd: module loaded
+Jun 22 08:17:18 rpi2 kernel: [    0.988095] loop: module loaded
+Jun 22 08:17:18 rpi2 kernel: [    0.993911] vchiq: vchiq_init_state: slot_zero = 0xdb880000, is_master = 0
+Jun 22 08:17:18 rpi2 kernel: [    1.004520] Loading iSCSI transport class v2.0-870.
+Jun 22 08:17:18 rpi2 kernel: [    1.012582] usbcore: registered new interface driver smsc95xx
+Jun 22 08:17:18 rpi2 kernel: [    1.020254] dwc_otg: version 3.00a 10-AUG-2012 (platform bus)
+Jun 22 08:17:18 rpi2 kernel: [    1.227939] Core Release: 2.80a
+Jun 22 08:17:18 rpi2 kernel: [    1.232645] Setting default values for core params
+Jun 22 08:17:18 rpi2 kernel: [    1.239032] Finished setting default values for core params
+Jun 22 08:17:18 rpi2 kernel: [    1.446406] Using Buffer DMA mode
+Jun 22 08:17:18 rpi2 kernel: [    1.451315] Periodic Transfer Interrupt Enhancement - disabled
+Jun 22 08:17:18 rpi2 kernel: [    1.458778] Multiprocessor Interrupt Enhancement - disabled
+Jun 22 08:17:18 rpi2 kernel: [    1.466018] OTG VER PARAM: 0, OTG VER FLAG: 0
+Jun 22 08:17:18 rpi2 kernel: [    1.472027] Dedicated Tx FIFOs mode
+Jun 22 08:17:18 rpi2 kernel: [    1.477640] WARN::dwc_otg_hcd_init:1047: FIQ DMA bounce buffers: virt = 0xdb814000 dma = 0x5b814000 len=9024
+Jun 22 08:17:18 rpi2 kernel: [    1.490813] FIQ FSM acceleration enabled for :
+Jun 22 08:17:18 rpi2 kernel: [    1.490813] Non-periodic Split Transactions
+Jun 22 08:17:18 rpi2 kernel: [    1.490813] Periodic Split Transactions
+Jun 22 08:17:18 rpi2 kernel: [    1.490813] High-Speed Isochronous Endpoints
+Jun 22 08:17:18 rpi2 kernel: [    1.514199] WARN::hcd_init_fiq:412: FIQ on core 0 at 0xc03ddc3c
+Jun 22 08:17:18 rpi2 kernel: [    1.521790] WARN::hcd_init_fiq:413: FIQ ASM at 0xc03ddf18 length 36
+Jun 22 08:17:18 rpi2 kernel: [    1.529721] WARN::hcd_init_fiq:438: MPHI regs_base at 0xdc896000
+Jun 22 08:17:18 rpi2 kernel: [    1.537465] dwc_otg 20980000.usb: DWC OTG Controller
+Jun 22 08:17:18 rpi2 kernel: [    1.544140] dwc_otg 20980000.usb: new USB bus registered, assigned bus number 1
+Jun 22 08:17:18 rpi2 kernel: [    1.553146] dwc_otg 20980000.usb: irq 32, io mem 0x00000000
+Jun 22 08:17:18 rpi2 kernel: [    1.560391] Init: Port Power? op_state=1
+Jun 22 08:17:18 rpi2 kernel: [    1.565926] Init: Power Port (0)
+Jun 22 08:17:18 rpi2 kernel: [    1.571040] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+Jun 22 08:17:18 rpi2 kernel: [    1.579509] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Jun 22 08:17:18 rpi2 kernel: [    1.588382] usb usb1: Product: DWC OTG Controller
+Jun 22 08:17:18 rpi2 kernel: [    1.594700] usb usb1: Manufacturer: Linux 4.1.18+ dwc_otg_hcd
+Jun 22 08:17:18 rpi2 kernel: [    1.602018] usb usb1: SerialNumber: 20980000.usb
+Jun 22 08:17:18 rpi2 kernel: [    1.609267] hub 1-0:1.0: USB hub found
+Jun 22 08:17:18 rpi2 kernel: [    1.614775] hub 1-0:1.0: 1 port detected
+Jun 22 08:17:18 rpi2 kernel: [    1.621483] usbcore: registered new interface driver usb-storage
+Jun 22 08:17:18 rpi2 kernel: [    1.629582] mousedev: PS/2 mouse device common for all mice
+Jun 22 08:17:18 rpi2 kernel: [    1.637845] bcm2835-cpufreq: min=700000 max=700000
+Jun 22 08:17:18 rpi2 kernel: [    1.644665] sdhci: Secure Digital Host Controller Interface driver
+Jun 22 08:17:18 rpi2 kernel: [    1.652432] sdhci: Copyright(c) Pierre Ossman
+Jun 22 08:17:18 rpi2 kernel: [    1.659138] mmc-bcm2835 20300000.mmc: mmc_debug:0 mmc_debug2:0
+Jun 22 08:17:18 rpi2 kernel: [    1.666671] mmc-bcm2835 20300000.mmc: DMA channels allocated
+Jun 22 08:17:18 rpi2 kernel: [    1.714599] sdhci-pltfm: SDHCI platform and OF driver helper
+Jun 22 08:17:18 rpi2 kernel: [    1.722678] ledtrig-cpu: registered to indicate activity on CPUs
+Jun 22 08:17:18 rpi2 kernel: [    1.731943] hidraw: raw HID events driver (C) Jiri Kosina
+Jun 22 08:17:18 rpi2 kernel: [    1.743756] usbcore: registered new interface driver usbhid
+Jun 22 08:17:18 rpi2 kernel: [    1.751053] usbhid: USB HID core driver
+Jun 22 08:17:18 rpi2 kernel: [    1.760381] Initializing XFRM netlink socket
+Jun 22 08:17:18 rpi2 kernel: [    1.768515] NET: Registered protocol family 17
+Jun 22 08:17:18 rpi2 kernel: [    1.776896] Key type dns_resolver registered
+Jun 22 08:17:18 rpi2 kernel: [    1.788037] registered taskstats version 1
+Jun 22 08:17:18 rpi2 kernel: [    1.794317] vc-sm: Videocore shared memory driver
+Jun 22 08:17:18 rpi2 kernel: [    1.800581] [vc_sm_connected_init]: start
+Jun 22 08:17:18 rpi2 kernel: [    1.807061] [vc_sm_connected_init]: end - returning 0
+Jun 22 08:17:18 rpi2 kernel: [    1.814453] Indeed it is in host mode hprt0 = 00021501
+Jun 22 08:17:18 rpi2 kernel: [    1.883669] Waiting for root device /dev/mmcblk0p2...
+Jun 22 08:17:18 rpi2 kernel: [    1.896760] mmc0: host does not support reading read-only switch, assuming write-enable
+Jun 22 08:17:18 rpi2 kernel: [    1.910873] mmc0: new high speed SDHC card at address 0007
+Jun 22 08:17:18 rpi2 kernel: [    1.918876] mmcblk0: mmc0:0007 SD08G 7.42 GiB 
+Jun 22 08:17:18 rpi2 kernel: [    1.927267]  mmcblk0: p1 p2
+Jun 22 08:17:18 rpi2 kernel: [    1.998072] EXT4-fs (mmcblk0p2): INFO: recovery required on readonly filesystem
+Jun 22 08:17:18 rpi2 kernel: [    2.007258] EXT4-fs (mmcblk0p2): write access will be enabled during recovery
+Jun 22 08:17:18 rpi2 kernel: [    2.016146] usb 1-1: new high-speed USB device number 2 using dwc_otg
+Jun 22 08:17:18 rpi2 kernel: [    2.024516] Indeed it is in host mode hprt0 = 00001101
+Jun 22 08:17:18 rpi2 kernel: [    2.224546] usb 1-1: New USB device found, idVendor=0424, idProduct=9514
+Jun 22 08:17:18 rpi2 kernel: [    2.233178] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+Jun 22 08:17:18 rpi2 kernel: [    2.244917] hub 1-1:1.0: USB hub found
+Jun 22 08:17:18 rpi2 kernel: [    2.250638] hub 1-1:1.0: 5 ports detected
+Jun 22 08:17:18 rpi2 kernel: [    2.534101] usb 1-1.1: new high-speed USB device number 3 using dwc_otg
+Jun 22 08:17:18 rpi2 kernel: [    2.644620] usb 1-1.1: New USB device found, idVendor=0424, idProduct=ec00
+Jun 22 08:17:18 rpi2 kernel: [    2.653464] usb 1-1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+Jun 22 08:17:18 rpi2 kernel: [    2.667188] smsc95xx v1.0.4
+Jun 22 08:17:18 rpi2 kernel: [    2.740118] smsc95xx 1-1.1:1.0 eth0: register 'smsc95xx' at usb-20980000.usb-1.1, smsc95xx USB 2.0 Ethernet, b8:27:eb:2e:83:78
+Jun 22 08:17:18 rpi2 kernel: [    9.114088] EXT4-fs (mmcblk0p2): recovery complete
+Jun 22 08:17:18 rpi2 kernel: [    9.128118] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+Jun 22 08:17:18 rpi2 kernel: [    9.139987] VFS: Mounted root (ext4 filesystem) readonly on device 179:2.
+Jun 22 08:17:18 rpi2 kernel: [    9.150276] devtmpfs: mounted
+Jun 22 08:17:18 rpi2 kernel: [    9.156322] Freeing unused kernel memory: 352K (c0772000 - c07ca000)
+Jun 22 08:17:18 rpi2 kernel: [    9.573229] random: systemd urandom read with 117 bits of entropy available
+Jun 22 08:17:18 rpi2 kernel: [    9.771357] NET: Registered protocol family 10
+Jun 22 08:17:18 rpi2 kernel: [    9.992858] uart-pl011 20201000.uart: no DMA platform data
+Jun 22 08:17:18 rpi2 kernel: [   10.138204] random: nonblocking pool is initialized
+Jun 22 08:17:18 rpi2 kernel: [   11.668143] fuse init (API version 7.23)
+Jun 22 08:17:18 rpi2 kernel: [   11.702196] i2c /dev entries driver
+Jun 22 08:17:18 rpi2 kernel: [   15.464654] bcm2835-rng 20104000.rng: hwrng registered
+Jun 22 08:17:18 rpi2 kernel: [   15.505922] EXT4-fs (mmcblk0p2): re-mounted. Opts: (null)
+Jun 22 08:17:18 rpi2 kernel: [   18.493474] gpiomem-bcm2835 20200000.gpiomem: Initialised: Registers at 0x20200000
+Jun 22 08:17:18 rpi2 kernel: [   18.511165] spi spi0.0: setting up native-CS0 as GPIO 8
+Jun 22 08:17:18 rpi2 kernel: [   18.511470] spi spi0.1: setting up native-CS1 as GPIO 7
+Jun 22 08:17:18 rpi2 kernel: [   18.915570] at86rf230: probe of spi0.0 failed with error -22
+Jun 22 08:17:18 rpi2 kernel: [   20.254438] smsc95xx 1-1.1:1.0 eth0: hardware isn't capable of remote wakeup
+Jun 22 08:17:18 rpi2 kernel: [   20.255216] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+Jun 22 08:17:18 rpi2 kernel: [   21.810901] smsc95xx 1-1.1:1.0 eth0: link up, 100Mbps, full-duplex, lpa 0x45E1
+Jun 22 08:17:18 rpi2 kernel: [   21.816844] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+Jun 22 08:17:18 rpi2 kernel: [   28.366687] cfg80211: Calling CRDA to update world regulatory domain
+Jun 22 08:17:18 rpi2 kernel: [   28.739959] cfg80211: World regulatory domain updated:
+Jun 22 08:17:18 rpi2 kernel: [   28.740003] cfg80211:  DFS Master region: unset
+Jun 22 08:17:18 rpi2 kernel: [   28.740019] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp), (dfs_cac_time)
+Jun 22 08:17:18 rpi2 kernel: [   28.740041] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 22 08:17:18 rpi2 kernel: [   28.740058] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 22 08:17:18 rpi2 kernel: [   28.740074] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 22 08:17:18 rpi2 kernel: [   28.740093] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (N/A)
+Jun 22 08:17:18 rpi2 kernel: [   28.740111] cfg80211:   (5250000 KHz - 5330000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (0 s)
+Jun 22 08:17:18 rpi2 kernel: [   28.740127] cfg80211:   (5490000 KHz - 5730000 KHz @ 160000 KHz), (N/A, 2000 mBm), (0 s)
+Jun 22 08:17:18 rpi2 kernel: [   28.740141] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 22 08:17:18 rpi2 kernel: [   28.740156] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm), (N/A)
+Jun 22 08:17:18 rpi2 kernel: [   29.232330] Adding 102396k swap on /var/swap.  Priority:-1 extents:5 across:339968k SSFS
+Jun 22 08:17:19 rpi2 rsyslogd: [origin software="rsyslogd" swVersion="8.4.2" x-pid="487" x-info="http://www.rsyslog.com"] start
+Jun 22 08:17:19 rpi2 kernel: [    0.000000] Booting Linux on physical CPU 0x0
+Jun 22 08:17:19 rpi2 kernel: [    0.000000] Initializing cgroup subsys cpuset
+Jun 22 08:17:19 rpi2 kernel: [    0.000000] Initializing cgroup subsys cpu
+Jun 22 08:17:19 rpi2 kernel: [    0.000000] Initializing cgroup subsys cpuacct
+Jun 22 08:17:19 rpi2 kernel: [    0.000000] Linux version 4.1.18+ (pi@raspberrypi) (gcc version 4.9.2 (Raspbian 4.9.2-10) ) #1 Tue Feb 23 04:01:39 UTC 2016
+Jun 22 08:17:19 rpi2 kernel: [    0.000000] CPU: ARMv6-compatible processor [410fb767] revision 7 (ARMv7), cr=00c5387d
+Jun 22 08:17:19 rpi2 kernel: [    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+Jun 22 08:17:19 rpi2 kernel: [    0.000000] Machine model: Raspberry Pi Model B Plus Rev 1.2
+Jun 22 08:17:19 rpi2 kernel: [    0.000000] cma: Reserved 8 MiB at 0x1b400000
+Jun 22 08:17:19 rpi2 kernel: [    0.000000] Memory policy: Data cache writeback
+Jun 22 08:17:19 rpi2 kernel: [    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 113680
+Jun 22 08:17:19 rpi2 kernel: [    0.000000] Kernel command line: dma.dmachans=0x7f35 bcm2708_fb.fbwidth=656 bcm2708_fb.fbheight=416 bcm2708.boardrev=0x10 bcm2708.serial=0xa62e8378 smsc95xx.macaddr=B8:27:EB:2E:83:78 bcm2708_fb.fbswap=1 bcm2708.uart_clock=3000000 bcm2708.disk_led_gpio=47 bcm2708.disk_led_active_low=0 vc_mem.mem_base=0x1ec00000 vc_mem.mem_size=0x20000000  dwc_otg.lpm_enable=0 console=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait
+Jun 22 08:17:19 rpi2 kernel: [    0.000000] PID hash table entries: 2048 (order: 1, 8192 bytes)
+Jun 22 08:17:19 rpi2 kernel: [    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+Jun 22 08:17:19 rpi2 kernel: [    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+Jun 22 08:17:19 rpi2 kernel: [    0.000000] Memory: 436824K/458752K available (5800K kernel code, 488K rwdata, 1788K rodata, 352K init, 720K bss, 13736K reserved, 8192K cma-reserved)
+Jun 22 08:17:19 rpi2 kernel: [    0.000000] Virtual kernel memory layout:
+Jun 22 08:17:19 rpi2 kernel: [    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+Jun 22 08:17:19 rpi2 kernel: [    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+Jun 22 08:17:19 rpi2 kernel: [    0.000000]     vmalloc : 0xdc800000 - 0xff000000   ( 552 MB)
+Jun 22 08:17:19 rpi2 kernel: [    0.000000]     lowmem  : 0xc0000000 - 0xdc000000   ( 448 MB)
+Jun 22 08:17:19 rpi2 kernel: [    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB)
+Jun 22 08:17:19 rpi2 kernel: [    0.000000]       .text : 0xc0008000 - 0xc07712e0   (7589 kB)
+Jun 22 08:17:19 rpi2 kernel: [    0.000000]       .init : 0xc0772000 - 0xc07ca000   ( 352 kB)
+Jun 22 08:17:19 rpi2 kernel: [    0.000000]       .data : 0xc07ca000 - 0xc0844260   ( 489 kB)
+Jun 22 08:17:19 rpi2 kernel: [    0.000000]        .bss : 0xc0844260 - 0xc08f83e0   ( 721 kB)
+Jun 22 08:17:19 rpi2 kernel: [    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Jun 22 08:17:19 rpi2 kernel: [    0.000000] NR_IRQS:522
+Jun 22 08:17:19 rpi2 kernel: [    0.000000] clocksource stc: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275 ns
+Jun 22 08:17:19 rpi2 kernel: [    0.000015] sched_clock: 32 bits at 1000kHz, resolution 1000ns, wraps every 2147483647500ns
+Jun 22 08:17:19 rpi2 kernel: [    0.000057] Switching to timer-based delay loop, resolution 1000ns
+Jun 22 08:17:19 rpi2 kernel: [    0.000338] Console: colour dummy device 80x30
+Jun 22 08:17:19 rpi2 kernel: [    0.001280] console [tty1] enabled
+Jun 22 08:17:19 rpi2 kernel: [    0.001336] Calibrating delay loop (skipped), value calculated using timer frequency.. 2.00 BogoMIPS (lpj=10000)
+Jun 22 08:17:19 rpi2 kernel: [    0.001416] pid_max: default: 32768 minimum: 301
+Jun 22 08:17:19 rpi2 kernel: [    0.001793] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Jun 22 08:17:19 rpi2 kernel: [    0.001860] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Jun 22 08:17:19 rpi2 kernel: [    0.002915] Initializing cgroup subsys blkio
+Jun 22 08:17:19 rpi2 kernel: [    0.003007] Initializing cgroup subsys memory
+Jun 22 08:17:19 rpi2 kernel: [    0.003075] Initializing cgroup subsys devices
+Jun 22 08:17:19 rpi2 kernel: [    0.003138] Initializing cgroup subsys freezer
+Jun 22 08:17:19 rpi2 kernel: [    0.003199] Initializing cgroup subsys net_cls
+Jun 22 08:17:19 rpi2 kernel: [    0.003317] CPU: Testing write buffer coherency: ok
+Jun 22 08:17:19 rpi2 kernel: [    0.003432] ftrace: allocating 19759 entries in 58 pages
+Jun 22 08:17:19 rpi2 kernel: [    0.105144] Setting up static identity map for 0x81c0 - 0x81f8
+Jun 22 08:17:19 rpi2 kernel: [    0.107309] devtmpfs: initialized
+Jun 22 08:17:19 rpi2 kernel: [    0.118610] VFP support v0.3: implementor 41 architecture 1 part 20 variant b rev 5
+Jun 22 08:17:19 rpi2 kernel: [    0.119060] clocksource jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+Jun 22 08:17:19 rpi2 kernel: [    0.121045] pinctrl core: initialized pinctrl subsystem
+Jun 22 08:17:19 rpi2 kernel: [    0.121925] NET: Registered protocol family 16
+Jun 22 08:17:19 rpi2 kernel: [    0.127442] DMA: preallocated 4096 KiB pool for atomic coherent allocations
+Jun 22 08:17:19 rpi2 kernel: [    0.128978] bcm2708.uart_clock = 3000000
+Jun 22 08:17:19 rpi2 kernel: [    0.134082] hw-breakpoint: found 6 breakpoint and 1 watchpoint registers.
+Jun 22 08:17:19 rpi2 kernel: [    0.134160] hw-breakpoint: maximum watchpoint size is 4 bytes.
+Jun 22 08:17:19 rpi2 kernel: [    0.134375] Serial: AMBA PL011 UART driver
+Jun 22 08:17:19 rpi2 kernel: [    0.134692] 20201000.uart: ttyAMA0 at MMIO 0x20201000 (irq = 83, base_baud = 0) is a PL011 rev2
+Jun 22 08:17:19 rpi2 kernel: [    0.505276] console [ttyAMA0] enabled
+Jun 22 08:17:19 rpi2 kernel: [    0.509652] bcm2835-mbox 2000b880.mailbox: mailbox enabled
+Jun 22 08:17:19 rpi2 kernel: [    0.556424] bcm2708-dmaengine 20007000.dma: DMA legacy API manager at f2007000, dmachans=0xf35
+Jun 22 08:17:19 rpi2 kernel: [    0.565152] bcm2708-dmaengine 20007000.dma: Initialized 7 DMA channels (+ 1 legacy)
+Jun 22 08:17:19 rpi2 kernel: [    0.573747] bcm2708-dmaengine 20007000.dma: Load BCM2835 DMA engine driver
+Jun 22 08:17:19 rpi2 kernel: [    0.580678] bcm2708-dmaengine 20007000.dma: dma_debug:0
+Jun 22 08:17:19 rpi2 kernel: [    0.586861] SCSI subsystem initialized
+Jun 22 08:17:19 rpi2 kernel: [    0.591011] usbcore: registered new interface driver usbfs
+Jun 22 08:17:19 rpi2 kernel: [    0.596747] usbcore: registered new interface driver hub
+Jun 22 08:17:19 rpi2 kernel: [    0.602261] usbcore: registered new device driver usb
+Jun 22 08:17:19 rpi2 kernel: [    0.608285] raspberrypi-firmware soc:firmware: Attached to firmware from 2016-03-15 14:47
+Jun 22 08:17:19 rpi2 kernel: [    0.644012] Switched to clocksource stc
+Jun 22 08:17:19 rpi2 kernel: [    0.697103] FS-Cache: Loaded
+Jun 22 08:17:19 rpi2 kernel: [    0.700412] CacheFiles: Loaded
+Jun 22 08:17:19 rpi2 kernel: [    0.718882] NET: Registered protocol family 2
+Jun 22 08:17:19 rpi2 kernel: [    0.724830] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+Jun 22 08:17:19 rpi2 kernel: [    0.732021] TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+Jun 22 08:17:19 rpi2 kernel: [    0.738650] TCP: Hash tables configured (established 4096 bind 4096)
+Jun 22 08:17:19 rpi2 kernel: [    0.745292] UDP hash table entries: 256 (order: 0, 4096 bytes)
+Jun 22 08:17:19 rpi2 kernel: [    0.751189] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+Jun 22 08:17:19 rpi2 kernel: [    0.757878] NET: Registered protocol family 1
+Jun 22 08:17:19 rpi2 kernel: [    0.762850] RPC: Registered named UNIX socket transport module.
+Jun 22 08:17:19 rpi2 kernel: [    0.768905] RPC: Registered udp transport module.
+Jun 22 08:17:19 rpi2 kernel: [    0.773642] RPC: Registered tcp transport module.
+Jun 22 08:17:19 rpi2 kernel: [    0.778409] RPC: Registered tcp NFSv4.1 backchannel transport module.
+Jun 22 08:17:19 rpi2 kernel: [    0.786173] hw perfevents: enabled with armv6_1176 PMU driver, 3 counters available
+Jun 22 08:17:19 rpi2 kernel: [    0.795304] futex hash table entries: 256 (order: -1, 3072 bytes)
+Jun 22 08:17:19 rpi2 kernel: [    0.817902] VFS: Disk quotas dquot_6.6.0
+Jun 22 08:17:19 rpi2 kernel: [    0.822291] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Jun 22 08:17:19 rpi2 kernel: [    0.831983] FS-Cache: Netfs 'nfs' registered for caching
+Jun 22 08:17:19 rpi2 kernel: [    0.838763] NFS: Registering the id_resolver key type
+Jun 22 08:17:19 rpi2 kernel: [    0.843950] Key type id_resolver registered
+Jun 22 08:17:19 rpi2 kernel: [    0.848287] Key type id_legacy registered
+Jun 22 08:17:19 rpi2 kernel: [    0.856179] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+Jun 22 08:17:19 rpi2 kernel: [    0.864170] io scheduler noop registered
+Jun 22 08:17:19 rpi2 kernel: [    0.868169] io scheduler deadline registered (default)
+Jun 22 08:17:19 rpi2 kernel: [    0.873751] io scheduler cfq registered
+Jun 22 08:17:19 rpi2 kernel: [    0.880206] BCM2708FB: allocated DMA memory 5b800000
+Jun 22 08:17:19 rpi2 kernel: [    0.885377] BCM2708FB: allocated DMA channel 0 @ f2007000
+Jun 22 08:17:19 rpi2 kernel: [    0.895938] Console: switching to colour frame buffer device 82x26
+Jun 22 08:17:19 rpi2 kernel: [    0.907224] Serial: 8250/16550 driver, 0 ports, IRQ sharing disabled
+Jun 22 08:17:19 rpi2 kernel: [    0.917021] vc-cma: Videocore CMA driver
+Jun 22 08:17:19 rpi2 kernel: [    0.922734] vc-cma: vc_cma_base      = 0x00000000
+Jun 22 08:17:19 rpi2 kernel: [    0.929190] vc-cma: vc_cma_size      = 0x00000000 (0 MiB)
+Jun 22 08:17:19 rpi2 kernel: [    0.936277] vc-cma: vc_cma_initial   = 0x00000000 (0 MiB)
+Jun 22 08:17:19 rpi2 kernel: [    0.943583] vc-mem: phys_addr:0x00000000 mem_base=0x1ec00000 mem_size:0x20000000(512 MiB)
+Jun 22 08:17:19 rpi2 kernel: [    0.974194] brd: module loaded
+Jun 22 08:17:19 rpi2 kernel: [    0.988151] loop: module loaded
+Jun 22 08:17:19 rpi2 kernel: [    0.993968] vchiq: vchiq_init_state: slot_zero = 0xdb880000, is_master = 0
+Jun 22 08:17:19 rpi2 kernel: [    1.004576] Loading iSCSI transport class v2.0-870.
+Jun 22 08:17:19 rpi2 kernel: [    1.012633] usbcore: registered new interface driver smsc95xx
+Jun 22 08:17:19 rpi2 kernel: [    1.020313] dwc_otg: version 3.00a 10-AUG-2012 (platform bus)
+Jun 22 08:17:19 rpi2 kernel: [    1.228000] Core Release: 2.80a
+Jun 22 08:17:19 rpi2 kernel: [    1.232700] Setting default values for core params
+Jun 22 08:17:19 rpi2 kernel: [    1.239090] Finished setting default values for core params
+Jun 22 08:17:19 rpi2 kernel: [    1.446464] Using Buffer DMA mode
+Jun 22 08:17:19 rpi2 kernel: [    1.451370] Periodic Transfer Interrupt Enhancement - disabled
+Jun 22 08:17:19 rpi2 kernel: [    1.458824] Multiprocessor Interrupt Enhancement - disabled
+Jun 22 08:17:19 rpi2 kernel: [    1.466056] OTG VER PARAM: 0, OTG VER FLAG: 0
+Jun 22 08:17:19 rpi2 kernel: [    1.472061] Dedicated Tx FIFOs mode
+Jun 22 08:17:19 rpi2 kernel: [    1.477673] WARN::dwc_otg_hcd_init:1047: FIQ DMA bounce buffers: virt = 0xdb814000 dma = 0x5b814000 len=9024
+Jun 22 08:17:19 rpi2 kernel: [    1.490838] FIQ FSM acceleration enabled for :
+Jun 22 08:17:19 rpi2 kernel: [    1.490838] Non-periodic Split Transactions
+Jun 22 08:17:19 rpi2 kernel: [    1.490838] Periodic Split Transactions
+Jun 22 08:17:19 rpi2 kernel: [    1.490838] High-Speed Isochronous Endpoints
+Jun 22 08:17:19 rpi2 kernel: [    1.514213] WARN::hcd_init_fiq:412: FIQ on core 0 at 0xc03ddc3c
+Jun 22 08:17:19 rpi2 kernel: [    1.521801] WARN::hcd_init_fiq:413: FIQ ASM at 0xc03ddf18 length 36
+Jun 22 08:17:19 rpi2 kernel: [    1.529730] WARN::hcd_init_fiq:438: MPHI regs_base at 0xdc896000
+Jun 22 08:17:19 rpi2 kernel: [    1.537467] dwc_otg 20980000.usb: DWC OTG Controller
+Jun 22 08:17:19 rpi2 kernel: [    1.544137] dwc_otg 20980000.usb: new USB bus registered, assigned bus number 1
+Jun 22 08:17:19 rpi2 kernel: [    1.553135] dwc_otg 20980000.usb: irq 32, io mem 0x00000000
+Jun 22 08:17:19 rpi2 kernel: [    1.560378] Init: Port Power? op_state=1
+Jun 22 08:17:19 rpi2 kernel: [    1.565909] Init: Power Port (0)
+Jun 22 08:17:19 rpi2 kernel: [    1.571024] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+Jun 22 08:17:19 rpi2 kernel: [    1.579492] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Jun 22 08:17:19 rpi2 kernel: [    1.588360] usb usb1: Product: DWC OTG Controller
+Jun 22 08:17:19 rpi2 kernel: [    1.594678] usb usb1: Manufacturer: Linux 4.1.18+ dwc_otg_hcd
+Jun 22 08:17:19 rpi2 kernel: [    1.601995] usb usb1: SerialNumber: 20980000.usb
+Jun 22 08:17:19 rpi2 kernel: [    1.609238] hub 1-0:1.0: USB hub found
+Jun 22 08:17:19 rpi2 kernel: [    1.614741] hub 1-0:1.0: 1 port detected
+Jun 22 08:17:19 rpi2 kernel: [    1.621449] usbcore: registered new interface driver usb-storage
+Jun 22 08:17:19 rpi2 kernel: [    1.629542] mousedev: PS/2 mouse device common for all mice
+Jun 22 08:17:19 rpi2 kernel: [    1.637804] bcm2835-cpufreq: min=700000 max=700000
+Jun 22 08:17:19 rpi2 kernel: [    1.644630] sdhci: Secure Digital Host Controller Interface driver
+Jun 22 08:17:19 rpi2 kernel: [    1.652398] sdhci: Copyright(c) Pierre Ossman
+Jun 22 08:17:19 rpi2 kernel: [    1.659102] mmc-bcm2835 20300000.mmc: mmc_debug:0 mmc_debug2:0
+Jun 22 08:17:19 rpi2 kernel: [    1.666633] mmc-bcm2835 20300000.mmc: DMA channels allocated
+Jun 22 08:17:19 rpi2 kernel: [    1.714619] sdhci-pltfm: SDHCI platform and OF driver helper
+Jun 22 08:17:19 rpi2 kernel: [    1.722699] ledtrig-cpu: registered to indicate activity on CPUs
+Jun 22 08:17:19 rpi2 kernel: [    1.732966] hidraw: raw HID events driver (C) Jiri Kosina
+Jun 22 08:17:19 rpi2 kernel: [    1.744791] usbcore: registered new interface driver usbhid
+Jun 22 08:17:19 rpi2 kernel: [    1.752039] usbhid: USB HID core driver
+Jun 22 08:17:19 rpi2 kernel: [    1.761371] Initializing XFRM netlink socket
+Jun 22 08:17:19 rpi2 kernel: [    1.768504] NET: Registered protocol family 17
+Jun 22 08:17:19 rpi2 kernel: [    1.775895] Key type dns_resolver registered
+Jun 22 08:17:19 rpi2 kernel: [    1.787032] registered taskstats version 1
+Jun 22 08:17:19 rpi2 kernel: [    1.793257] vc-sm: Videocore shared memory driver
+Jun 22 08:17:19 rpi2 kernel: [    1.799586] [vc_sm_connected_init]: start
+Jun 22 08:17:19 rpi2 kernel: [    1.806262] [vc_sm_connected_init]: end - returning 0
+Jun 22 08:17:19 rpi2 kernel: [    1.815222] Waiting for root device /dev/mmcblk0p2...
+Jun 22 08:17:19 rpi2 kernel: [    1.822264] Indeed it is in host mode hprt0 = 00021501
+Jun 22 08:17:19 rpi2 kernel: [    1.895078] mmc0: host does not support reading read-only switch, assuming write-enable
+Jun 22 08:17:19 rpi2 kernel: [    1.909175] mmc0: new high speed SDHC card at address 0007
+Jun 22 08:17:19 rpi2 kernel: [    1.917169] mmcblk0: mmc0:0007 SD08G 7.42 GiB 
+Jun 22 08:17:19 rpi2 kernel: [    1.925593]  mmcblk0: p1 p2
+Jun 22 08:17:19 rpi2 kernel: [    2.004078] usb 1-1: new high-speed USB device number 2 using dwc_otg
+Jun 22 08:17:19 rpi2 kernel: [    2.012442] Indeed it is in host mode hprt0 = 00001101
+Jun 22 08:17:19 rpi2 kernel: [    2.083458] EXT4-fs (mmcblk0p2): INFO: recovery required on readonly filesystem
+Jun 22 08:17:19 rpi2 kernel: [    2.092679] EXT4-fs (mmcblk0p2): write access will be enabled during recovery
+Jun 22 08:17:19 rpi2 kernel: [    2.214497] usb 1-1: New USB device found, idVendor=0424, idProduct=9514
+Jun 22 08:17:19 rpi2 kernel: [    2.223037] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+Jun 22 08:17:19 rpi2 kernel: [    2.233066] hub 1-1:1.0: USB hub found
+Jun 22 08:17:19 rpi2 kernel: [    2.238834] hub 1-1:1.0: 5 ports detected
+Jun 22 08:17:19 rpi2 kernel: [    2.524087] usb 1-1.1: new high-speed USB device number 3 using dwc_otg
+Jun 22 08:17:19 rpi2 kernel: [    2.644470] usb 1-1.1: New USB device found, idVendor=0424, idProduct=ec00
+Jun 22 08:17:19 rpi2 kernel: [    2.653154] usb 1-1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+Jun 22 08:17:19 rpi2 kernel: [    2.665411] smsc95xx v1.0.4
+Jun 22 08:17:19 rpi2 kernel: [    2.728550] smsc95xx 1-1.1:1.0 eth0: register 'smsc95xx' at usb-20980000.usb-1.1, smsc95xx USB 2.0 Ethernet, b8:27:eb:2e:83:78
+Jun 22 08:17:19 rpi2 kernel: [    5.272417] EXT4-fs (mmcblk0p2): recovery complete
+Jun 22 08:17:19 rpi2 kernel: [    5.286561] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+Jun 22 08:17:19 rpi2 kernel: [    5.298445] VFS: Mounted root (ext4 filesystem) readonly on device 179:2.
+Jun 22 08:17:19 rpi2 kernel: [    5.308760] devtmpfs: mounted
+Jun 22 08:17:19 rpi2 kernel: [    5.314806] Freeing unused kernel memory: 352K (c0772000 - c07ca000)
+Jun 22 08:17:19 rpi2 kernel: [    5.738426] random: systemd urandom read with 75 bits of entropy available
+Jun 22 08:17:19 rpi2 kernel: [    5.935960] NET: Registered protocol family 10
+Jun 22 08:17:19 rpi2 kernel: [    6.101681] uart-pl011 20201000.uart: no DMA platform data
+Jun 22 08:17:19 rpi2 kernel: [    7.804864] fuse init (API version 7.23)
+Jun 22 08:17:19 rpi2 kernel: [    7.850848] i2c /dev entries driver
+Jun 22 08:17:19 rpi2 kernel: [   10.343025] random: nonblocking pool is initialized
+Jun 22 08:17:19 rpi2 kernel: [   11.478172] bcm2835-rng 20104000.rng: hwrng registered
+Jun 22 08:17:19 rpi2 kernel: [   11.733090] EXT4-fs (mmcblk0p2): re-mounted. Opts: (null)
+Jun 22 08:17:19 rpi2 kernel: [   14.726128] gpiomem-bcm2835 20200000.gpiomem: Initialised: Registers at 0x20200000
+Jun 22 08:17:19 rpi2 kernel: [   14.743930] spi spi0.0: setting up native-CS0 as GPIO 8
+Jun 22 08:17:19 rpi2 kernel: [   14.764577] spi spi0.1: setting up native-CS1 as GPIO 7
+Jun 22 08:17:19 rpi2 kernel: [   15.126273] at86rf230: probe of spi0.0 failed with error -22
+Jun 22 08:17:19 rpi2 kernel: [   16.467337] smsc95xx 1-1.1:1.0 eth0: hardware isn't capable of remote wakeup
+Jun 22 08:17:19 rpi2 kernel: [   16.468091] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+Jun 22 08:17:19 rpi2 kernel: [   18.015370] smsc95xx 1-1.1:1.0 eth0: link up, 100Mbps, full-duplex, lpa 0x45E1
+Jun 22 08:17:19 rpi2 kernel: [   18.019192] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+Jun 22 08:17:19 rpi2 kernel: [   24.889790] cfg80211: Calling CRDA to update world regulatory domain
+Jun 22 08:17:19 rpi2 kernel: [   25.221036] cfg80211: World regulatory domain updated:
+Jun 22 08:17:19 rpi2 kernel: [   25.221079] cfg80211:  DFS Master region: unset
+Jun 22 08:17:19 rpi2 kernel: [   25.221095] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp), (dfs_cac_time)
+Jun 22 08:17:19 rpi2 kernel: [   25.221118] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 22 08:17:19 rpi2 kernel: [   25.221135] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 22 08:17:19 rpi2 kernel: [   25.221152] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 22 08:17:19 rpi2 kernel: [   25.221171] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (N/A)
+Jun 22 08:17:19 rpi2 kernel: [   25.221190] cfg80211:   (5250000 KHz - 5330000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (0 s)
+Jun 22 08:17:19 rpi2 kernel: [   25.221205] cfg80211:   (5490000 KHz - 5730000 KHz @ 160000 KHz), (N/A, 2000 mBm), (0 s)
+Jun 22 08:17:19 rpi2 kernel: [   25.221220] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm), (N/A)
+Jun 22 08:17:19 rpi2 kernel: [   25.221235] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm), (N/A)
+Jun 22 08:17:19 rpi2 kernel: [   25.800524] Adding 102396k swap on /var/swap.  Priority:-1 extents:5 across:339968k SSFS
