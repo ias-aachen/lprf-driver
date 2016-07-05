@@ -58,28 +58,6 @@
 #include "lprf_registers.h"
 
 
-/* defines */
-//#define LPRF_MAX_BUF	(256 + 2)
-
-
-// defines for the state machine 
-#define STATE_CMD_NONE		0
-#define STATE_CMD_SLEEP		2
-#define STATE_CMD_DEEPSLEEP	3
-#define STATE_CMD_TX		4
-#define STATE_CMD_TXIDLE	5
-#define STATE_CMD_RX		6
-#define STATE_CMD_RXHOLD	7
-
-#define T_POWER_TX_TIME		0x20
-#define T_POWER_RX_TIME		0x20
-#define T_PLL_PON_TIME		0x60
-#define T_PLL_SET_TIME 		0x60
-#define T_TX_TIME		0x40
-#define T_PD_EN_TIME		0x20
-
-
-
 static inline int __lprf_write(struct lprf_local *lp, unsigned int addr, unsigned int data)
 {
 	unsigned int retval;
@@ -91,7 +69,7 @@ static inline int __lprf_write(struct lprf_local *lp, unsigned int addr, unsigne
 
 static inline int __lprf_read(struct lprf_local *lp, unsigned int addr, unsigned int *data)
 {
-	printk(KERN_DEBUG "lprf: __lprf_read: addr=%u\tdata=%u\n", addr, data);
+	printk(KERN_DEBUG "lprf: __lprf_read: addr=%u\tdata=%u\n", addr, *data);
 	return regmap_read(lp->regmap, addr, data);
 }
 
@@ -99,7 +77,7 @@ static inline int lprf_read_subreg(struct lprf_local *lp, unsigned int addr, uns
 {
 	int rc;
 
-	printk(KERN_DEBUG "lprf: lprf_read_subreg: addr=%d\tdata=%d\tmask=%d\tshift=%d\n", addr, data, mask, shift);
+	printk(KERN_DEBUG "lprf: lprf_read_subreg: addr=%u\tdata=%u\tmask=%u\tshift=%u\n", addr, *data, mask, shift);
 
 	rc = __lprf_read(lp, addr, data);
 	if (rc > 0)
@@ -257,17 +235,17 @@ static int lprf_get_state(u8 value){
 	switch(value){
 		case 0x00:
 			return STATE_CMD_NONE;
-		case 0x01:	
+		case STATE_RECEIVING:	
 			return STATE_CMD_RX;
-		case 0x02:
+		case STATE_RX_RDY:
 			return STATE_CMD_RXHOLD;
-		case 0x04:
+		case STATE_SENDING:
 			return STATE_CMD_TX;
-		case 0x08:
+		case STATE_TX_RDY:
 			return STATE_CMD_TXIDLE;
-		case 0x20:
+		case STATE_SLEEP:
 			return STATE_CMD_DEEPSLEEP;
-		case 0x40:
+		case STATE_DEEPSLEEP:
 			return STATE_CMD_SLEEP;
 		default:
 			return -1;			
@@ -290,7 +268,7 @@ lprf_async_state_assert(void *context)
 
 
 	// modify: what can we do if the state change fail?
-	if (trx_state == 0x10) { 
+	if ((trx_state & STATE_BUSY)) { 
 		printk(KERN_DEBUG "lprf: lprf_async_state_assert - state machine is busy: trx_state=%u. %s:%i\n", trx_state, __FILE__, __LINE__);
 		return;
 	}
@@ -436,7 +414,7 @@ change:
 }
 
 
-
+/*
 static void
 lprf_sync_state_change_complete(void *context)
 {
@@ -450,11 +428,6 @@ lprf_sync_state_change_complete(void *context)
 	printk(KERN_DEBUG "lprf: lprf_sync_state_change_complete - end. %s:%i\n",  __FILE__, __LINE__);
 }
 
-
-/* This function do a sync framework above the async state change.
- * Some callbacks of the IEEE 802.15.4 driver interface need to be
- * handled synchronously.
- */
 static int
 lprf_sync_state_change(struct lprf_local *lp, unsigned int state)
 {
@@ -477,7 +450,7 @@ lprf_sync_state_change(struct lprf_local *lp, unsigned int state)
 	printk(KERN_DEBUG "lprf: lprf_sync_state_change - end.%s:%i\n", __FILE__, __LINE__);
 
 	return 0;
-}
+}*/
 
 
 // new function: completion function for async state change (or should we use the sync state change structure?) 
@@ -486,16 +459,13 @@ static void lprf_async_state_change_complete(void *context){
 	struct lprf_local *lp = ctx->lp;
 	int rc;
 	u8 buffer = ctx->buf[2]; 
-	//unsigned int *data;
-	ktime_t tim;
 
 	//printk(KERN_DEBUG "lprf: lprf_async_state_change_complete - start. %s:%i\n",  __FILE__, __LINE__);
-
 
 	if(lp->is_tx){
 		printk(KERN_DEBUG "lprf: lprf_async_state_change_complete - from TX. buffer=%u. %s:%i\n", buffer,  __FILE__, __LINE__);
 	
-		if(buffer & 0x04){
+		if(buffer & STATE_SENDING){
 			lprf_async_read_reg(lp, RG_SM_STATE, ctx, lprf_async_state_change_complete, 1);	// read SM_STAE again
 			return;
 		} 
@@ -638,7 +608,23 @@ lprf_rx_read_frame(void *context)
 	printk(KERN_DEBUG "lprf: lprf_rx_read_frame - end. %s:%i\n", __FILE__, __LINE__);
 }
 
+// TX
+static uint8_t lprf_reverse_bit_order(uint8_t val){
+	uint8_t reversed_byte = 0;
+	int i;
 
+	// printk(KERN_DEBUG "lprf: lprf_reverse_bit_order- start. val=%u %s:%i\n", val, __FILE__, __LINE__);
+
+	for(i = 0; i <= 7; i++){	
+		if(val & (1 << i)){
+			reversed_byte += (1 << (7 - i));
+		}
+	}
+	
+	// printk(KERN_DEBUG "lprf: lprf_reverse_bit_order- end. reversed_byte=%u %s:%i\n", reversed_byte, __FILE__, __LINE__);
+
+	return reversed_byte;
+}
 
 static void lprf_check_state_complete(void *context){
 	struct lprf_state_change *ctx = context;
@@ -647,39 +633,10 @@ static void lprf_check_state_complete(void *context){
 
 	printk(KERN_DEBUG "lprf: lprf_check_state_complete - start. buffer=%u. %s:%i\n", buffer, __FILE__, __LINE__);
 
-	if(buffer != 0x10){	// State machine busy?
+	if(!(buffer & STATE_BUSY)){	// State machine not busy?
 		printk(KERN_DEBUG "lprf: lprf_check_state_complete, not busy %s:%i\n", __FILE__, __LINE__);
-		/*		
-		switch(buffer){
-			case 0x00:
-				printk(KERN_DEBUG "lprf: lprf_check_state_complete, NONE %s:%i\n", __FILE__, __LINE__);
-				ctx->from_state = STATE_CMD_NONE;
-				goto change;
-			case 0x01:	
-				printk(KERN_DEBUG "lprf: lprf_check_state_complete, RX %s:%i\n", __FILE__, __LINE__);
-				ctx->from_state = STATE_CMD_RX;
-				goto change;
-			case 0x02:
-				ctx->from_state = STATE_CMD_RXHOLD;
-				goto change;
-			case 0x04:
-				ctx->from_state = STATE_CMD_TX;
-				goto change;
-			case 0x08:
-				ctx->from_state = STATE_CMD_TXIDLE;
-				goto change;
-			case 0x20:
-				ctx->from_state = STATE_CMD_DEEPSLEEP;
-				goto change;
-			case 0x40:
-				printk(KERN_DEBUG "lprf: lprf_check_state_complete, SLEEP %s:%i\n", __FILE__, __LINE__);
-				ctx->from_state = STATE_CMD_SLEEP;
-				goto change;
-			default:
-				break;			
-		}*/
-		ctx->from_state = lprf_get_state(buffer);
 
+		ctx->from_state = lprf_get_state(buffer);
 
 		printk(KERN_DEBUG "lprf: lprf_check_state_complete, ctx->from_state=%u. %s:%i\n", ctx->from_state, __FILE__, __LINE__);
 
@@ -731,24 +688,30 @@ lprf_write_frame(void *context)
 	struct lprf_local *lp = ctx->lp;
 	struct sk_buff *skb = lp->tx_skb;
 	u8 *buf = ctx->buf;
-	int rc;
+	int rc, pos;
+	// only used for outputs
+	int i;	
+	int to_buf = 14;
 
 	printk(KERN_DEBUG "lprf: lprf_write_frame - start. buf=%u %s:%i\n", *buf, __FILE__, __LINE__);
 
 	// 1. frame write access (FRMW): 0x60
 	// 2. number of bytes to be written (n+2 bytes, to transmitt n bytes)
-	// 3. data
+	// 3. data 
 
 	buf[0] = 0x60;
 	buf[1] = skb->len + 2;
+
+	for(pos = 0; pos < skb->len;  pos++){
+		*(skb->data + pos) = lprf_reverse_bit_order(*(skb->data + pos));
+	}
+
 	memcpy(buf + 2, skb->data, skb->len);
 
 
 	// ######################################################################
 	// buffer begins with the IEEE 802.15.4 header, data starts in buf[11]
 	// outputs
-	int i;	
-	int to_buf = 14;
 	for(i = 0; i < to_buf; i ++){
 		printk(KERN_DEBUG "lprf: lprf_write_frame, buf[%u]=%u  %s:%i\n",i, *(buf + i), __FILE__, __LINE__);
 	}	
@@ -774,11 +737,10 @@ static void
 lprf_xmit_start(void *context)
 {
 	struct lprf_state_change *ctx = context;
-	struct lprf_local *lp = ctx->lp;
 
 	printk(KERN_DEBUG "lprf: lprf_xmit_start - start. %s:%i\n", __FILE__, __LINE__);
 
-	// write data into the FIFO	
+	// write data into FIFO	
 	lprf_write_frame(ctx);
 
 	printk(KERN_DEBUG "lprf: lprf_xmit_start - end. %s:%i\n", __FILE__, __LINE__);
@@ -810,18 +772,14 @@ static int lprf_xmit(struct ieee802154_hw *hw, struct sk_buff *skb)    //part of
 	return 0;
 }
 
-static int lprf_ed(struct ieee802154_hw *hw, u8 *level)    //part of struct ieee802154_ops lprf_ops
-{
-	printk(KERN_DEBUG "lprf: lprf_ed - not implemented. %s:%i\n", __FILE__, __LINE__);	
 
-	return 0;
-}
+
 
 // first solutuion for RX polling (not tested yet)
-static void lprf_check_for_data_timer(struct hrtimer *timer){
+static enum hrtimer_restart lprf_check_for_data_timer(struct hrtimer *timer){
 	struct lprf_state_change *ctx = container_of(timer, struct lprf_state_change, timer);	
-	unsigned int data;
-	unsigned int sending_bit;	
+	unsigned int data = 0;
+	unsigned int sending_bit = 0;	
 	int rc;	
 	ktime_t tim;
 
@@ -829,14 +787,14 @@ static void lprf_check_for_data_timer(struct hrtimer *timer){
 	rc = __lprf_read(lp, RG_SM_FIFO , &data);
 	if(rc){
 		printk(KERN_DEBUG "lprf: lprf_check_for_data - reading RG_SM_FIFO failed. %s:%i\n", __FILE__, __LINE__);
-		return;	
+		return rc;	
 	}
 	
 	// SM_SENDING 
 	rc = __lprf_read(lp, RG_SM_STATE , &sending_bit);
 	if(rc){
 		printk(KERN_DEBUG "lprf: lprf_check_for_data - reading RG_SM_STATE failed. %s:%i\n", __FILE__, __LINE__);
-		return;	
+		return rc;	
 	}
 
 	// check SENDING bit
@@ -849,6 +807,8 @@ static void lprf_check_for_data_timer(struct hrtimer *timer){
 			hrtimer_start(&ctx->timer, tim, HRTIMER_MODE_REL);
 		}
 	}
+
+	return HRTIMER_NORESTART;
 }
 
 // first solutuion for RX polling (not tested yet)
@@ -878,6 +838,14 @@ static int lprf_start(struct ieee802154_hw *hw)    //part of struct ieee802154_o
 	return 0;
 }
 
+// ieee802154_ops lprf_ops - file operations for ieee802154 layer
+static int lprf_ed(struct ieee802154_hw *hw, u8 *level)    //part of struct ieee802154_ops lprf_ops
+{
+	printk(KERN_DEBUG "lprf: lprf_ed - not implemented. %s:%i\n", __FILE__, __LINE__);	
+
+	return 0;
+}
+
 static void lprf_stop(struct ieee802154_hw *hw)    //part of struct ieee802154_ops lprf_ops
 {
 	printk(KERN_DEBUG "lprf: lprf_stop - not implemented. %s:%i\n", __FILE__, __LINE__);
@@ -902,10 +870,7 @@ static int lprf_channel(struct ieee802154_hw *hw, u8 page, u8 channel)     //par
 static int lprf_set_hw_addr_filt(struct ieee802154_hw *hw, struct ieee802154_hw_addr_filt *filt, unsigned long changed)    //part of struct ieee802154_ops lprf_ops
 {
 	// we have no hardware Frame Filter
-	// we need some implementation in software 
-	 
-
-	struct lprf_local *lp = hw->priv;
+	// Do we need some implementation in software?	 
 
 	/**
 	struct ieee802154_hw_addr_filt - hardware address filtering settings
@@ -988,6 +953,7 @@ static int lprf_set_promiscuous_mode(struct ieee802154_hw *hw, const bool on)   
 }
 
 
+// setup functions
 // gets called only by lprf_probe()
 static int lprf_hw_init(struct lprf_local *lp)
 {
@@ -1301,7 +1267,6 @@ static int lprf_detect_device(struct lprf_local *lp)
 	}
 
 
-	
 	/*
 	// Indicates that xmitter will add FCS on it's own. 
 		#define IEEE802154_HW_TX_OMIT_CKSUM     0x00000001
@@ -1344,6 +1309,7 @@ static int lprf_detect_device(struct lprf_local *lp)
 	return 0;
 }
 
+
 static void lprf_setup_spi_messages(struct lprf_local *lp)
 {
 	lp->state.lp = lp;
@@ -1374,7 +1340,7 @@ static void lprf_setup_spi_messages(struct lprf_local *lp)
 	lp->rx.trx.rx_buf = lp->rx.buf;
 	spi_message_add_tail(&lp->rx.trx, &lp->rx.msg);
 	hrtimer_init(&lp->rx.timer, CLOCK_MONOTONIC, HRTIMER_MODE_REL);		//initialise timer
-	lp->rx.timer.function = lprf_check_for_data;
+	lp->rx.timer.function = lprf_check_for_data_timer;
 
 	// is used for the char driver
 	lp->debug.lp = lp;
@@ -1393,7 +1359,6 @@ static int lprf_probe(struct spi_device *spi)   // part of struct spi_driver lpr
 {	
 	struct ieee802154_hw *hw;
 	//struct lprf_local *lp;	// the definition of lp is global (lprf.h)			
-	unsigned int status;
 	int rc, rstn, slp_tr;
 	u8 xtal_trim = 0;
 
@@ -1462,7 +1427,6 @@ static int lprf_probe(struct spi_device *spi)   // part of struct spi_driver lpr
 	if (rc < 0)
 		goto free_dev;
 
-	// spin_lock_init(&lp->lock); 	// not included in at86rf230
 	
 	// initialise completion 
 	init_completion(&lp->state_complete);
@@ -1623,12 +1587,10 @@ loff_t scull_llseek(struct file *filp, loff_t offset, int whence)
 ssize_t scull_read(struct file *filp, char __user *buf, size_t count, loff_t *f_pos)
 {
 	ssize_t retval = 0;
-	unsigned int myrc;
-	unsigned int address = 1;
 	unsigned int myval = 1;
 	unsigned int dev_size = 2 + *f_pos;
 	unsigned int rc;
-	struct scull_dev *dev = filp->private_data; 
+	//struct scull_dev *dev = filp->private_data; 
 	struct lprf_state_change *ctx = &(lp->debug);
 
 	printk(KERN_DEBUG "lprf: scull_read - start.");
@@ -1675,8 +1637,6 @@ ssize_t scull_read(struct file *filp, char __user *buf, size_t count, loff_t *f_
 }
 
 
-
-
 int lprf_read_status(void)
 {
 /*
@@ -1701,9 +1661,9 @@ int lprf_read_status(void)
 ssize_t scull_write(struct file *filp, const char __user *userbuf, size_t count, loff_t *f_pos)
 {
 	ssize_t retval = -ENOMEM; // value used in "goto out" statements 
-
 	u8 *buffer2;
 	unsigned int addr;
+	int rc;
 	buffer2 = kmalloc(sizeof(u8), GFP_KERNEL);	
 	memset(buffer2, 0, sizeof(u8));
 
@@ -1715,7 +1675,11 @@ ssize_t scull_write(struct file *filp, const char __user *userbuf, size_t count,
 	
 	//write data
 	count = 1;	
-	copy_from_user(buffer2, userbuf, count);
+	rc = copy_from_user(buffer2, userbuf, count);
+	if(rc){
+		return -EFAULT;
+	}
+
 	addr = (unsigned int)(*f_pos);	// is set by fseek
 
 	printk(KERN_DEBUG "lprf: scull_write: waiting for completion!\n");
