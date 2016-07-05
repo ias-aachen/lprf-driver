@@ -610,20 +610,15 @@ lprf_rx_read_frame(void *context)
 
 // TX
 static uint8_t lprf_reverse_bit_order(uint8_t val){
-	uint8_t reversed_byte = 0;
-	int i;
-
-	// printk(KERN_DEBUG "lprf: lprf_reverse_bit_order- start. val=%u %s:%i\n", val, __FILE__, __LINE__);
-
-	for(i = 0; i <= 7; i++){	
-		if(val & (1 << i)){
-			reversed_byte += (1 << (7 - i));
-		}
-	}
+	//printk(KERN_DEBUG "lprf: lprf_reverse_bit_order- start. val=%u %s:%i\n", val, __FILE__, __LINE__);
+								// bit masks 
+	val = ((val & 0xF0) >> 4) | ((val & 0x0F) << 4);	// 1111 0000	0000 1111
+	val = ((val & 0xCC) >> 2) | ((val & 0x33) << 2);	// 1100 1100	0011 0011
+	val = ((val & 0xAA) >> 1) | ((val & 0x55) << 1); 	// 1010 1010	0101 0101
 	
-	// printk(KERN_DEBUG "lprf: lprf_reverse_bit_order- end. reversed_byte=%u %s:%i\n", reversed_byte, __FILE__, __LINE__);
+	//printk(KERN_DEBUG "lprf: lprf_reverse_bit_order- end. val=%u %s:%i\n", val, __FILE__, __LINE__);
 
-	return reversed_byte;
+	return val;
 }
 
 static void lprf_check_state_complete(void *context){
@@ -702,6 +697,7 @@ lprf_write_frame(void *context)
 	buf[0] = 0x60;
 	buf[1] = skb->len + 2;
 
+	// bit reversal 
 	for(pos = 0; pos < skb->len;  pos++){
 		*(skb->data + pos) = lprf_reverse_bit_order(*(skb->data + pos));
 	}
