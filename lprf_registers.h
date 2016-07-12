@@ -766,7 +766,7 @@
 
 
 // state machine 
-// commands 
+// commands, (SM_MAIN)
 #define STATE_CMD_NONE		0
 #define STATE_CMD_SLEEP		2
 #define STATE_CMD_DEEPSLEEP	3
@@ -775,7 +775,7 @@
 #define STATE_CMD_RX		6
 #define STATE_CMD_RXHOLD	7
 
-// state bits
+// state bits, SM_STATE
 #define STATE_DEEPSLEEP 	0x40
 #define STATE_SLEEP		0x20
 #define STATE_BUSY		0x10
@@ -785,11 +785,11 @@
 #define STATE_RECEIVING		0x01
 
 // settling times PLL
-#define T_POWER_TX_TIME		0x20
+#define T_POWER_TX_TIME		0xFF
 #define T_POWER_RX_TIME		0x20
-#define T_PLL_PON_TIME		0x60
+#define T_PLL_PON_TIME		0xFF
 #define T_PLL_SET_TIME 		0x60
-#define T_TX_TIME		0x40
+#define T_TX_TIME		0xFF
 #define T_PD_EN_TIME		0x20
 
 

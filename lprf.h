@@ -235,6 +235,7 @@ struct lprf_state_change {
 	void (*complete)(void *context);
 	u8 from_state;
 	u8 to_state;
+	uint16_t iterations;
 };
 
 
