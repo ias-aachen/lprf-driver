@@ -9,17 +9,17 @@ fi
 
 dmesg -c
 
-if lsmod | grep "lprf_mod_1" &> /dev/null ; then
+if lsmod | grep "lprf_tx" &> /dev/null ; then
 	echo "lprf module is currently loaded:"
 	echo "remove lprf module..."
-	rmmod lprf_mod_1
+	rmmod lprf_tx
 fi
 
 echo "compile module..."
 make 
 
 echo "load lprf module..."
-insmod lprf_mod_1.ko
+insmod lprf_tx.ko
 
 cat /proc/modules
 
