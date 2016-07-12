@@ -72,8 +72,10 @@
 	[97377.282782] lprf: scull_init_module registered lprf0  quantum=1  qset=1
 [97377.304691] lprf: lprf_probe - end: /home/pi/lprf/lprf_mod_1.c:1447
 
+
+
 // is called by: ip link set wpan0 up
-[97377.903496] lprf: lprf_start - initialise state change. /home/pi/lprf/lprf_mod_1.c:829
+[97377.903496] lprf: lprf_start - start. /home/pi/lprf/lprf_mod_1.c:829
 
 // is called by starting the client user space program 
 [97554.159860] lprf: lprf_xmit - start. /home/pi/lprf/lprf_mod_1.c:751
@@ -156,7 +158,7 @@
 	[97554.161797] lprf: lprf_get_state. /home/pi/lprf/lprf_mod_1.c:233
 	[97554.161810] lprf: lprf_async_state_assert - state change was successful, trx_state=4. /home/pi/lprf/lprf_mod_1.c:278
 
-	// is called vie ctx->complete (was defined in lprf_asyc_state_change)
+	// is called via ctx->complete (was defined in lprf_asyc_state_change)
 	[97554.161824] lprf: lprf_async_state_change_complete - from TX. buffer=4. /home/pi/lprf/lprf_mod_1.c:466
 [97554.161840] lprf: lprf_async_state_assert - end. /home/pi/lprf/lprf_mod_1.c:293
 
