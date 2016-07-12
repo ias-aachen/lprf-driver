@@ -1,4 +1,4 @@
-obj-m += lprf_mod_1.o
+obj-m += lprf_tx.o
 #obj-m += at86rf230.o
 
 #scull-objs := lprf.o
