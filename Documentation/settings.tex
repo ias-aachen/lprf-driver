@@ -1,0 +1,40 @@
+%% Change the settings of the file here
+
+%%
+%\setboolean{DraftMode}{false} % no Effect Josua
+% To set Packeges to draft mode go to Vorloge_DA.tex 
+% and set document options to draft. Makes Compiling much faster. 
+
+% faster PDF Generation but PDF needs much more MB 
+% \pdfcompresslevel=0
+
+% change Links and IAS Logo to Black and white Printable output.
+\setboolean{PrintVersion}{false} 
+% adds CONFIDANTIAL Print to Bottom line
+\setboolean{ConfidentialVersion}{false}
+% Changes TOC, ABR, LOF and most parts of the document to english
+\setboolean{IsEnglish}{false}
+
+% Changes First Page to use No Logo
+\setboolean{NoLogo}{false}
+
+% Please look at http://www.rwth-aachen.de/go/id/hjxv
+% or search for "Hinweise zu schriftlichen Arbeiten an der RWTH" 
+% to get the "Erklärung zur Verwendung des logos" and reache it in to "ZPA"
+
+
+\newcommand{\IASAuthor}{Richter-BRockmann, Jan}
+\newcommand{\IASTitleGerman}{Dokumentation des Kernel Modules für den LPRF Transceiver Chip}
+%\newcommand{\IASTitleEnglish}{English Title, could also be very long to test if the next line looks good! Also if there are more then two lines. Or tree, maybe four or five lines. Everything schould look like we wanted it to! And the following text schould always be on the same place!}
+\newcommand{\IASSubject}{Dokumentation}% Bachelorarbeit, Studienarbeit usw.
+%\newcommand{\IASMatNr}{123456}
+%%\newcommand{\IASSupervisor}{BetreuerNachname, BetreuerVorname M.Sc.}
+\newcommand{\IASNumber}{D123}
+\newcommand{\IASSubmissionDate}{06.07.2016}
+
+
+
+\graphicspath{{bilder/}} %relativer Pfad, in dem die Bilder liegen
+
+
+\bibliography{mybib}
