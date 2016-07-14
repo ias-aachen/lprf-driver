@@ -4,7 +4,7 @@
 
 \section{Strukturierung der Dateien}
 
-Alle Dateien, die zu dem LPRF Treiber gehören, befinden sich im Repository \textit{https://github.com/ias-aachen/lprf-driver}. In Tabelle \ref{tab:dateien} sind diese Datein mit ihren zugehörigen Funktionen aufgelistet. 
+Alle Dateien, die zu dem LPRF Treiber gehören, befinden sich im Repository \textit{https://github.com/ias-aachen/lprf-driver}. In Tabelle \ref{tab:dateien} sind diese Dateien mit ihren zugehörigen Funktionen aufgelistet. 
 
 \begin{table}[hbtp]
   \centering      
@@ -12,7 +12,7 @@ Alle Dateien, die zu dem LPRF Treiber gehören, befinden sich im Repository \text
   \toprule
              Datei								& Funktion          \\
   \midrule
-             load\_dirver.sh 					& Skript zum Einbinden des Treibers, nimmt alle \\ 
+             load\_driver.sh 					& Skript zum Einbinden des Treibers, nimmt alle \\ 
              										& nötigen Einstellungen vor \\           
   \midrule	
              lprf.h				      		& Header-Datei für das Modul, viele struct Definitionen                 	\\  
@@ -35,7 +35,7 @@ Alle Dateien, die zu dem LPRF Treiber gehören, befinden sich im Repository \text
    \caption{Zugehörige Dateien zum LPRF Treiber\label{tab:dateien}}   
 \end{table}
 
-Das Einbinden des LPRF Treibers geschieht über den Befehl \textit{\$sudo insmod lprf\_tx.ko}. Dafür muss das Module compiled sein und eine \textit{*.ko} Datei existieren. Um das Ausbinden, Compilen und wieder Einbinden zu erleichtern, ist es möglich das Skript \textit{load\_driver.sh} aufzurufen. Dort werden alle nötigen Schritte für eine Benutzung des Treibers durchgeführt. Dies beinhaltet auch das Erstellen einer Gerätedatei unter \textit{/dev}, welches mit dem Befehlt \textit{\$sudo mknod /dev/lprf c 243 0} geschieht. Zum Schluss wird das WPAN Devices gestartet. Die dazu notwendigen Dateien befinden sich im Verzeichnis \textit{/ieee802154}.
+Das Einbinden des LPRF Treibers geschieht über den Befehl \textit{\$sudo insmod lprf\_tx.ko}. Dafür muss das Module kompiliert sein und eine \textit{*.ko} Datei existieren. Um das Ausbinden, Kompilieren und wieder Einbinden zu erleichtern, ist es möglich, das Skript \textit{load\_driver.sh} aufzurufen. Dort werden alle nötigen Schritte für eine Benutzung des Treibers durchgeführt. Dies beinhaltet auch das Erstellen einer Gerätedatei unter \textit{/dev}, welches mit dem Befehlt \textit{\$sudo mknod /dev/lprf c 243 0} geschieht. Zum Schluss wird das WPAN Device gestartet. Die dazu notwendigen Dateien befinden sich im Verzeichnis \textit{/lprf-driver/ieee802154}.
 
 
 \section{Beschreibung des Codes}
@@ -134,7 +134,7 @@ struct lprf_chip_data {
 
 \subsubsection{ieee802154\_ops}
 
-In dem Struct \textit{ieee802154\_ops} werden alle Funktionen definiert, welche vom IEEE802.15.4 Layer benötigt und aufgerufen werden. Die wichtigsten für den LPRF Treiber sind die Funktionen \textit{int (*start)(struct ieee802154\_hw *hw)} und \textit{int (*xmit\_async)(struct ieee802154\_hw *hw, struct sk\_buff *skb)}. Wann diese Funktionen aufgerufen werden und welchen Nutzen sie haben wird weiter unten in Kapitel \ref{sec:lprf_start} und \ref{sec:lprf_xmit} erläutert. 
+In dem Struct \textit{ieee802154\_ops} werden Funktionspointer zu all den Funktionen abgelegt, welche vom IEEE802.15.4 Layer benötigt und aufgerufen werden. Die wichtigsten für den LPRF Treiber sind die Funktionen \textit{int (*start)(struct ieee802154\_hw *hw)} und \textit{int (*xmit\_async)(struct ieee802154\_hw *hw, struct sk\_buff *skb)}. Wann diese Funktionen aufgerufen werden und welchen Nutzen sie haben wird, weiter unten in Kapitel \ref{sec:lprf_start} und \ref{sec:lprf_xmit} erläutert. 
 
 %\begin{lstlisting}[language={C}, caption=Struct ieee802154\_ops, label=lis:ieeeOps]
 %struct ieee802154_ops {
@@ -159,17 +159,17 @@ In dem Struct \textit{ieee802154\_ops} werden alle Funktionen definiert, welche 
 
 \subsubsection{regmap\_config}
 
-Für die Konfiguration des regmap Subsystems wird der Struct \textit{regmap\_config} benötigt. Hier werden alle Hardware und Treiber spezifischen Einstellungen vorgenommen. Weitere Details befinden sich im Anhang \ref{sec:regmap}.
+Für die Konfiguration des regmap Subsystems wird der Struct \textit{regmap\_config} benötigt. Hier werden alle Hardware- und Treiber-spezifischen Einstellungen vorgenommen. Weitere Details befinden sich im Anhang \ref{sec:regmap}.
 
 
 
 \subsection{lprf\_probe()}
 
-Die Funktion \textit{lprf\_probe()} wird automatisch beim Einbinden des Moduls aufgerufen. Hier wird zu Beginn ein Struct vom Typ \textit{ieee802154\_hw} erstellt, welcher alle notwendigen Informationen über die Hardware beinhaltet. Diese Daten werden dann im Struct \textit{lp} vom Typ \textit{lprf\_local} abgelegt. Dieser struct spielt in dem gesamten Treiber eine wichtige Rolle, da dieser in jeder Funktion zur Verfügung steht (auch wenn \textit{lp} nicht mehr lokal initialisiert werden sollte). Nun folgt eine Initialisierung für das regmap Subsystem. Dieses wird für das Lesen und Schreiben von einzelnen Registern ohne Callback-Funktion genutzt. Außerdem steht ein Debugging Modus zur Verfügung. 
+Die Funktion \textit{lprf\_probe()} wird automatisch beim Einbinden des Moduls vom Kernel aufgerufen. Hier wird zu Beginn ein Struct vom Typ \textit{ieee802154\_hw} erstellt, welcher alle notwendigen Informationen über die Hardware beinhaltet. Diese Daten werden dann im Struct \textit{lp} vom Typ \textit{lprf\_local} abgelegt. Dieser struct spielt in dem gesamten Treiber eine wichtige Rolle, da dieser in jeder Funktion zur Verfügung steht (auch wenn \textit{lp} nicht mehr lokal initialisiert werden sollte). Nun folgt eine Initialisierung für das regmap Subsystem. Dieses wird für das Lesen und Schreiben von einzelnen Registern ohne Callback-Funktion genutzt. Außerdem steht ein Debugging Modus zur Verfügung. 
 
-Die Funktion \textit{lprf\_setup\_spi\_messages()} dient für das Einstellen der SPI Kommunikationen. Eine besondere Rolle spielt hier der struct \textit{lprf\_state\_change}. Davon sind aktuell vier Stück in \textit{lp} definiert. Je nach dem welche Aufgabe der Treiber gerade erfüllt, werden hier andere Implementierungen verwendet. Alle Funktionen, die von dem IEEE802.15.4 Layer aufgerufen werden, bekommen einen solchen Struct als Parameter übergeben und haben somit wieder Zugriff auf \textit{lp} (siehe Listing \ref{lis:stateChange}). 
+Die Funktion \textit{lprf\_setup\_spi\_messages()} dient zum Einstellen der SPI-Kommunikationen. Eine besondere Rolle spielt hier der struct \textit{lprf\_state\_change}. Davon sind aktuell vier Stück in \textit{lp} definiert. Je nach dem welche Aufgabe der Treiber gerade erfüllt, werden hier andere Implementierungen verwendet. Alle Funktionen, die vom IEEE802.15.4 Layer aufgerufen werden, bekommen einen solchen Struct als Parameter übergeben und haben somit wieder Zugriff auf \textit{lp} (siehe Listing \ref{lis:stateChange}). 
 
-Als nächster Schritt wird die Funktion \textit{lprf\_detect\_device()} aufgerufen. Diese liest die Chip ID Register (RG\_CHIP\_ID\_H und RG\_CHIP\_ID\_L) aus und prüft diese auf korrekten Inhalt (0x1A und 0x51). Falls einer der Werte nicht korrekt ausgelesen wird, wird der Initialisierungsprozess des LPRF Treibers abgebrochen. Am Ende von \textit{lprf\_detect\_device()} werden noch Hardware spezifische Einstellungen vorgenommen. Genaueres lässt sich aus den Kommentaren im Code entnehmen. 
+Als nächster Schritt wird die Funktion \textit{lprf\_detect\_device()} aufgerufen. Diese liest die Chip ID Register (RG\_CHIP\_ID\_H und RG\_CHIP\_ID\_L) aus und prüft diese auf korrekten Inhalt (0x1A und 0x51). Falls einer der Werte nicht korrekt ausgelesen wird, wird der Initialisierungsprozess des LPRF Treibers abgebrochen. Am Ende von \textit{lprf\_detect\_device()} werden noch Hardware-spezifische Einstellungen vorgenommen. Genaueres lässt sich aus den Kommentaren im Code entnehmen. 
 
 Nun werden zwei Initialisierungsfunktionen für die Verwendung der Completion-Struktur und der SPI Kommunikation aufgerufen. Dabei handelt es sich um \textit{init\_completion()} und \textit{spi\_set\_drvdata()}. 
 

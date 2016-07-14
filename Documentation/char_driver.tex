@@ -4,14 +4,14 @@
 
 Ein Char Driver zeichnet sich durch die Kommunikation zwischen dem Kernel und dem User Space aus. Es ist also möglich Daten vom und zum User Space zu übertragen. 
 
-In dem LPRF Treiber wird die Implementierung eines Char Drivers genutzt, um Registerwerte im laufenden Betrieb des Chips auszulesen. Dies ermöglicht ein leichteres Debuggen des Treibers. 
+Im LPRF Treiber wird die Implementierung eines Char Drivers genutzt, um Registerwerte im laufenden Betrieb des Chips auszulesen. Dies ermöglicht ein leichteres Debuggen des Treibers. 
 
 Wie bereits oben erwähnt, wird der Char Driver mit Hilfe der Funktion \textit{scull\_init\_module()} in \textit{lprf\_probe()} initialisiert. 
 
 
 \section{scull\_read()}
 
-Um die Verbindung zwischen User Space und Kernel Module zu schaffen, spielt die Funktion \textit{scull\_read()} eine wichtige Rolle. Damit diese Funktion allerdings Daten an den User Space zurückgeben kann, muss dort eine Gerätedatei mit der zum Treiber gehörigen Major Number erstellt werden (\textit{sudo mknode /dev/lprf -c MajorNumber MinorNumber}). Im Anschluss ist es möglich diese Datei auszulesen und der Char Driver liefert an diese einen Wert zurück. Falls das Auslesen einfach über \textit{\$cat} geschieht, wird in dem hier vorliegendem Fall immer das erste Register ausgegeben. Um die Registeradresse frei zu wählen, kann das Programm \textit{userspace.c} genutzt werden. 
+Um die Verbindung zwischen User Space und Kernel Module zu schaffen, spielt die Funktion \textit{scull\_read()} eine wichtige Rolle. Damit diese Funktion allerdings Daten an den User Space zurückgeben kann, muss dort eine Gerätedatei mit der zum Treiber gehörigen Major Number erstellt werden (\textit{sudo mknod /dev/lprf -c MajorNumber MinorNumber}). Im Anschluss ist es möglich, diese Datei auszulesen und der Char Driver liefert an diese einen Wert zurück. Falls das Auslesen einfach über \textit{\$cat} geschieht, wird in dem hier vorliegendem Fall immer das erste Register ausgegeben. Um die Registeradresse frei zu wählen, kann das Programm \textit{userspace.c} genutzt werden. 
 
 
 Wenn die Gerätedatei vom User Space aus ausgelesen wird, wird in dem Char Driver die Funktion \textit{scull\_read()} ausgeführt (Listing \ref{lis:scullRead}). Der Parameter \textit{*buf} enthält die Informationen über den Ort, von dem die Funktion aufgerufen wurde. Somit kann der Treiber die Daten an den korrekten Ort im User Space zurück liefern. Mit der Variable \textit{*f\_pos} wird die Adresse des auszulesenden Registers festgelegt. Dieser Pointer kann im User Space mit der c-Funktion \textit{fseek} modifiziert werden. 
