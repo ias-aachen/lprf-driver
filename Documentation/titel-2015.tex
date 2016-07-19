@@ -1,0 +1,74 @@
+\begin{titlepage}
+
+\pagestyle{empty}
+
+\ifthenelse{\boolean{IsEnglish}}
+{
+\pdfbookmark[0]{Front Page}{Front Page} %Titelseite in die pdf-Bookmarks aufnehmen        
+}
+{
+\pdfbookmark[0]{Titelseite}{Titelseite} %Titelseite in die pdf-Bookmarks aufnehmen    
+}
+
+% set textheight so the date also fits when Tittles get bigger
+\enlargethispage{2.3in}
+% set topmargin so picture fits in Page
+\setlength{\voffset}{-1in}
+
+\ifthenelse{\boolean{NoLogo}}
+{
+   \vspace*{32.4mm} 
+}
+{ 
+\ifthenelse{\boolean{PrintVersion}}
+{  \hspace*{4.5cm}\includegraphics[height=32mm, trim= 5 5 50 5 ]{Logos_2015/rwth_ias_bild_schwarz_grau_cmyk.eps}
+}
+{
+  \hspace*{4.5cm}\includegraphics[height=32mm, trim= 5 5 50 5 ]{Logos_2015/rwth_ias_bild_rgb.eps}
+}\bigskip 
+}\setcounter{subfigure}{0}
+
+~\\
+Lehrstuhl für Integrierte Analogschaltungen
+der RWTH Aachen. \bigskip \\ \bigskip
+~\\~\\~\\~\\
+{\Large \bfseries \IASTitleGerman\\} \bigskip 
+~\\~\\~\\~\\
+%{\Large \bfseries \IASTitleEnglish\\} \bigskip
+% 
+%% bring the next text down to the bottom so variation of title lenght don´t change the position of this text
+%\par\vspace*{\fill}
+%~\\
+%{\Large \IASSubject\\}\bigskip
+%
+%~\\
+{\Large von\\~\\}~{\Large \IASAuthor\\}~\\
+{\Large und\\~\\}~{\Large Schrey, Moritz\\} 
+%{\Large Matr.-Nr. \IASMatNr\\} \bigskip \bigskip
+
+%~\\
+%{\large Unter Betreuung von \IASSupervisor\\} \bigskip \bigskip 
+%
+%~\\
+%{\Large 1. Prüfer: Prof. Dr.-Ing. Stefan J. Heinen}
+%~\\
+%{\Large 2. Prüfer: Prof. Dr. sc. techn. Renato Negra}
+%\confidential{\vspace*{0.8cm}}{\vspace*{1.3cm}}
+%\confidential{\vspace*{0.4cm}}{\vspace*{1.1cm}}
+%\confidential{~\\
+%\ifthenelse{\boolean{IsEnglish}}
+%  {\textbf{CONFIDENTIAL}}
+%  {\textbf{VERTRAULICH}}
+%  }{}
+%
+%\centerline{ \Large \IASNumber}
+%{\flushright{ \Large Aachen, \IASSubmissionDate}\\~\\}
+
+\newpage
+% reset the voffset so the following pages have the Normal Layout
+\setlength{\voffset}{0in}
+
+\thispagestyle{empty}
+\rule{0pt}{0pt}
+\cleardoublepage
+\end{titlepage}
