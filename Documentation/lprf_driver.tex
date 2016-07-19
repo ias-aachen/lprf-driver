@@ -1,0 +1,245 @@
+% lprf driver 
+
+\chapter{LPRF Driver}
+
+\section{Strukturierung der Dateien}
+
+Alle Dateien, die zu dem LPRF Treiber gehören, befinden sich im Repository \textit{https://github.com/ias-aachen/lprf-driver}. In Tabelle \ref{tab:dateien} sind diese Dateien mit ihren zugehörigen Funktionen aufgelistet. 
+
+\begin{table}[hbtp]
+  \centering      
+  \begin{tabular}{ll}
+  \toprule
+             Datei								& Funktion          \\
+  \midrule
+             load\_driver.sh 					& Skript zum Einbinden des Treibers, nimmt alle \\ 
+             										& nötigen Einstellungen vor \\           
+  \midrule	
+             lprf.h				      		& Header-Datei für das Modul, viele struct Definitionen                 	\\  
+  \midrule
+             lprf\_tx.c			   			& Implementierung des Treibers, eigentlicher Code     								\\
+  \midrule
+ 			    lprf\_tx.ko           			& Datei wird zum Einbinden des Treibers benötigt									\\
+  \midrule
+ 			    Makefile              			& Enthält die Regeln fürs Compilen														\\	
+  \midrule
+ 			    output\_dmesg\_lprf.txt		& Ausgabe des dmesg nach einem Sendevorgang 											\\				
+  \midrule
+ 			    userspace.c						& Ermöglicht das Auslesen eines Registers des \\
+ 			    										& Chips bei laufendem Betrieb	\\	
+  \midrule 
+  				 lprf\_registers.h					& Enthält die Register Definitionen \\   
+  \bottomrule
+  \end{tabular}
+        
+   \caption{Zugehörige Dateien zum LPRF Treiber\label{tab:dateien}}   
+\end{table}
+
+Das Einbinden des LPRF Treibers geschieht über den Befehl \textit{\$sudo insmod lprf\_tx.ko}. Dafür muss das Module kompiliert sein und eine \textit{*.ko} Datei existieren. Um das Ausbinden, Kompilieren und wieder Einbinden zu erleichtern, ist es möglich, das Skript \textit{load\_driver.sh} aufzurufen. Dort werden alle nötigen Schritte für eine Benutzung des Treibers durchgeführt. Dies beinhaltet auch das Erstellen einer Gerätedatei unter \textit{/dev}, welches mit dem Befehlt \textit{\$sudo mknod /dev/lprf c 243 0} geschieht. Zum Schluss wird das WPAN Device gestartet. Die dazu notwendigen Dateien befinden sich im Verzeichnis \textit{/lprf-driver/ieee802154}.
+
+
+\section{Beschreibung des Codes}
+
+\subsection{Wichtige structs}
+
+In dem Treiber wird viel mit Structs gearbeitet, welche oft auch untereinander verknüpft sind. Dieses Kapitel soll über die wichtigsten verwendeten Structs einen Überblick geben. 
+
+\subsubsection{lprf\_local}
+
+Der Struct \textit{lprf\_local} (Listing \ref{lis:local}) dient dem Speichern aller Daten über das Device. Dazu zählen die Einstellungen für die SPI Kommunikation, das regmap Subsystem, boolesche Variablen und structs von Typ \textit{lprf\_state\_change} (dazu mehr in \ref{sec:StructStateChange}). Dieser Struct dient daher auch der Kommunikation zwischen den Funktionen. 
+
+\begin{lstlisting}[language={C}, caption=Struct lprf\_local, label=lis:local]
+struct lprf_local {
+	struct spi_device *spi;
+
+	struct ieee802154_hw *hw;	
+	struct lprf_chip_data *data;
+	struct regmap *regmap;
+	int slp_tr;
+
+	struct completion state_complete;
+	struct lprf_state_change state;
+
+	bool tx_aret;
+	unsigned long cal_timeout;
+	s8 max_frame_retries;
+	bool is_tx;
+	bool is_tx_from_off;
+
+	u8 tx_retry;
+	struct sk_buff *tx_skb;
+	struct lprf_state_change tx;
+
+	struct lprf_state_change rx;
+	struct lprf_state_change debug;
+};
+
+\end{lstlisting}
+
+
+\subsubsection{lprf\_state\_change}\label{sec:StructStateChange}
+
+Der Struct \textit{lprf\_state\_change} wird für die Kommunikation zwischen den Funktionen, welche vom IEEE802.15.4 Layer aufgerufen werden, benutzt. Damit in solchen Funktionen auch der Struct \textit{lprf\_local} zur Verfügung steht, wird dieser ebenfalls in \textit{lprf\_state\_change} verknüpft. Des Weiteren enthält der Struct Informationen über benötigte Timer, den Buffer (dort werden die Bytes der SPI Kommunikation abgelegt) und boolesche Werte über einen Statuswechsel. 
+
+\begin{lstlisting}[language={C}, caption=Struct lprf\_state\_change, label=lis:stateChange]
+struct lprf_state_change {
+	struct lprf_local *lp;
+
+	struct hrtimer timer;
+	struct spi_message msg;
+	struct spi_transfer trx;
+	u8 buf[LPRF_MAX_BUF];
+
+	void (*complete)(void *context);
+	u8 from_state;
+	u8 to_state;
+};
+
+\end{lstlisting}
+
+
+\subsubsection{lprf\_chip\_data}
+
+In Listing \ref{lis:chipData} ist die Implementierung des Structs \textit{lprf\_chip\_data} dargestellt. Dieser enthält hauptsächlich die Zeiten, welche die verschiedenen Komponenten auf dem Chip zum Einschwingen benötigen. Alle Zeiten werden in $\mu s$ angegeben. 
+
+\begin{lstlisting}[language={C}, caption=Struct lprf\_chip\_data, label=lis:chipData]
+struct lprf_chip_data {
+	u16 t_from_sleep_to_tx;
+	u16 t_from_tx_idle_to_tx;
+	u16 t_from_rx_power_to_tx;
+	u16 t_from_rx_pll_to_tx;
+	
+	u16 t_from_sleep_to_rx;
+	u16 t_from_tx_to_rx;
+	u16 t_from_rxhold_to_rx;
+
+	u16 t_from_sleep_to_txidle;
+	u16 t_from_tx_to_txidle;
+	u16 t_from_rx_to_txidle; 
+	u16 t_from_rx_pll_to_txidle;
+
+	u16 t_from_sleep_to_rxhold;
+	u16 t_from_tx_to_rxhold;
+	u16 t_from_rx_to_rxhold;
+
+	
+	int rssi_base_val;
+
+	int (*set_channel)(struct lprf_local *, u8, u8);
+	int (*get_desense_steps)(struct lprf_local *, s32);
+};
+\end{lstlisting}
+
+
+
+\subsubsection{ieee802154\_ops}
+
+In dem Struct \textit{ieee802154\_ops} werden Funktionspointer zu all den Funktionen abgelegt, welche vom IEEE802.15.4 Layer benötigt und aufgerufen werden. Die wichtigsten für den LPRF Treiber sind die Funktionen \textit{int (*start)(struct ieee802154\_hw *hw)} und \textit{int (*xmit\_async)(struct ieee802154\_hw *hw, struct sk\_buff *skb)}. Wann diese Funktionen aufgerufen werden und welchen Nutzen sie haben wird, weiter unten in Kapitel \ref{sec:lprf_start} und \ref{sec:lprf_xmit} erläutert. 
+
+%\begin{lstlisting}[language={C}, caption=Struct ieee802154\_ops, label=lis:ieeeOps]
+%struct ieee802154_ops {
+%	struct module   *owner;
+%	int             (*start)(struct ieee802154_hw *hw);
+%	void            (*stop)(struct ieee802154_hw *hw);
+%	int             (*xmit_sync)(struct ieee802154_hw *hw, struct sk_buff *skb);
+%	int             (*xmit_async)(struct ieee802154_hw *hw, struct sk_buff *skb);
+%	int             (*ed)(struct ieee802154_hw *hw, u8 *level);
+%	int             (*set_channel)(struct ieee802154_hw *hw, u8 page, u8 channel);
+%	int             (*set_hw_addr_filt)(struct ieee802154_hw *hw, struct ieee802154_hw_addr_filt *filt, unsigned long changed);
+%	int             (*set_txpower)(struct ieee802154_hw *hw, s32 mbm);
+%	int             (*set_lbt)(struct ieee802154_hw *hw, bool on);
+%	int             (*set_cca_mode)(struct ieee802154_hw *hw, const struct wpan_phy_cca *cca);
+%	int             (*set_cca_ed_level)(struct ieee802154_hw *hw, s32 mbm);
+%	int             (*set_csma_params)(struct ieee802154_hw *hw, u8 min_be, u8 max_be, u8 retries);
+%	int             (*set_frame_retries)(struct ieee802154_hw *hw, s8 retries);
+%	int             (*set_promiscuous_mode)(struct ieee802154_hw *hw, const bool on);
+%};
+%\end{lstlisting}
+
+
+\subsubsection{regmap\_config}
+
+Für die Konfiguration des regmap Subsystems wird der Struct \textit{regmap\_config} benötigt. Hier werden alle Hardware- und Treiber-spezifischen Einstellungen vorgenommen. Weitere Details befinden sich im Anhang \ref{sec:regmap}.
+
+
+
+\subsection{lprf\_probe()}
+
+Die Funktion \textit{lprf\_probe()} wird automatisch beim Einbinden des Moduls vom Kernel aufgerufen. Hier wird zu Beginn ein Struct vom Typ \textit{ieee802154\_hw} erstellt, welcher alle notwendigen Informationen über die Hardware beinhaltet. Diese Daten werden dann im Struct \textit{lp} vom Typ \textit{lprf\_local} abgelegt. Dieser struct spielt in dem gesamten Treiber eine wichtige Rolle, da dieser in jeder Funktion zur Verfügung steht (auch wenn \textit{lp} nicht mehr lokal initialisiert werden sollte). Nun folgt eine Initialisierung für das regmap Subsystem. Dieses wird für das Lesen und Schreiben von einzelnen Registern ohne Callback-Funktion genutzt. Außerdem steht ein Debugging Modus zur Verfügung. 
+
+Die Funktion \textit{lprf\_setup\_spi\_messages()} dient zum Einstellen der SPI Kommunikationen. Eine besondere Rolle spielt hier der struct \textit{lprf\_state\_change}. Davon sind aktuell vier Stück in \textit{lp} definiert. Je nach dem welche Aufgabe der Treiber gerade erfüllt, werden hier andere Implementierungen verwendet. Alle Funktionen, die vom IEEE802.15.4 Layer aufgerufen werden, bekommen einen solchen Struct als Parameter übergeben und haben somit wieder Zugriff auf \textit{lp} (siehe Listing \ref{lis:stateChange}). 
+
+Als nächster Schritt wird die Funktion \textit{lprf\_detect\_device()} aufgerufen. Diese liest die Chip ID Register (RG\_CHIP\_ID\_H und RG\_CHIP\_ID\_L) aus und prüft diese auf korrekten Inhalt (0x1A und 0x51). Falls einer der Werte nicht korrekt ausgelesen wird, wird der Initialisierungsprozess des LPRF Treibers abgebrochen. Am Ende von \textit{lprf\_detect\_device()} werden noch Hardware-spezifische Einstellungen vorgenommen. Genaueres lässt sich aus den Kommentaren im Code entnehmen. 
+
+Nun werden zwei Initialisierungsfunktionen für die Verwendung der Completion-Struktur und der SPI Kommunikation aufgerufen. Dabei handelt es sich um \textit{init\_completion()} und \textit{spi\_set\_drvdata()}. 
+
+Der nun folgende Aufruf von der Funktion \textit{lprf\_hw\_init()} dient für das Setzten aller notwendigen Register. Mit der dort verwendeten Funktion \textit{lprf\_write\_subreg()} werden nur einzelne Bits geändert. Die Funktion \textit{\_\_lprf\_write()} hingegen ändert den gesamten Wert eines Registers und wurde verwendet, wenn mehrere Bits in einem Register geändert werden mussten. Diese wurden dann zu einem Wort zusammengefasst und in einem Schreibvorgang aktualisiert. 
+
+Zum Abschluss in \textit{lprf\_probe()} wird der Char-Driver initialisiert (dazu weiter unten mehr) und die Hardware im IEEE802.15.4 Layer registriert. Dafür finden die Funktionen \textit{scull\_init\_module()} und \textit{ieee802154\_register\_hw()} Anwendung. 
+
+
+
+
+
+
+\subsection{lprf\_start()}\label{sec:lprf_start}
+
+Die Funktion \textit{lprf\_start()} wird durch den IEEE802.15.4 Layer aufgerufen, wenn ein WPAN Netzwerk über den Treiber initialisiert wird (\textit{/ieee802154/setup\_wpan.sh}). Zur Zeit erfüllt der Aufruf dieser Funktion keinen weiteren Nutzen. Ein möglicher Verwendungszweck könnte allerdings die Implementierung einer Polling-Struktur für den RX-Pfad sein. 
+
+
+
+
+
+\subsection{lprf\_xmit()}\label{sec:lprf_xmit}
+
+Wenn mit dem User Space Programm \textit{/ieee802154/client\_udp\_802154.c} auf den Treiber zugegriffen wird, wird die Funktion \textit{lprf\_xmit()} aufgerufen und ein Sendevorgang gestartet. Um einen aktiven Sendevorgang zu kennzeichnen, wird der boolesche Wert \textit{lp->is\_tx} auf logisch 1 gesetzt. Außerdem werden die zu übertragenden Daten vom IEEE802.15.4 Layer übergeben und in \textit{lp->tx\_skb} abgelegt. Nun wird die Funktion \\ 
+	\hspace*{15mm}\textit{lprf\_xmit\_start()} \\
+genutzt, um lediglich die Funktion \\
+	\hspace*{15mm}\textit{lprf\_write\_frame()} \\
+aufzurufen. Hier werden die Bits der einzelnen zu sendenden Bytes mit der Funktion \textit{lprf\_reverse\_bit\_order()} in der Reihenfolge getauscht. Dann werden diese Daten mittels \textit{spi\_async()} an die Hardware übertragen. Als Callback-Funktion wird \\
+	\hspace*{15mm}\textit{lprf\_write\_frame\_complete()} \\
+aufgerufen. Hier wird zuerst der FIFO mode aktiviert (SR\_FIFO\_MODE\_EN) und im Anschluss mit \textit{lprf\_async\_read\_reg()} das Register RG\_SM\_STATE ausgelesen. Da dieses Auslesen über die Funktion \textit{spi\_async()} geschieht, gibt es auch hier eine Callback-Funktion, welche in diesem Fall \\
+	\hspace*{15mm}\textit{lprf\_check\_state\_complete()} \\ 
+ist. Hier wird mit dem ausgelesenen Wert geprüft, ob die State Machine busy ist. Falls das der Fall sein sollte, wird das Register SM\_STATE erneut gelesen und als Callback-Funktion wiederum \textit{lprf\_check\_state\_complete()} aufgerufen. Wenn sich die State Machine nicht in dem Status STATE\_BUSY befindet, wird mittels der Funktion \\
+	\hspace*{15mm}\textit{lprf\_get\_state()} \\ 
+der ausgelesene Wert aus SM\_STATE dem passenden Status aus SM\_MAIN zugewiesen und damit der aktuelle Status der State Machine ermittelt. Dieser Status wird dann in \textit{ctx->from\_state} abgelegt. Im Anschluss wird mit der Funktion \\
+	\hspace*{15mm}\textit{lprf\_async\_state\_change()} \\
+ein Statuswechsel gestartet. Hier werden als Parameter der Zielstatus und eine Completion-Funktion übergeben. Der Zielstatus wird unter \textit{ctx->to\_state} abgespeichert und die Completion-Funktion unter \textit{ctx->complete}. Danach wird das Register SM\_MAIN ausgelesen, indem wieder die Funktion \textit{lprf\_async\_read\_reg()} verwendet wird. Dieses mal wird als Callback-Funktion von \textit{spi\_async()} die Funktion \\
+	\hspace*{15mm}\textit{lprf\_async\_state\_change\_start()} \\
+aufgerufen. Das Auslesen aus SM\_MAIN wird gemacht, damit die letzten vier Bits aus dem gelesenen Byte selektiert werden können. Diese werden bei dem Schreiben des neuen Status benötigt, um ein Überschreiben dieser zu verhindern. Der Schreibprozess wird auch hier mit \textit{spi\_async()} durchgeführt. Als Callback-Funktion ist \\
+	\hspace*{15mm}\textit{lprf\_state\_delay()} \\
+definiert. Hier wird über eine switch-case Anweisung die korrekte Wartezeit ermittelt, um sicherzustellen, dass alle Module auf dem Chip eingeschwungen sind. Falls eine dieser Wartezeiten angepasst werden muss, kann dies über die Konstanten in Listing \ref{lis:TimingConst} geschehen (definiert in \textit{lprf\_registers.h}). 
+
+
+\begin{minipage}{\linewidth}
+	\begin{lstlisting}[language={C}, caption=Definition der Wartezeiten, label=lis:TimingConst]
+	// settling times PLL
+	#define T_POWER_TX_TIME		0x20
+	#define T_POWER_RX_TIME		0x20
+	#define T_PLL_PON_TIME		0x60
+	#define T_PLL_SET_TIME 		0x60
+	#define T_TX_TIME			0x40
+	#define T_PD_EN_TIME		0x20
+	\end{lstlisting}
+\end{minipage}
+
+
+Wenn die richtige Wartezeit ermittelt wurde, wird ein Timer gestartet, welcher als Callback-Funktion \\
+	\hspace*{15mm}\textit{lprf\_state\_timer()} \\
+aufruft. Nun wird erneut das Register SM\_STATE mittels \textit{lprf\_async\_read\_reg()} ausgelesen und als Callback-Funktion \\
+	\hspace*{15mm}\textit{lprf\_async\_state\_assert()} \\
+übergeben. Hier findet mit Hilfe des ausgelesenen Wertes eine Abfrage nach Abbildung \ref{fig:TXassert} statt. 
+
+\begin{figure}[htbp!]
+	\center
+  \includegraphics[width = 0.6\textwidth]{LPRF_TX_assert.pdf}
+        \caption{Abfrage in \textit{lprf\_async\_state\_change()}\label{fig:TXassert}}
+\end{figure} 
+
+Mit dieser Abfrage wird überprüft, ob der Statuswechsel erfolgreich war. Bei einem auftretenden Fehler wird zur Zeit nichts unternommen, sondern nur mittels \textit{return} die Funktion verlassen. Wenn allerdings alles erfolgreich durchgeführt wurde, wird die Funktion \\
+	\hspace*{15mm}\textit{lprf\_async\_state\_change\_complete()} \\
+aufgerufen (wurde in \textit{lprf\_async\_state\_change unter \textit{ctx->complete} gespeichert}). Hier wird zuerst überprüft, ob \textit{lp->is\_tx} gesetzt ist. Mittels einer Überprüfung, ob sich die State Machine noch im Sendemodus befindet, wird \textit{lprf\_async\_read\_reg()} solange aufgerufen, bis dies nicht mehr der Fall sein sollte. Dann ist das Senden beendet und das Register SM\_MAIN kann zurückgesetzt werden und der FIFO Mode ausgeschaltet werden. Außerdem wird \textit{lp->is\_tx} auf logisch 0 zurückgesetzt. Zum Abschluss einer Übertragung über den IEEE802.15.4 Layer muss die Funktion \textit{ieee802154\_xmit\_complete()} ausgeführt werden. 
+
+
+
+

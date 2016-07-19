@@ -1,0 +1,66 @@
+% Char Driver 
+
+\chapter{Char Driver}
+
+Ein Char Driver zeichnet sich durch die Kommunikation zwischen dem Kernel und dem User Space aus. Es ist also möglich Daten vom und zum User Space zu übertragen. 
+
+Im LPRF Treiber wird die Implementierung eines Char Drivers genutzt, um Registerwerte im laufenden Betrieb des Chips auszulesen. Dies ermöglicht ein leichteres Debuggen des Treibers. 
+\urlstyle{same}
+
+
+Wie bereits oben erwähnt, wird der Char Driver mit Hilfe der Funktion \textit{\url{scull\_init\_module()}} in \textit{lprf\_probe()} initialisiert. 
+
+
+\section{scull\_read()}
+
+Um die Verbindung zwischen User Space und Kernel Module zu schaffen, spielt die Funktion \textit{scull\_read()} eine wichtige Rolle. Damit diese Funktion allerdings Daten an den User Space zurückgeben kann, muss dort eine Gerätedatei mit der zum Treiber gehörigen Major Number erstellt werden (\textit{sudo mknod /dev/lprf -c MajorNumber MinorNumber}). Im Anschluss ist es möglich, diese Datei auszulesen und der Char Driver liefert an diese einen Wert zurück. Falls das Auslesen einfach über \textit{\$cat} geschieht, wird in dem hier vorliegendem Fall immer das erste Register ausgegeben. Um die Registeradresse frei zu wählen, kann das Programm \textit{userspace.c} genutzt werden. 
+
+
+Wenn die Gerätedatei vom User Space aus ausgelesen wird, wird in dem Char Driver die Funktion \textit{scull\_read()} ausgeführt (Listing \ref{lis:scullRead}). Der Parameter \textit{*buf} enthält die Informationen über den Ort, von dem die Funktion aufgerufen wurde. Somit kann der Treiber die Daten an den korrekten Ort im User Space zurück liefern. Mit der Variable \textit{*f\_pos} wird die Adresse des auszulesenden Registers festgelegt. Dieser Pointer kann im User Space mit der c-Funktion \textit{fseek} modifiziert werden. 
+
+
+\begin{lstlisting}[language={C}, caption=Implementierung scull\_read(), label=lis:scullRead]
+ssize_t scull_read(struct file *filp, char __user *buf, size_t count, loff_t *f_pos)
+{
+	ssize_t retval = 0;
+	unsigned int myval = 1;
+	unsigned int dev_size = 2 + *f_pos;
+	unsigned int rc;
+	struct lprf_state_change *ctx = &(lp->debug);
+
+	printk(KERN_DEBUG "lprf: scull_read - start.");
+	
+	// read from hardware via spi_sync()
+	lprf_sync_read_reg_debugging(lp, *f_pos, ctx, 0);
+
+	// get read value
+	myval = ctx->buf[2];	
+	
+	count = 1;			
+	
+	rc = copy_to_user(buf, &myval, count);	
+	if (rc) {		//1 char is transfered, count = 1	
+		retval = -EFAULT;
+		goto out;
+	}
+	
+	*f_pos += count;	//+= 1
+		
+	if (*f_pos + count > dev_size){		
+		count = dev_size - *f_pos;
+		printk(KERN_DEBUG "lprf: scull_read: count=%u\n", count);
+		return 0;
+	}
+
+	retval = count;
+
+out:
+	printk(KERN_DEBUG "lprf: scull_read - end. %s:%i\n", __FILE__, __LINE__);	
+	return retval;
+	return 0;
+}
+\end{lstlisting}
+
+Für das Auslesen des Registers wird die Funktion \textit{lprf\_sync\_read\_debugging()} verwendet. Diese spezielle Funktion ist notwendig, damit bei der SPI Kommunikation der Code des LPRF Treibers unterbrochen wird und nicht weiter ausgeführt wird. Ansonsten würde \textit{scull\_write} fortgesetzt werden, wenn noch keine ausgelesenen Daten in ctx->buf[2] vorliegen würde. 
+
+Nachdem das entsprechende Register ausgelesen wurde, ist es möglich den Wert aus {ctx->buf[2]} in \textit{myval} zu speichern. Zum Schluss kann der Wert an den User Space zurückgegeben werden, wozu die Funktion \textit{copy\_to\_user()} genutzt wird. 

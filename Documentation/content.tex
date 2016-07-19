@@ -1,0 +1,52 @@
+% Add the content of the file here
+
+\input{lprf_driver.tex}
+\input{char_driver.tex}
+
+
+%\input{beispiel.tex}
+%%%% Add your chapters here
+
+\printbibliography[heading=bibintoc]
+
+\appendix
+
+
+\input{Anhang.tex}
+
+%
+%\ifthenelse{\boolean{IsEnglish}}
+%{
+%  \chapter{Presentation Slides}
+%}
+%{
+%  \chapter{Vortragsfolien}
+%} 
+%
+%% include slides be aware of the slide numbers at include pdf page, at the beginning the chapter heading will be included so only 4 slides fit at this page. first page slide 1-4 , than include the other Pages from 5 - xx
+%\tikzexternaldisable
+%
+%\begin{minipage}{\textwidth}
+%     \includepdf[nup=2x2,pages={1-4},width=0.48\textwidth, offset=0 -3.0cm, delta=17.58pt 2cm,pagecommand={\section{Einführungsvortrag}}]{../Anhang/Einfuehrungsvortrag.pdf}
+%\end{minipage}
+%
+%\includepdf[nup=2x3,pages={5-29},width=0.48\textwidth, offset=-6.55mm 0cm, delta=17.58pt 2cm,pagecommand={\pagestyle{scrheadings}}]{../Anhang/Einfuehrungsvortrag.pdf}
+%\cleardoublepage % do NOT remove
+%
+%
+%% Final Presentation
+%% No chapter Heading so no minipage
+%
+%%\includepdf[nup=2x3,pages={1-33},width=0.48\textwidth, offset=-6.55mm 0cm, delta=17.58pt 2cm,pagecommand=\section{Abschlussvortrag}}]{../Anhang/FinalPresentation_final.pdf}
+%%\cleardoublepage % do NOT remove
+%
+%\begin{minipage}{\textwidth}
+%     \includepdf[nup=2x2,pages={1-4},width=0.48\textwidth, offset=0 -3.0cm, delta=17.58pt 2cm,pagecommand={\section{Abschlussvortrag}}]{../Anhang/FinalPresentation_final.pdf}
+%\end{minipage}
+%
+%\includepdf[nup=2x3,pages={5-27},width=0.48\textwidth, offset=-6.55mm 0cm, delta=17.58pt 2cm,pagecommand={\pagestyle{scrheadings}}]{../Anhang/FinalPresentation_final.pdf}
+%\cleardoublepage % do NOT remove
+%
+%\tikzexternalenable
+
+
