@@ -3,7 +3,7 @@ obj-m += lprf_tx.o
 
 #scull-objs := lprf.o
 
-KERNELDIR ?= /home/pi/linux
+KERNELDIR ?= /home/pi/kernel/linux
 
 all:
 	make -C $(KERNELDIR) M=$(PWD) LDDINC=$(PWD)/../include modules
