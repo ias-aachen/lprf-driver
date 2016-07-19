@@ -15,8 +15,11 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details
  *
+ * Works on kernel version 4.4.15+
+ *
  * Written by:
  * Moritz Schrey <mschrey@ias.rwth-aachen.de>
+ * Jan Richter-Brockmann <jan.richter-brockmann@rwth-aachen.de>
  * Dmitry Eremin-Solenikov <dbaryshkov@gmail.com>
  * Alexander Smirnov <alex.bluesman.smirnov@gmail.com>
  * Alexander Aring <aar@pengutronix.de>
@@ -54,7 +57,7 @@
 #include <asm/uaccess.h>	/* copy_*_user */
 //</scull>
 
-#include "lprf.h"			/* local definitions */
+#include "lprf.h"		/* local definitions */
 #include "lprf_registers.h"
 
 
@@ -482,7 +485,7 @@ static void lprf_async_state_change_complete(void *context){
 			lp->is_tx = 0;
 
 			// we need to call 
-			ieee802154_xmit_complete(lp->hw, lp->tx_skb, !lp->tx_aret);
+			ieee802154_xmit_complete(lp->hw, lp->tx_skb, false);
 		}
 	}
 	else{	
@@ -574,7 +577,7 @@ lprf_rx_read_frame_complete(void *context)
 
 	memcpy(skb_put(skb, len), rx_local_buf, len);
 	
-	ieee802154_rx(lp->hw, skb);
+	//ieee802154_rx(lp->hw, skb);
 
 	// activate polling
 	lprf_check_for_data(lp);
@@ -652,6 +655,8 @@ lprf_write_frame_complete(void *context)
 	// u8 *buf = ctx->buf;
 
 	printk(KERN_DEBUG "lprf: lprf_write_frame_complete - start. %s:%i\n", __FILE__, __LINE__);
+
+	ctx->trx.len = 2;
 
 	// enable FIFO mode 
 	rc = lprf_write_subreg(lp, SR_FIFO_MODE_EN, 1);
@@ -1333,13 +1338,14 @@ static int lprf_detect_device(struct lprf_local *lp)
 		#define IEEE802154_HW_RX_DROP_BAD_CKSUM 0x00000800
 	*/
 
-	lp->hw->flags = IEEE802154_HW_TX_OMIT_CKSUM;		// Which flags are missing?
+	//lp->hw->flags = IEEE802154_HW_TX_OMIT_CKSUM;		// Which flags are missing?
 
 	// @NL802154_CCA_ENERGY: Energy above threshold
 	lp->hw->phy->cca.mode = NL802154_CCA_ENERGY;
 
 	lp->data = &lprf_data;
-	lp->hw->phy->channels_supported[0] = 0x7FFF800;
+	//lp->hw->phy->channels_supported[0] = 0x7FFF800;
+	lp->hw->phy->supported.channels[0] = 0x7FFF800;	
 	lp->hw->phy->current_channel = 11;
 	lp->hw->phy->symbol_duration = 16;
 
@@ -1445,7 +1451,7 @@ static int lprf_probe(struct spi_device *spi)   // part of struct spi_driver lpr
 	lp->spi = spi;
 	lp->slp_tr = slp_tr;
 	hw->parent = &spi->dev;
-	hw->vif_data_size = sizeof(*lp);
+	//hw->vif_data_size = sizeof(*lp);
 	ieee802154_random_extended_addr(&hw->phy->perm_extended_addr);
 
 	// initialise hrtimer for rx
@@ -2035,8 +2041,9 @@ static const struct ieee802154_ops lprf_ops = {
 //interface to device tree file (bcm2835-rpi-b-plus.dts);
 // !modify! 
 static const struct of_device_id lprf_of_match[] = {    // part of struct spi_driver lprf_driver
-	{ .compatible = "atmel,at86rf233", },   
+	{ .compatible = "atmel,at86rf233", },    
 	{ .compatible = "atmel,at86rf212", },
+	{ .compatible = "ias,lprf", },
 	{ },
 };
 MODULE_DEVICE_TABLE(of, lprf_of_match);   		//second argument is name of struct of_device_id 
