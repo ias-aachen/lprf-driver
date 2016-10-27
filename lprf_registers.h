@@ -10,7 +10,8 @@
  *     #define SR_bit-field-name    register-address, bitmask, LSB of bit field
  *
  * 2016-07.04 - Version 1.1
- * 2016-09-15 - Version 1.2 - Removed Tabs and unnecessary white space
+ * 2016-09-15 - Version 1.2 - Removed Tabs, unnecessary white space and IQ_INV issue, added "t" at 0x24, removed "_IN" at 0x25 and 0x26, added "SR_" at 0x40
+
  *
   */
 
@@ -22,7 +23,7 @@
 #define RG_ACTIVATE_ALL        (0xFF)
 
 #define RG_GLOBAL              (0x02)
-#define SR_WUR_DEBUG_EN        0x02, 0x10, 4
+#define SRf_WUR_DEBUG_EN        0x02, 0x10, 4
 #define SR_BANDGAP_PD          0x02, 0x08, 3
 #define SR_BANDGAP_EN          0x02, 0x04, 2
 #define SR_BIAS_EXT            0x02, 0x02, 1
@@ -120,13 +121,13 @@
 #define SR_PLL_LMS_HOLD_ON     0x23, 0x01, 0
 
 #define RG_PLL_CHN_INT         (0x24)
-#define SR_PLL_CHN_INT_IN      0x24, 0x7F, 0
+#define SR_PLL_CHN_INT         0x24, 0x7F, 0
 
 #define RG_PLL_CHN_FRAC_H      (0x25)
-#define SR_PLL_CHN_FRAC_H_IN   0x25, 0x0F, 0
+#define SR_PLL_CHN_FRAC_H      0x25, 0x0F, 0
 
 #define RG_PLL_CHN_FRAC_M      (0x26)
-#define SR_PLL_CHN_FRAC_M_IN   0x26, 0xFF, 0
+#define SR_PLL_CHN_FRAC_M      0x26, 0xFF, 0
 
 #define RG_PLL_CHN_FRAC_L      (0x27)
 #define SR_PLL_CHN_FRAC_L      0x27, 0xFF, 0
@@ -206,17 +207,17 @@
 //on-chip demodulator
 #define RG_DEM_MAIN            (0x40)
 #define SR_DEM_RESETB          0x40, 0x80, 7
-#define DEM_EN                 0x40, 0x40, 6
-#define DEM_CLK96_SEL          0x40, 0x20, 5
-#define DEM_PD_EN              0x40, 0x10, 4
-#define DEM_AGC_EN             0x40, 0x08, 3
-#define DEM_FREQ_OFFSET_CAL_EN 0x40, 0x04, 2
-#define DEM_OSR_SEL            0x40, 0x02, 1
-#define DEM_BTLE_MODE          0x40, 0x01, 0
+#define SR_DEM_EN                 0x40, 0x40, 6
+#define SR_DEM_CLK96_SEL          0x40, 0x20, 5
+#define SR_DEM_PD_EN              0x40, 0x10, 4
+#define SR_DEM_AGC_EN             0x40, 0x08, 3
+#define SR_DEM_FREQ_OFFSET_CAL_EN 0x40, 0x04, 2
+#define SR_DEM_OSR_SEL            0x40, 0x02, 1
+#define SR_DEM_BTLE_MODE          0x40, 0x01, 0
 
 #define RG_DEM_SET             (0x41)
-#define SR_DEM_IQ_INV          0x41, 0x40, 6
-#define SR_DEM_IQ_CROSS        0x41, 0x30, 4
+#define SR_DEM_IQ_INV          0x41, 0x60, 5
+#define SR_DEM_IQ_CROSS        0x41, 0x10, 4
 #define SR_DEM_IF_SEL          0x41, 0x0C, 2
 #define SR_DEM_DATA_RATE_SEL   0x41, 0x03, 0
 
@@ -233,7 +234,7 @@
 #define SR_DEM_GC6             0x044, 0x0F, 0
 
 #define RG_DEM_GC_7            (0x45)
-#define SR_DEM_GC7             0x45, 0xF0, 4
+#define SR_DEM_GC7             0x45, 0x0F, 0
 
 #define RG_DEM_PD_OUT          (0x46)
 #define SR_DEM_PD_OUT          0x46, 0x01, 0
@@ -251,7 +252,7 @@
 #define SR_DEM_GC6_OUT         0x49, 0x0F, 0
 
 #define RG_DEM_GC_DOUT         (0x4A)
-#define SR_DEM_GC7_OUT         0x4A, 0xF0, 4
+#define SR_DEM_GC7_OUT         0x4A, 0x0F, 0
 
 #define RG_DEM_FREQ_OFFSET_OUT (0x4B)
 #define SR_DEM_FREQ_OFFSET_OUT 0x4B, 0xF0, 0
@@ -493,28 +494,28 @@
 
 //statemachine timing
 #define RG_SM_TIME_POWER_TX    (0xA0)
-#define SR_POWER_TX_TIME       0xA0, 0xFF, 0
+#define SR_SM_TIME_POWER_TX    0xA0, 0xFF, 0
 
 #define RG_SM_TIME_POWER_RX    (0xA1)
-#define SR_POWER_RX_TIME       0xA1, 0xFF, 0
+#define SR_SM_TIME_POWER_RX    0xA1, 0xFF, 0
 
 #define RG_SM_TIME_PLL_PON     (0xA2)
-#define SR_PLL_PON_TIME        0xA2, 0xFF, 0
+#define SR_SM_TIME_PLL_PON     0xA2, 0xFF, 0
 
 #define RG_SM_TIME_PLL_SET     (0xA3)
-#define SR_PLL_SET_TIME        0xA3, 0xFF, 0
+#define SR_SM_TIME_PLL_SET     0xA3, 0xFF, 0
 
 #define RG_SM_TIME_TX          (0xA4)
-#define SR_TX_TIME             0xA4, 0xFF, 0
+#define SR_SM_TIME_TX          0xA4, 0xFF, 0
 
 #define RG_SM_TIME_RX_FE       (0xA5)
-#define SR_RX_FE_TIME          0xA5, 0xFF, 0
+#define SR_SM_TIME_RX_FE       0xA5, 0xFF, 0
 
 #define RG_SM_TIME_ADC         (0xA6)
-#define SR_ADC_TIME            0xA6, 0xFF, 0
+#define SR_SM_TIME_ADC         0xA6, 0xFF, 0
 
 #define RG_SM_TIME_PD_EN       (0xA7)
-#define SR_PD_EN_TIME          0xA7, 0xFF, 0
+#define SR_SM_TIME_PD_EN       0xA7, 0xFF, 0
 
 //statemachine outputs
 #define RG_SM_STATE            (0xB0)
