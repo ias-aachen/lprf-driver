@@ -5,8 +5,10 @@
 Ein Char Driver zeichnet sich durch die Kommunikation zwischen dem Kernel und dem User Space aus. Es ist also möglich Daten vom und zum User Space zu übertragen. 
 
 Im LPRF Treiber wird die Implementierung eines Char Drivers genutzt, um Registerwerte im laufenden Betrieb des Chips auszulesen. Dies ermöglicht ein leichteres Debuggen des Treibers. 
+\urlstyle{same}
 
-Wie bereits oben erwähnt, wird der Char Driver mit Hilfe der Funktion \textit{scull\_init\_module()} in \textit{lprf\_probe()} initialisiert. 
+
+Wie bereits oben erwähnt, wird der Char Driver mit Hilfe der Funktion \textit{\url{scull\_init\_module()}} in \textit{lprf\_probe()} initialisiert. 
 
 
 \section{scull\_read()}

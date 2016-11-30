@@ -44,11 +44,11 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>Documantation.aux</file>
-      <file>Documantation-blx.bib</file>
+      <file>Documentation.aux</file>
+      <file>Documentation-blx.bib</file>
     </provides>
     <requires type="dynamic">
-      <file>Documantation.bbl</file>
+      <file>Documentation.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-compat.def</file>
@@ -69,20 +69,20 @@
       <option>--wolfgang</option>
       <option>--min_crossrefs 2</option>
       <option>--csfile latin1.csf</option>
-      <infile>Documantation</infile>
+      <infile>Documentation</infile>
     </cmdline>
     <input>
-      <file>Documantation.aux</file>
+      <file>Documentation.aux</file>
     </input>
     <output>
-      <file>Documantation.bbl</file>
+      <file>Documentation.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>Documantation.bbl</file>
+      <file>Documentation.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>Documantation.aux</file>
-      <file>Documantation-blx.bib</file>
+      <file>Documentation.aux</file>
+      <file>Documentation-blx.bib</file>
     </requires>
     <requires type="editable">
       <file>mybib.bib</file>

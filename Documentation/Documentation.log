@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.7.22)  19 JUL 2016 15:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2015.7.22)  19 JUL 2016 16:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Documantation.tex
-(./Documantation.tex
+**Documentation.tex
+(./Documentation.tex
 LaTeX2e <2014/05/01>
 Babel <3.9k> and hyphenation patterns for 78 languages loaded.
 (c:/texlive/2014/texmf-dist/tex/latex/koma-script/scrbook.cls
@@ -1034,7 +1034,7 @@ File: tikzlibrarymatrix.code.tex 2013/07/12 v3.0.0 (rcs-revision 1.4)
 ternal.code.tex
 (c:/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzex
 ternalshared.code.tex))
-\openout4 = `Documantation.auxlock'.
+\openout4 = `Documentation.auxlock'.
 
 
 (c:/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
@@ -1671,10 +1671,10 @@ Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 \nomitemsep=\skip87
 )
 \@nomenclaturefile=\write5
-\openout5 = `Documantation.nlo'.
+\openout5 = `Documentation.nlo'.
 
 
-Writing nomenclature file Documantation.nlo
+Writing nomenclature file Documentation.nlo
 Package biblatex Info: Trying to load language 'ngerman'...
 Package biblatex Info: ... file 'ngerman.lbx' found.
 (c:/texlive/2014/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
@@ -1690,8 +1690,8 @@ Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
 
-(./Documantation.aux)
-\openout1 = `Documantation.aux'.
+(./Documentation.aux)
+\openout1 = `Documentation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 323.
 LaTeX Font Info:    ... okay on input line 323.
@@ -1770,12 +1770,12 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 Package biblatex Info: Input encoding 'latin1' detected.
 Package biblatex Info: Data encoding 'latin1' specified.
 (biblatex)             No need to reencode data.
-\openout3 = `Documantation-blx.bib'.
+\openout3 = `Documentation-blx.bib'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Documantation.bbl' not found.
+Package biblatex Info: ... file 'Documentation.bbl' not found.
 
-No file Documantation.bbl.
+No file Documentation.bbl.
 Package biblatex Info: Reference section=0 on input line 323.
 Package biblatex Info: Reference segment=0 on input line 323.
 LaTeX Info: Redefining \microtypecontext on input line 323.
@@ -1825,9 +1825,9 @@ LaTeX Info: Redefining \ref on input line 323.
 LaTeX Info: Redefining \pageref on input line 323.
 LaTeX Info: Redefining \nameref on input line 323.
 
-(./Documantation.out) (./Documantation.out)
+(./Documentation.out) (./Documentation.out)
 \@outlinefile=\write6
-\openout6 = `Documantation.out'.
+\openout6 = `Documentation.out'.
 
 \c@lstlisting=\count388
 Package scrhack Info: undefining \float@addtolists on input line 323.
@@ -2014,9 +2014,9 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             See the microtype manual for details.
 Package tocbasic Info: character protrusion at toc deactivated on input line 33
 7.
- (./Documantation.toc)
+ (./Documentation.toc)
 \tf@toc=\write7
-\openout7 = `Documantation.toc'.
+\openout7 = `Documentation.toc'.
 
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 343.
@@ -2055,9 +2055,9 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 343.
 Package tocbasic Info: character protrusion at lof deactivated on input line 34
 4.
- (./Documantation.lof)
+ (./Documentation.lof)
 \tf@lof=\write8
-\openout8 = `Documantation.lof'.
+\openout8 = `Documentation.lof'.
 
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 346.
@@ -2089,9 +2089,9 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 346.
 Package tocbasic Info: character protrusion at lot deactivated on input line 34
 7.
- (./Documantation.lot)
+ (./Documentation.lot)
 \tf@lot=\write9
-\openout9 = `Documantation.lot'.
+\openout9 = `Documentation.lot'.
 
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 349.
@@ -2124,9 +2124,9 @@ Package babel Info: Redefining ngerman shorthand "~
 Package tocbasic Info: character protrusion at lol deactivated on input line 35
 0.
 
-(./Documantation.lol)
+(./Documentation.lol)
 \tf@lol=\write10
-\openout10 = `Documantation.lol'.
+\openout10 = `Documentation.lol'.
 
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 358.
@@ -2157,7 +2157,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 358.
 
-No file Documantation.nls.
+No file Documentation.nls.
 (./content.tex (./lprf_driver.tex
 Kapitel 1.
 Package babel Info: Redefining ngerman shorthand "|
@@ -2237,12 +2237,6 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 166.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 166.
-
-Overfull \hbox (39.07967pt too wide) in paragraph at lines 170--171
-[]\T1/lmr/m/n/12 (-20) Die Funk-ti-on \T1/lmr/m/it/12 (-20) lprf_setup_spi_mess
-ages() \T1/lmr/m/n/12 (-20) dient zum Ein-stel-len der SPI-Kommunikationen.
- []
-
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 171.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2251,7 +2245,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 171.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 171.
-[4]
+ [4]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 185.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2285,7 +2279,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 227.
  [6]
-<bilder/LPRF_TX_assert.pdf, id=295, 390.70969pt x 287.57437pt>
+<bilder/LPRF_TX_assert.pdf, id=301, 390.70969pt x 287.57437pt>
 File: bilder/LPRF_TX_assert.pdf Graphic file (type pdf)
 
 <use bilder/LPRF_TX_assert.pdf>
@@ -2315,24 +2309,18 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 3.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 3.
-
-Overfull \hbox (44.87172pt too wide) in paragraph at lines 9--10
-[]\T1/lmr/m/n/12 (-20) Wie be-reits oben er-wähnt, wird der Char Dri-ver mit Hi
-l-fe der Funk-ti-on \T1/lmr/m/it/12 (-20) scull_init_module()
- []
-
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 12.
+(babel)             in language  on input line 14.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 12.
+(babel)             in language  on input line 14.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 29.
 [9
 
 
@@ -2380,7 +2368,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 5.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 5.
-<bilder/LPRF_TX.pdf, id=382, 1063.72406pt x 819.06pt>
+<bilder/LPRF_TX.pdf, id=390, 1063.72406pt x 819.06pt>
 File: bilder/LPRF_TX.pdf Graphic file (type pdf)
  <use bilder/LPRF_TX.pdf>
 Package pdftex.def Info: bilder/LPRF_TX.pdf used on input line 7.
@@ -2390,7 +2378,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 13.
 
-<Anhang/Paper_regmap.pdf, id=383, 614.295pt x 794.97pt>
+<Anhang/Paper_regmap.pdf, id=391, 614.295pt x 794.97pt>
 File: Anhang/Paper_regmap.pdf Graphic file (type pdf)
 
 <use Anhang/Paper_regmap.pdf>
@@ -2408,7 +2396,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 14.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 14.
- [13 <./bilder/LPRF_TX.pdf>] <Anhang/Paper_regmap.pdf, id=401, page=1, 614.295p
+ [13 <./bilder/LPRF_TX.pdf>] <Anhang/Paper_regmap.pdf, id=409, page=1, 614.295p
 t x 794.97pt>
 File: Anhang/Paper_regmap.pdf Graphic file (type pdf)
 
@@ -2442,7 +2430,7 @@ File: Anhang/Paper_regmap.pdf Graphic file (type pdf)
 Package pdftex.def Info: Anhang/Paper_regmap.pdf, page1 used on input line 14.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [14 <./Anhang/Paper_regmap.pdf>]
-<Anhang/Paper_regmap.pdf, id=442, page=2, 614.295pt x 794.97pt>
+<Anhang/Paper_regmap.pdf, id=450, page=2, 614.295pt x 794.97pt>
 File: Anhang/Paper_regmap.pdf Graphic file (type pdf)
 
 <use Anhang/Paper_regmap.pdf, page 2>
@@ -2466,7 +2454,7 @@ File: Anhang/Paper_regmap.pdf Graphic file (type pdf)
 Package pdftex.def Info: Anhang/Paper_regmap.pdf, page2 used on input line 14.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [15 <./Anhang/Paper_regmap.pdf>]
-<Anhang/Paper_regmap.pdf, id=461, page=3, 614.295pt x 794.97pt>
+<Anhang/Paper_regmap.pdf, id=469, page=3, 614.295pt x 794.97pt>
 File: Anhang/Paper_regmap.pdf Graphic file (type pdf)
 
 <use Anhang/Paper_regmap.pdf, page 3>
@@ -2490,7 +2478,7 @@ File: Anhang/Paper_regmap.pdf Graphic file (type pdf)
 Package pdftex.def Info: Anhang/Paper_regmap.pdf, page3 used on input line 14.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [16 <./Anhang/Paper_regmap.pdf>]
-<Anhang/Paper_regmap.pdf, id=478, page=4, 614.295pt x 794.97pt>
+<Anhang/Paper_regmap.pdf, id=486, page=4, 614.295pt x 794.97pt>
 File: Anhang/Paper_regmap.pdf Graphic file (type pdf)
 
 <use Anhang/Paper_regmap.pdf, page 4>
@@ -2514,7 +2502,7 @@ File: Anhang/Paper_regmap.pdf Graphic file (type pdf)
 Package pdftex.def Info: Anhang/Paper_regmap.pdf, page4 used on input line 14.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [17 <./Anhang/Paper_regmap.pdf>]
-<Anhang/Paper_regmap.pdf, id=488, page=5, 614.295pt x 794.97pt>
+<Anhang/Paper_regmap.pdf, id=496, page=5, 614.295pt x 794.97pt>
 File: Anhang/Paper_regmap.pdf Graphic file (type pdf)
 
 <use Anhang/Paper_regmap.pdf, page 5>
@@ -2537,25 +2525,222 @@ File: Anhang/Paper_regmap.pdf Graphic file (type pdf)
 <use Anhang/Paper_regmap.pdf, page 5>
 Package pdftex.def Info: Anhang/Paper_regmap.pdf, page5 used on input line 14.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [18 <./Anhang/Paper_regmap.pdf>]))
+ [18 <./Anhang/Paper_regmap.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 17.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 17.
+
+<Anhang/HowToSetupRPI.pdf, id=501, 597.55246pt x 845.07718pt>
+File: Anhang/HowToSetupRPI.pdf Graphic file (type pdf)
+
+<use Anhang/HowToSetupRPI.pdf>
+Package pdftex.def Info: Anhang/HowToSetupRPI.pdf used on input line 18.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+File: Anhang/HowToSetupRPI.pdf Graphic file (type pdf)
+ <use Anhang/HowToSetupRPI.pdf>
+Package pdftex.def Info: Anhang/HowToSetupRPI.pdf used on input line 18.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 18.
+ [19]
+<Anhang/HowToSetupRPI.pdf, id=508, page=1, 597.55246pt x 845.07718pt>
+File: Anhang/HowToSetupRPI.pdf Graphic file (type pdf)
+
+<use Anhang/HowToSetupRPI.pdf, page 1>
+Package pdftex.def Info: Anhang/HowToSetupRPI.pdf, page1 used on input line 18.
+
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+File: Anhang/HowToSetupRPI.pdf Graphic file (type pdf)
+ <use Anhang/HowToSetupRPI.pdf, page 1>
+Package pdftex.def Info: Anhang/HowToSetupRPI.pdf, page1 used on input line 18.
+
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+File: Anhang/HowToSetupRPI.pdf Graphic file (type pdf)
+
+<use Anhang/HowToSetupRPI.pdf, page 1>
+Package pdftex.def Info: Anhang/HowToSetupRPI.pdf, page1 used on input line 18.
+
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+File: Anhang/HowToSetupRPI.pdf Graphic file (type pdf)
+ <use Anhang/HowToSetupRPI.pdf, page 1>
+Package pdftex.def Info: Anhang/HowToSetupRPI.pdf, page1 used on input line 18.
+
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 18.
+File: Anhang/HowToSetupRPI.pdf Graphic file (type pdf)
+
+<use Anhang/HowToSetupRPI.pdf, page 1>
+Package pdftex.def Info: Anhang/HowToSetupRPI.pdf, page1 used on input line 18.
+
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+ [20 <./Anhang/HowToSetupRPI.pdf>]
+<Anhang/HowToSetupRPI.pdf, id=606, page=2, 597.55246pt x 845.07718pt>
+File: Anhang/HowToSetupRPI.pdf Graphic file (type pdf)
+
+<use Anhang/HowToSetupRPI.pdf, page 2>
+Package pdftex.def Info: Anhang/HowToSetupRPI.pdf, page2 used on input line 18.
+
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+File: Anhang/HowToSetupRPI.pdf Graphic file (type pdf)
+ <use Anhang/HowToSetupRPI.pdf, page 2>
+Package pdftex.def Info: Anhang/HowToSetupRPI.pdf, page2 used on input line 18.
+
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 18.
+File: Anhang/HowToSetupRPI.pdf Graphic file (type pdf)
+
+<use Anhang/HowToSetupRPI.pdf, page 2>
+Package pdftex.def Info: Anhang/HowToSetupRPI.pdf, page2 used on input line 18.
+
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+ [21 <./Anhang/HowToSetupRPI.pdf>]
+<Anhang/HowToSetupRPI.pdf, id=637, page=3, 597.55246pt x 845.07718pt>
+File: Anhang/HowToSetupRPI.pdf Graphic file (type pdf)
+
+<use Anhang/HowToSetupRPI.pdf, page 3>
+Package pdftex.def Info: Anhang/HowToSetupRPI.pdf, page3 used on input line 18.
+
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+File: Anhang/HowToSetupRPI.pdf Graphic file (type pdf)
+ <use Anhang/HowToSetupRPI.pdf, page 3>
+Package pdftex.def Info: Anhang/HowToSetupRPI.pdf, page3 used on input line 18.
+
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 18.
+File: Anhang/HowToSetupRPI.pdf Graphic file (type pdf)
+
+<use Anhang/HowToSetupRPI.pdf, page 3>
+Package pdftex.def Info: Anhang/HowToSetupRPI.pdf, page3 used on input line 18.
+
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+ [22 <./Anhang/HowToSetupRPI.pdf>]
+<Anhang/HowToSetupRPI.pdf, id=647, page=4, 597.55246pt x 845.07718pt>
+File: Anhang/HowToSetupRPI.pdf Graphic file (type pdf)
+
+<use Anhang/HowToSetupRPI.pdf, page 4>
+Package pdftex.def Info: Anhang/HowToSetupRPI.pdf, page4 used on input line 18.
+
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+File: Anhang/HowToSetupRPI.pdf Graphic file (type pdf)
+ <use Anhang/HowToSetupRPI.pdf, page 4>
+Package pdftex.def Info: Anhang/HowToSetupRPI.pdf, page4 used on input line 18.
+
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 18.
+File: Anhang/HowToSetupRPI.pdf Graphic file (type pdf)
+
+<use Anhang/HowToSetupRPI.pdf, page 4>
+Package pdftex.def Info: Anhang/HowToSetupRPI.pdf, page4 used on input line 18.
+
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+ [23 <./Anhang/HowToSetupRPI.pdf>]
+<Anhang/HowToSetupRPI.pdf, id=661, page=5, 597.55246pt x 845.07718pt>
+File: Anhang/HowToSetupRPI.pdf Graphic file (type pdf)
+
+<use Anhang/HowToSetupRPI.pdf, page 5>
+Package pdftex.def Info: Anhang/HowToSetupRPI.pdf, page5 used on input line 18.
+
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+File: Anhang/HowToSetupRPI.pdf Graphic file (type pdf)
+ <use Anhang/HowToSetupRPI.pdf, page 5>
+Package pdftex.def Info: Anhang/HowToSetupRPI.pdf, page5 used on input line 18.
+
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 18.
+File: Anhang/HowToSetupRPI.pdf Graphic file (type pdf)
+
+<use Anhang/HowToSetupRPI.pdf, page 5>
+Package pdftex.def Info: Anhang/HowToSetupRPI.pdf, page5 used on input line 18.
+
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+ [24 <./Anhang/HowToSetupRPI.pdf>]
+<Anhang/HowToSetupRPI.pdf, id=687, page=6, 597.55246pt x 845.07718pt>
+File: Anhang/HowToSetupRPI.pdf Graphic file (type pdf)
+
+<use Anhang/HowToSetupRPI.pdf, page 6>
+Package pdftex.def Info: Anhang/HowToSetupRPI.pdf, page6 used on input line 18.
+
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+File: Anhang/HowToSetupRPI.pdf Graphic file (type pdf)
+ <use Anhang/HowToSetupRPI.pdf, page 6>
+Package pdftex.def Info: Anhang/HowToSetupRPI.pdf, page6 used on input line 18.
+
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 18.
+File: Anhang/HowToSetupRPI.pdf Graphic file (type pdf)
+
+<use Anhang/HowToSetupRPI.pdf, page 6>
+Package pdftex.def Info: Anhang/HowToSetupRPI.pdf, page6 used on input line 18.
+
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+ [25 <./Anhang/HowToSetupRPI.pdf>]))
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 377.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 377.
 
-(./Documantation.aux)
+(./Documentation.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 377.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 377.
-Package rerunfilecheck Info: File `Documantation.out' has not changed.
-(rerunfilecheck)             Checksum: C3B657F3A067B94BC0FF9468389CB361;1139.
-Package logreq Info: Writing requests to 'Documantation.run.xml'.
-\openout1 = `Documantation.run.xml'.
+Package rerunfilecheck Info: File `Documentation.out' has not changed.
+(rerunfilecheck)             Checksum: 4016EBC56D30DE93B5A71F8F82C16276;1220.
+Package logreq Info: Writing requests to 'Documentation.run.xml'.
+\openout1 = `Documentation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46380 strings out of 893117
- 1005956 string characters out of 6138984
+ 46421 strings out of 893117
+ 1006868 string characters out of 6138984
  1428961 words of memory out of 10000000
- 48744 multiletter control sequences out of 15000+600000
- 78287 words of font info for 123 fonts, out of 8000000 for 9000
+ 48767 multiletter control sequences out of 15000+600000
+ 78727 words of font info for 127 fonts, out of 8000000 for 9000
  1148 hyphenation exceptions out of 8191
  73i,18n,80p,94284b,3185s stack positions out of 5000i,500n,10000p,10000000b,80000s
 {c:/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2014
@@ -2578,10 +2763,10 @@ pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/lm/lmtti10.pfb><c:/texlive/2
 014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2014/texmf-dist/fon
 ts/type1/urw/times/utmbi8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/urw/time
 s/utmr8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Documantation.pdf (28 pages, 620466 bytes).
+Output written on Documentation.pdf (35 pages, 1189732 bytes).
 PDF statistics:
- 588 PDF objects out of 1000 (max. 8388607)
- 514 compressed objects within 6 object streams
- 171 named destinations out of 1000 (max. 500000)
- 30927 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 800 PDF objects out of 1000 (max. 8388607)
+ 584 compressed objects within 6 object streams
+ 179 named destinations out of 1000 (max. 500000)
+ 30980 words of extra memory for PDF output out of 35830 (max. 10000000)
 
